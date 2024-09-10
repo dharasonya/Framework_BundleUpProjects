@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-10T22:44:31 IST" name="TestSuite_CRM_Projects" finished-at="2024-09-10T22:47:18 IST" duration-ms="167083">
+    <groups>
+      <group name="SanityTest">
+        <method signature="TestCollection_CRM_ePayPropertyConfig.AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" name="AddNewRecord" class="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig"/>
+      </group> <!-- SanityTest -->
+    </groups>
+    <test started-at="2024-09-10T22:44:31 IST" name="CRM-Edge Test-Reset Functionality" finished-at="2024-09-10T22:45:38 IST" duration-ms="66545">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:44:34 IST" name="BrowserIntilization" finished-at="2024-09-10T22:44:41 IST" duration-ms="6927" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:44:41 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:45:05 IST" duration-ms="24092" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestApplicatioName]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[index741]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[755.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResetRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:45:05 IST" name="TearDown" finished-at="2024-09-10T22:45:07 IST" duration-ms="1368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:45:07 IST" name="BrowserIntilization" finished-at="2024-09-10T22:45:11 IST" duration-ms="4389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:45:11 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:45:36 IST" duration-ms="25313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestApplicatioName]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[index741]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[755.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResetRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@70325e14]" started-at="2024-09-10T22:45:36 IST" name="TearDown" finished-at="2024-09-10T22:45:38 IST" duration-ms="1570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+    </test> <!-- CRM-Edge Test-Reset Functionality -->
+    <test started-at="2024-09-10T22:44:31 IST" name="CRM-Edge Test-Add Functionality" finished-at="2024-09-10T22:47:18 IST" duration-ms="167083">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:44:34 IST" name="BrowserIntilization" finished-at="2024-09-10T22:44:41 IST" duration-ms="7010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:44:41 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:45:03 IST" duration-ms="21318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestNameApp0005]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[key05]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4505.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Reject]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Got it Reject]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:45:03 IST" name="TearDown" finished-at="2024-09-10T22:45:04 IST" duration-ms="1765" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:45:04 IST" name="BrowserIntilization" finished-at="2024-09-10T22:45:09 IST" duration-ms="4406" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:45:09 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:45:57 IST" duration-ms="48233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestNameApp0065]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[key0d]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5505.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Reject]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Got it Reject]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:45:57 IST" name="TearDown" finished-at="2024-09-10T22:45:58 IST" duration-ms="1376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:45:58 IST" name="BrowserIntilization" finished-at="2024-09-10T22:46:02 IST" duration-ms="3684" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:46:02 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:46:33 IST" duration-ms="31172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestNameApp8905]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[key05s]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5506.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Reject]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Got it Reject]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:46:33 IST" name="TearDown" finished-at="2024-09-10T22:46:35 IST" duration-ms="1498" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:46:35 IST" name="BrowserIntilization" finished-at="2024-09-10T22:46:40 IST" duration-ms="4855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:46:40 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-10T22:47:17 IST" duration-ms="37486" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PhonePe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBPS Configuration]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EPay Property File Configuration]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestNameApp0785]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[key05s]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5507.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Index to Test]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Added]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Reject]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Got it Reject]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@40a4337a]" started-at="2024-09-10T22:47:17 IST" name="TearDown" finished-at="2024-09-10T22:47:18 IST" duration-ms="1385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+    </test> <!-- CRM-Edge Test-Add Functionality -->
+  </suite> <!-- TestSuite_CRM_Projects -->
+</testng-results>
