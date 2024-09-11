@@ -25,6 +25,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	WebDriverWait wait;
 	int errCount=0;
 	Method_CRMBaseSteps baseStep=null;
+	int retryCount=0;
 	CallListeners event=new CallListeners();
 	
 	public Method_EpayPropertyConfig(WebDriver driver) throws Exception {
@@ -877,23 +878,31 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 	public void Logout() throws Exception {
 		// TODO Auto-generated method stub
-		
-		
+	
 		try
 		{
-			//obj.ClickLogout.click();
-			wait=new WebDriverWait(driver,Duration.ofSeconds(180));
-			wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
-			getLog().info("CRM-Logout Succesfully");
-			event.printSnap("CRM-Succesful LogOut");
+			if(retryCount<3)
+			{
+				System.out.println("\n Logout Retry Attempt : "+retryCount);
+				wait=new WebDriverWait(driver,Duration.ofSeconds(60));
+				wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
+				getLog().info("CRM-Logout Succesfully");
+				event.printSnap("CRM-Succesful LogOut");
+			}
+			else
+			{
+				System.out.println("Logout retry Attempt Completed.!!!");
+			}
 		}
 		catch(Exception e)
 		{
+			retryCount++;
+			Logout();
 			//obj.ClickLogout.click();
-			wait=new WebDriverWait(driver,Duration.ofSeconds(180));
+			/*wait=new WebDriverWait(driver,Duration.ofSeconds(180));
 			wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
 			getLog().info("CRM-Logout Succesfully");
-			event.printSnap("CRM-Succesful LogOut");
+			event.printSnap("CRM-Succesful LogOut");*/
 		}
 	}
 
