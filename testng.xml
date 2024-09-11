@@ -17,7 +17,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test>  
 
 	<test name="CRM-Edge Test-Reset Functionality" enabled="true">
 		<parameter name="BrowserValue" value="edge" />
