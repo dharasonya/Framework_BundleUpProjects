@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="135.029" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="278.94" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\sonya\AppData\Local\Temp\surefire16650560383908236663\surefirebooter-20240911225552030_3.jar C:\Users\sonya\AppData\Local\Temp\surefire16650560383908236663 2024-09-11T22-55-51_751-jvmRun1 surefire-20240911225552030_1tmp surefire_0-20240911225552030_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\sonya\AppData\Local\Temp\surefire6775117635098729244\surefirebooter-20240911234743376_3.jar C:\Users\sonya\AppData\Local\Temp\surefire6775117635098729244 2024-09-11T23-47-42_872-jvmRun1 surefire-20240911234743376_1tmp surefire_0-20240911234743376_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects\target\test-classes;C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects\target\classes;C:\Users\sonya\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\sonya\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\sonya\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-java\4.20.0\selenium-java-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-api\4.20.0\selenium-api-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.20.0\selenium-chrome-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.20.0\selenium-chromium-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-json\4.20.0\selenium-json-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.20.0\selenium-manager-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.20.0\selenium-devtools-v122-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.20.0\selenium-devtools-v123-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.20.0\selenium-devtools-v124-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.20.0\selenium-devtools-v85-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.20.0\selenium-edge-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.20.0\selenium-firefox-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-http\4.20.0\selenium-http-4.20.0.jar;C:\Users\sonya\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.20.0\selenium-ie-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.20.0\selenium-remote-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\sonya\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\sonya\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\sonya\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\sonya\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\sonya\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\sonya\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-api\1.37.0\opentelemetry-api-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-context\1.37.0\opentelemetry-context-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.37.0\opentelemetry-exporter-logging-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.37.0\opentelemetry-sdk-common-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.37.0\opentelemetry-sdk-extension-autoconfigure-spi-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.37.0\opentelemetry-sdk-extension-autoconfigure-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.37.0-alpha\opentelemetry-api-incubator-1.37.0-alpha.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.37.0\opentelemetry-sdk-trace-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.37.0\opentelemetry-sdk-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.37.0\opentelemetry-sdk-metrics-1.37.0.jar;C:\Users\sonya\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.37.0\opentelemetry-sdk-logs-1.37.0.jar;C:\Users\sonya\.m2\repository\net\bytebuddy\byte-buddy\1.14.14\byte-buddy-1.14.14.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-os\4.20.0\selenium-os-4.20.0.jar;C:\Users\sonya\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.20.0\selenium-safari-driver-4.20.0.jar;C:\Users\sonya\.m2\repository\org\seleniumhq\selenium\selenium-support\4.20.0\selenium-support-4.20.0.jar;C:\Users\sonya\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\sonya\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\sonya\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\sonya\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\sonya\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\sonya\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\sonya\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\sonya\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\sonya\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\sonya\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\sonya\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\sonya\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\sonya\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\sonya\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\Users\sonya\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\Users\sonya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\sonya\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\Users\sonya\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\Users\sonya\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\Users\sonya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\sonya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\sonya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\sonya\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\sonya\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\sonya\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\sonya\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\Users\sonya\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\Users\sonya\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\Users\sonya\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\sonya\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\sonya\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\sonya\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\sonya\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\sonya\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\sonya\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\sonya\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\sonya\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\sonya\.m2\repository\org\apache\maven\plugins\maven-deploy-plugin\2.8.2\maven-deploy-plugin-2.8.2.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-plugin-api\2.2.1\maven-plugin-api-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-project\2.2.1\maven-project-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-settings\2.2.1\maven-settings-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-profile\2.2.1\maven-profile-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-artifact-manager\2.2.1\maven-artifact-manager-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-repository-metadata\2.2.1\maven-repository-metadata-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-6\wagon-provider-api-1.0-beta-6.jar;C:\Users\sonya\.m2\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-plugin-registry\2.2.1\maven-plugin-registry-2.2.1.jar;C:\Users\sonya\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.11\plexus-interpolation-1.11.jar;C:\Users\sonya\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9-stable-1\plexus-container-default-1.0-alpha-9-stable-1.jar;C:\Users\sonya\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\sonya\.m2\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-model\2.2.1\maven-model-2.2.1.jar;C:\Users\sonya\.m2\repository\org\apache\maven\maven-artifact\2.2.1\maven-artifact-2.2.1.jar;C:\Users\sonya\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.15\plexus-utils-3.0.15.jar;C:\Users\sonya\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\sonya\AppData\Local\Temp\surefire16650560383908236663\surefirebooter-20240911225552030_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sonya\AppData\Local\Temp\surefire6775117635098729244\surefirebooter-20240911234743376_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="16.0.1+9-24"/>
@@ -55,7 +55,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="ResetRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestApplicatioName, index741, 755.0, Active, Index to Test, Test Added](1)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="30.981">
+  <testcase name="ResetRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestApplicatioName, index741, 755.0, Active, Index to Test, Test Added](1)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="37.354">
     <system-out><![CDATA[Extent Report called
 Extent Report called
 
@@ -67,9 +67,9 @@ Extent Report called
 
  Total No. of Records (Rows) :4
 
- Total No. of Fields (Columns) ::9
-
  Total No. of Fields (Columns) ::11
+
+ Total No. of Fields (Columns) ::9
 
  Imported Records: [PhonePe, BBPS Configuration, EPay Property File Configuration, TestApplicatioName, index741, 755.0, Active, Index to Test, Test Added]
 
@@ -91,9 +91,9 @@ Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@2502cb78
 Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@1bdfc4e
+Event type :ePay_CRM.Reusable_Utils.CallListeners@59bac01a
+Event type :ePay_CRM.Reusable_Utils.CallListeners@45bb5780
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
@@ -106,82 +106,258 @@ Listener Get Browser value: edge
 ]]></system-out>
     <system-err><![CDATA[log4j:ERROR Could not find value for key log4j.appender.CONSOLE
 log4j:ERROR Could not instantiate appender named "CONSOLE".
-Sep 11, 2024 10:55:56 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+Sep 11, 2024 11:47:49 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
 INFO: Browser Initilzation Started
-Sep 11, 2024 10:55:56 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+Sep 11, 2024 11:47:49 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
 INFO: Browser Initilzation Started
-Sep 11, 2024 10:56:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 11, 2024 11:48:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:56:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 11, 2024 11:48:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:56:07 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+Sep 11, 2024 11:48:02 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
 INFO: Browser Launched :- edge
-Sep 11, 2024 10:56:07 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+Sep 11, 2024 11:48:02 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
 INFO: Browser Launched :- edge
-Sep 11, 2024 10:56:12 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+Sep 11, 2024 11:48:08 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
 INFO: Maker Username Entered
-Sep 11, 2024 10:56:13 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+Sep 11, 2024 11:48:08 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
 INFO: Maker Username Entered
-Sep 11, 2024 10:56:14 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+Sep 11, 2024 11:48:11 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
 INFO: Maker Password Entered
-Sep 11, 2024 10:56:16 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
-INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:56:16 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+Sep 11, 2024 11:48:11 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
 INFO: Maker Password Entered
-Sep 11, 2024 10:56:17 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+Sep 11, 2024 11:48:13 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
 INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:56:21 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+Sep 11, 2024 11:48:14 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:48:17 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
 INFO: Enviornment Selected :-PhonePe
-Sep 11, 2024 10:56:23 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+Sep 11, 2024 11:48:20 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
 INFO: Enviornment Selected :-BBPS2.0
-Sep 11, 2024 10:56:23 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:48:20 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:56:24 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:48:21 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:48:26 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:48:26 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:48:29 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+INFO: Clicked on Add Button
+Sep 11, 2024 11:48:29 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+INFO: Clicked on Add Button
+Sep 11, 2024 11:48:37 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+INFO: Added all the Details,Proceed to Save
+Sep 11, 2024 11:48:37 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+INFO: Added all the Details,Proceed to Save
+Sep 11, 2024 11:48:39 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnResetButton
+INFO: Reset Done succesfully!!..
+]]></system-err>
+  </testcase>
+  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0005, key05, 4505.0, Active, Index to Test, Test Added, Reject, Got it Reject](1)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="34.923">
+    <system-out><![CDATA[Listener Get Browser value: edge
+Listener Get Browser value: edge
+
+ Logout Retry Attempt : 0
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@45bb5780
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@41f2a27d
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+]]></system-out>
+    <system-err><![CDATA[Sep 11, 2024 11:48:40 PM ePay_CRM.LandingPage.BasePageSetup TearDown
+INFO: Closing Browser: edge
+Sep 11, 2024 11:48:42 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnSaveButton
+INFO: ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:48:43 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
+INFO: Any Error Messages on Save/Update : 0
+Sep 11, 2024 11:48:43 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
+INFO: Maker Status Message :-ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:48:44 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+INFO: Browser Initilzation Started
+Sep 11, 2024 11:48:46 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig Logout
+INFO: CRM-Logout Succesfully
+Sep 11, 2024 11:48:47 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserName
+INFO: Checker Username Entered
+Sep 11, 2024 11:48:50 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserPassword
+INFO: Checker Password Entered
+Sep 11, 2024 11:48:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
+Sep 11, 2024 11:48:52 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+INFO: Browser Launched :- edge
+Sep 11, 2024 11:48:53 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:48:57 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+INFO: Maker Username Entered
+Sep 11, 2024 11:48:59 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+INFO: Maker Password Entered
+Sep 11, 2024 11:48:59 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-PhonePe
+Sep 11, 2024 11:49:02 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:49:02 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:49:07 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:49:09 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-BBPS2.0
+Sep 11, 2024 11:49:10 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnVerifyButton
+INFO: Checker Verification Process Started
+Sep 11, 2024 11:49:11 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:49:12 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Action Taken : Reject
+Sep 11, 2024 11:49:16 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:49:19 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:49:20 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+INFO: Clicked on Add Button
+Sep 11, 2024 11:49:24 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:49:27 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerGrid
+INFO: Search Records Found Showing 0 to 0 of 0 entries (filtered from 35 total entries)
+Sep 11, 2024 11:49:27 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Checker Verification Process Completed
+]]></system-err>
+  </testcase>
+  <testcase name="ResetRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestApplicatioName, index741, 755.0, Active, Index to Test, Test Added](2)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="1.382">
+    <system-out><![CDATA[Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+]]></system-out>
+    <system-err><![CDATA[Sep 11, 2024 11:49:27 PM ePay_CRM.LandingPage.BasePageSetup TearDown
+INFO: Closing Browser: edge
+Sep 11, 2024 11:49:29 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+INFO: Browser Initilzation Started
+Sep 11, 2024 11:49:30 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+INFO: Added all the Details,Proceed to Save
+Sep 11, 2024 11:49:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
+Sep 11, 2024 11:49:37 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+INFO: Browser Launched :- edge
+Sep 11, 2024 11:49:38 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnResetButton
+INFO: Reset Done succesfully!!..
+]]></system-err>
+  </testcase>
+  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0065, key0d, 5505.0, Active, Index to Test, Test Added, Reject, Got it Reject](2)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="46.736">
+    <system-out><![CDATA[Listener Get Browser value: edge
+Listener Get Browser value: edge
+Report got flushed
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@183cd81
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+
+ Logout Retry Attempt : 0
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@183cd81
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+]]></system-out>
+    <system-err><![CDATA[Sep 11, 2024 11:49:38 PM ePay_CRM.LandingPage.BasePageSetup TearDown
+INFO: Closing Browser: edge
+Sep 11, 2024 11:49:41 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+INFO: Maker Username Entered
+Sep 11, 2024 11:49:42 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+INFO: Maker Password Entered
+Sep 11, 2024 11:49:45 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:49:49 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-PhonePe
+Sep 11, 2024 11:49:53 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:49:57 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:50:00 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+INFO: Clicked on Add Button
+Sep 11, 2024 11:50:06 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+INFO: Added all the Details,Proceed to Save
+Sep 11, 2024 11:50:08 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnSaveButton
+INFO: ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:50:08 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
+INFO: Any Error Messages on Save/Update : 0
+Sep 11, 2024 11:50:09 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
+INFO: Maker Status Message :-ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:50:09 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig Logout
+INFO: CRM-Logout Succesfully
+Sep 11, 2024 11:50:10 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserName
+INFO: Checker Username Entered
+Sep 11, 2024 11:50:10 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserPassword
+INFO: Checker Password Entered
+Sep 11, 2024 11:50:11 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:50:13 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-PhonePe
+Sep 11, 2024 11:50:14 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Menu/Sub-Menu Not availabele for Selection , Retry Attempt :1
-Sep 11, 2024 10:56:25 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:50:14 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:56:26 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:50:16 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:56:29 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:50:17 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnVerifyButton
+INFO: Checker Verification Process Started
+Sep 11, 2024 11:50:18 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Action Taken : Reject
+Sep 11, 2024 11:50:20 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:50:22 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:56:29 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
-INFO: Clicked on Add Button
-Sep 11, 2024 10:56:30 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
-INFO: Clicked on Add Button
-Sep 11, 2024 10:56:36 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
-INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:56:36 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
-INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:56:38 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnResetButton
-INFO: Reset Done succesfully!!..
-Sep 11, 2024 10:56:38 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
-INFO: Any Error Messages on Save/Update : 0
+Sep 11, 2024 11:50:23 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerGrid
+INFO: Search Records Found Showing 0 to 0 of 0 entries (filtered from 35 total entries)
+Sep 11, 2024 11:50:23 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Checker Verification Process Completed
 ]]></system-err>
   </testcase>
-  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0005, key05, 4505.0, Active, Index to Test, Test Added, Reject, Got it Reject](1)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="31.293">
-    <system-out><![CDATA[Listener Get Browser value: edge
-]]></system-out>
-    <system-err><![CDATA[Sep 11, 2024 10:56:38 PM ePay_CRM.LandingPage.BasePageSetup TearDown
-INFO: Closing Browser: edge
-Sep 11, 2024 10:56:39 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
-INFO: On Save : Kindly approve/reject previous added record.
-]]></system-err>
-  </testcase>
-  <testcase name="ResetRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestApplicatioName, index741, 755.0, Active, Index to Test, Test Added](2)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="27.013">
+  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp8905, key05s, 5506.0, Active, Index to Test, Test Added, Reject, Got it Reject](3)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="43.753">
     <system-out><![CDATA[Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@66a1c492
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@6b962f82
 Listener Get Browser value: edge
 Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@271a394e
+
+ Logout Retry Attempt : 0
 Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@66a1c492
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
@@ -190,152 +366,148 @@ Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 ]]></system-out>
-    <system-err><![CDATA[Sep 11, 2024 10:56:39 PM ePay_CRM.LandingPage.BasePageSetup TearDown
+    <system-err><![CDATA[Sep 11, 2024 11:50:23 PM ePay_CRM.LandingPage.BasePageSetup TearDown
 INFO: Closing Browser: edge
-Sep 11, 2024 10:56:40 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+Sep 11, 2024 11:50:25 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
 INFO: Browser Initilzation Started
-Sep 11, 2024 10:56:41 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
-INFO: Browser Initilzation Started
-Sep 11, 2024 10:56:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 11, 2024 11:50:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:56:45 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+Sep 11, 2024 11:50:31 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
 INFO: Browser Launched :- edge
-Sep 11, 2024 10:56:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:56:48 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
-INFO: Browser Launched :- edge
-Sep 11, 2024 10:56:51 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+Sep 11, 2024 11:50:36 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
 INFO: Maker Username Entered
-Sep 11, 2024 10:56:52 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
-INFO: Maker Username Entered
-Sep 11, 2024 10:56:53 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+Sep 11, 2024 11:50:37 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
 INFO: Maker Password Entered
-Sep 11, 2024 10:56:54 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
-INFO: Maker Password Entered
-Sep 11, 2024 10:56:55 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+Sep 11, 2024 11:50:40 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
 INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:56:57 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
-INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:57:00 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
-INFO: Enviornment Selected :-BBPS2.0
-Sep 11, 2024 10:57:01 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+Sep 11, 2024 11:50:45 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
 INFO: Enviornment Selected :-PhonePe
-Sep 11, 2024 10:57:01 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:50:47 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:57:03 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
-INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:57:05 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:50:51 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:57:06 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
-INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:57:08 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+Sep 11, 2024 11:50:53 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
 INFO: Clicked on Add Button
-Sep 11, 2024 10:57:09 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
-INFO: Clicked on Add Button
-Sep 11, 2024 10:57:12 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+Sep 11, 2024 11:50:56 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
 INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:57:12 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
-INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:57:14 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnResetButton
-INFO: Reset Done succesfully!!..
-Sep 11, 2024 10:57:15 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
+Sep 11, 2024 11:50:58 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnSaveButton
+INFO: ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:50:59 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
 INFO: Any Error Messages on Save/Update : 0
-]]></system-err>
-  </testcase>
-  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0065, key0d, 5505.0, Active, Index to Test, Test Added, Reject, Got it Reject](2)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="27.376">
-    <system-out><![CDATA[Listener Get Browser value: edge
-]]></system-out>
-    <system-err><![CDATA[Sep 11, 2024 10:57:15 PM ePay_CRM.LandingPage.BasePageSetup TearDown
-INFO: Closing Browser: edge
-Sep 11, 2024 10:57:15 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
-INFO: On Save : Kindly approve/reject previous added record.
-]]></system-err>
-  </testcase>
-  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp8905, key05s, 5506.0, Active, Index to Test, Test Added, Reject, Got it Reject](3)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="17.973">
-    <system-out><![CDATA[Report got flushed
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@31fffc96
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-Listener Get Browser value: edge
-]]></system-out>
-    <system-err><![CDATA[Sep 11, 2024 10:57:15 PM ePay_CRM.LandingPage.BasePageSetup TearDown
-INFO: Closing Browser: edge
-Sep 11, 2024 10:57:17 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
-INFO: Browser Initilzation Started
-Sep 11, 2024 10:57:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:57:23 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
-INFO: Browser Launched :- edge
-Sep 11, 2024 10:57:27 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
-INFO: Maker Username Entered
-Sep 11, 2024 10:57:28 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
-INFO: Maker Password Entered
-Sep 11, 2024 10:57:30 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+Sep 11, 2024 11:50:59 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
+INFO: Maker Status Message :-ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:51:00 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig Logout
+INFO: CRM-Logout Succesfully
+Sep 11, 2024 11:51:00 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserName
+INFO: Checker Username Entered
+Sep 11, 2024 11:51:01 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserPassword
+INFO: Checker Password Entered
+Sep 11, 2024 11:51:03 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
 INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:57:33 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+Sep 11, 2024 11:51:05 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
 INFO: Enviornment Selected :-PhonePe
-Sep 11, 2024 10:57:33 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:51:05 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:57:35 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:51:07 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:57:36 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
-INFO: Clicked on Add Button
-Sep 11, 2024 10:57:38 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
-INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:57:40 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
-INFO: Any Error Messages on Save/Update : 0
-Sep 11, 2024 10:57:41 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
-INFO: On Save : Kindly approve/reject previous added record.
+Sep 11, 2024 11:51:09 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnVerifyButton
+INFO: Checker Verification Process Started
+Sep 11, 2024 11:51:10 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Action Taken : Reject
+Sep 11, 2024 11:51:12 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:51:14 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:51:15 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerGrid
+INFO: Search Records Found Showing 0 to 0 of 0 entries (filtered from 35 total entries)
+Sep 11, 2024 11:51:15 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Checker Verification Process Completed
 ]]></system-err>
   </testcase>
-  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0785, key05s, 5507.0, Active, Index to Test, Test Added, Reject, Got it Reject](4)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="17.891">
+  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0785, key05s, 5507.0, Active, Index to Test, Test Added, Reject, Got it Reject](4)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="56.196">
     <system-out><![CDATA[Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
-Event type :ePay_CRM.Reusable_Utils.CallListeners@e3e67a5
+Event type :ePay_CRM.Reusable_Utils.CallListeners@1c5e9ba1
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+
+ Logout Retry Attempt : 0
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Listener Get Browser value: edge
+Event type :ePay_CRM.Reusable_Utils.CallListeners@1c5e9ba1
+Listener Get Browser value: edge
+Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 Listener Get Browser value: edge
 ]]></system-out>
-    <system-err><![CDATA[Sep 11, 2024 10:57:41 PM ePay_CRM.LandingPage.BasePageSetup TearDown
+    <system-err><![CDATA[Sep 11, 2024 11:51:15 PM ePay_CRM.LandingPage.BasePageSetup TearDown
 INFO: Closing Browser: edge
-Sep 11, 2024 10:57:42 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+Sep 11, 2024 11:51:17 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
 INFO: Browser Initilzation Started
-Sep 11, 2024 10:57:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 11, 2024 11:51:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
-Sep 11, 2024 10:57:48 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+Sep 11, 2024 11:51:24 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
 INFO: Browser Launched :- edge
-Sep 11, 2024 10:57:51 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+Sep 11, 2024 11:51:29 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
 INFO: Maker Username Entered
-Sep 11, 2024 10:57:52 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+Sep 11, 2024 11:51:32 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
 INFO: Maker Password Entered
-Sep 11, 2024 10:57:54 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+Sep 11, 2024 11:51:33 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
 INFO: Succesfully Login with Entered Credentials
-Sep 11, 2024 10:57:57 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+Sep 11, 2024 11:51:39 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
 INFO: Enviornment Selected :-PhonePe
-Sep 11, 2024 10:57:58 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:51:40 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Main Menu Selected :-BBPS Configuration
-Sep 11, 2024 10:57:59 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+Sep 11, 2024 11:51:42 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
 INFO: Child Menu Opened :-EPay Property File Configuration
-Sep 11, 2024 10:58:01 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+Sep 11, 2024 11:51:44 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
 INFO: Clicked on Add Button
-Sep 11, 2024 10:58:03 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+Sep 11, 2024 11:51:47 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
 INFO: Added all the Details,Proceed to Save
-Sep 11, 2024 10:58:05 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
+Sep 11, 2024 11:51:52 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig clickOnSaveButton
+INFO: ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:51:52 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
 INFO: Any Error Messages on Save/Update : 0
-Sep 11, 2024 10:58:05 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
-INFO: On Save : Kindly approve/reject previous added record.
+Sep 11, 2024 11:51:53 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
+INFO: Maker Status Message :-ePay Property File configuration details added successfully and sent for Checker Approval!
+Sep 11, 2024 11:51:54 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig Logout
+INFO: CRM-Logout Succesfully
+Sep 11, 2024 11:51:55 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserName
+INFO: Checker Username Entered
+Sep 11, 2024 11:51:55 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterCheckerUserPassword
+INFO: Checker Password Entered
+Sep 11, 2024 11:51:57 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 11, 2024 11:51:58 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-PhonePe
+Sep 11, 2024 11:51:59 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:52:02 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:52:06 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnVerifyButton
+INFO: Checker Verification Process Started
+Sep 11, 2024 11:52:07 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Action Taken : Reject
+Sep 11, 2024 11:52:12 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 11, 2024 11:52:15 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 11, 2024 11:52:19 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerGrid
+INFO: Search Records Found Showing 0 to 0 of 0 entries (filtered from 35 total entries)
+Sep 11, 2024 11:52:20 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig CheckerSearchCriteria
+INFO: Checker Verification Process Completed
 ]]></system-err>
   </testcase>
 </testsuite>

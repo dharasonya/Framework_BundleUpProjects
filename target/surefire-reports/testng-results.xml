@@ -2,15 +2,15 @@
 <testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-11T22:55:53 IST" name="TestSuite_CRM_Projects" finished-at="2024-09-11T22:58:07 IST" duration-ms="133931">
+  <suite started-at="2024-09-11T23:47:45 IST" name="TestSuite_CRM_Projects" finished-at="2024-09-11T23:52:22 IST" duration-ms="277124">
     <groups>
       <group name="SanityTest">
         <method signature="TestCollection_CRM_ePayPropertyConfig.AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" name="AddNewRecord" class="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig"/>
       </group> <!-- SanityTest -->
     </groups>
-    <test started-at="2024-09-11T22:55:53 IST" name="CRM-Edge Test-Reset Functionality" finished-at="2024-09-11T22:57:16 IST" duration-ms="83240">
+    <test started-at="2024-09-11T23:47:45 IST" name="CRM-Edge Test-Reset Functionality" finished-at="2024-09-11T23:49:40 IST" duration-ms="114901">
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:55:56 IST" name="BrowserIntilization" finished-at="2024-09-11T22:56:07 IST" duration-ms="11387" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:47:49 IST" name="BrowserIntilization" finished-at="2024-09-11T23:48:02 IST" duration-ms="13910" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:56:07 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:56:38 IST" duration-ms="31017" status="PASS">
+        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:48:02 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:48:40 IST" duration-ms="37386" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ResetRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:56:38 IST" name="TearDown" finished-at="2024-09-11T22:56:40 IST" duration-ms="1557" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:48:40 IST" name="TearDown" finished-at="2024-09-11T23:48:44 IST" duration-ms="3692" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:56:40 IST" name="BrowserIntilization" finished-at="2024-09-11T22:56:45 IST" duration-ms="5453" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:48:44 IST" name="BrowserIntilization" finished-at="2024-09-11T23:48:52 IST" duration-ms="8326" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:56:45 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:57:15 IST" duration-ms="29522" status="PASS">
+        <test-method signature="ResetRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:48:52 IST" name="ResetRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:49:38 IST" duration-ms="46232" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -145,7 +145,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ResetRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T22:57:15 IST" name="TearDown" finished-at="2024-09-11T22:57:16 IST" duration-ms="1591" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@43195e57]" started-at="2024-09-11T23:49:38 IST" name="TearDown" finished-at="2024-09-11T23:49:40 IST" duration-ms="1830" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -158,9 +158,9 @@
         </test-method> <!-- TearDown -->
       </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
     </test> <!-- CRM-Edge Test-Reset Functionality -->
-    <test started-at="2024-09-11T22:55:53 IST" name="CRM-Edge Test-Add Functionality" finished-at="2024-09-11T22:58:07 IST" duration-ms="133930">
+    <test started-at="2024-09-11T23:47:45 IST" name="CRM-Edge Test-Add Functionality" finished-at="2024-09-11T23:52:22 IST" duration-ms="277124">
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:55:56 IST" name="BrowserIntilization" finished-at="2024-09-11T22:56:07 IST" duration-ms="11391" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:47:49 IST" name="BrowserIntilization" finished-at="2024-09-11T23:48:02 IST" duration-ms="13908" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -171,7 +171,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:56:07 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:56:39 IST" duration-ms="31333" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:48:02 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:49:27 IST" duration-ms="84343" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -232,7 +232,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:56:39 IST" name="TearDown" finished-at="2024-09-11T22:56:41 IST" duration-ms="2028" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:49:27 IST" name="TearDown" finished-at="2024-09-11T23:49:29 IST" duration-ms="2442" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -243,7 +243,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:56:41 IST" name="BrowserIntilization" finished-at="2024-09-11T22:56:48 IST" duration-ms="7175" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:49:29 IST" name="BrowserIntilization" finished-at="2024-09-11T23:49:37 IST" duration-ms="7460" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -254,7 +254,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:56:48 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:57:15 IST" duration-ms="27376" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:49:37 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:50:23 IST" duration-ms="46751" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -315,7 +315,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:15 IST" name="TearDown" finished-at="2024-09-11T22:57:17 IST" duration-ms="1622" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:50:23 IST" name="TearDown" finished-at="2024-09-11T23:50:25 IST" duration-ms="1738" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -326,7 +326,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:17 IST" name="BrowserIntilization" finished-at="2024-09-11T22:57:23 IST" duration-ms="5942" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:50:25 IST" name="BrowserIntilization" finished-at="2024-09-11T23:50:31 IST" duration-ms="6263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -337,7 +337,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:23 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:57:41 IST" duration-ms="17973" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:50:31 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:51:15 IST" duration-ms="43761" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -398,7 +398,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:41 IST" name="TearDown" finished-at="2024-09-11T22:57:42 IST" duration-ms="1574" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:51:15 IST" name="TearDown" finished-at="2024-09-11T23:51:17 IST" duration-ms="2090" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -409,7 +409,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:42 IST" name="BrowserIntilization" finished-at="2024-09-11T22:57:48 IST" duration-ms="5240" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:51:17 IST" name="BrowserIntilization" finished-at="2024-09-11T23:51:24 IST" duration-ms="6488" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -420,7 +420,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:57:48 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T22:58:05 IST" duration-ms="17898" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:51:24 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2024-09-11T23:52:20 IST" duration-ms="56200" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -481,7 +481,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T22:58:05 IST" name="TearDown" finished-at="2024-09-11T22:58:07 IST" duration-ms="1675" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@3d680b5a]" started-at="2024-09-11T23:52:20 IST" name="TearDown" finished-at="2024-09-11T23:52:22 IST" duration-ms="2149" status="PASS">
           <params>
             <param index="0">
               <value>
