@@ -28,14 +28,14 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	int retryCount=0;
 	int addRetryCheck=0;
 	CallListeners event=new CallListeners();
-	
+
 	public Method_EpayPropertyConfig(WebDriver driver) throws Exception {
 		//	super(driver);
 		this.driver=driver;
 		obj =new Repo_EpayPropertyConfig(driver);	
 		baseStep=new Method_CRMBaseSteps(driver);
 	}
-	
+
 	public void ClickOnAddButton() throws Exception
 	{
 		try
@@ -125,7 +125,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 		boolean flag=false;
 		wait=new WebDriverWait(driver,Duration.ofSeconds(5000));
 		wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnSave)).click();
-	//	obj.ClickOnSave.click();
+		//	obj.ClickOnSave.click();
 		String onSaveNewExpMsg="ePay Property File configuration details added successfully and sent for Checker Approval!";
 		String onSaveDupExpMsg="ePay Property File configuration already exists";
 
@@ -148,7 +148,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	}
 
 	public boolean clickOnUpdateButton() throws Exception {
-		
+
 		boolean flag=false;
 		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnSubmit)).click();
@@ -177,12 +177,12 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 			event.printSnap("CRM-Update Duplicate Msg");
 			flag=false;
 		}
-		
+
 		return flag;
-		
+
 
 	}
-	
+
 	public void clickOnResetButton() throws Exception {
 		// TODO Auto-generated method stub
 
@@ -256,7 +256,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 								event.printSnap("Record Selected to Edit");
 								obj.EditButton.click();
 								FillInEditDetails(ApplicationName,Key,Value,NewValue,Status,NewStatus,Description,NewDescription,Remarks);
-								
+
 								clickOnUpdateButton();
 								//flagChk=1;
 								flag=true;
@@ -451,7 +451,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 			if(tempCount<5)//(tempCount<5)
 			{
-				
+
 				getLog().info("Search Process On Page No "+pageNumber);
 				event.printSnap("CRM SearchPage "+pageNumber);
 				count++;
@@ -477,12 +477,12 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 						event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
 						obj.ClickOnView.click();
 						Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
-						
+
 						event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
 						//Thread.sleep(6000);
 						//event.printSnap("Open Records in View Mode "+" for Row "+j);
 						getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-						
+
 						ReadRecords();
 						clickOnBackButton();
 
@@ -515,22 +515,22 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 					for(int j=0;j<10;j++) 
 					{
 
-							List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
-							//   System.out.println("\n j value :" +listRadio.get(j).getText());
-							//getLog().info(j +" : ");
-							listRadio.get(j).click();
-							event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
-							obj.ClickOnView.click();
-							Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
-							event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							//event.printSnap("Open Records in View Mode "+" for Row "+j);
-							getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							
-							ReadRecords();
-							clickOnBackButton();
-							driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
+						List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
+						//   System.out.println("\n j value :" +listRadio.get(j).getText());
+						//getLog().info(j +" : ");
+						listRadio.get(j).click();
+						event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
+						obj.ClickOnView.click();
+						Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
+						event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
+						//event.printSnap("Open Records in View Mode "+" for Row "+j);
+						getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
 
-						
+						ReadRecords();
+						clickOnBackButton();
+						driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
+
+
 
 
 						/*for(int k=0;k<count;k++)
@@ -538,7 +538,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 									driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
 								}
 								break;*/
-						
+
 
 						consValue=6;
 						//System.out.println("---consValue :"+consValue);
@@ -549,105 +549,105 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 				}
 			}
-				else if(consValue==6 && tempCount==6)
+			else if(consValue==6 && tempCount==6)
+			{
+				getLog().info("Search Process On Next Page No "+pageNumber);
+				event.printSnap("CRM SearchPage "+pageNumber);
+
+				Thread.sleep(5000);
+				//driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a[5]")).click();
+				driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
+
+				nextCounter++;
+
+				for(int j=0;j<10;j++)
 				{
-					getLog().info("Search Process On Next Page No "+pageNumber);
-					event.printSnap("CRM SearchPage "+pageNumber);
-
-					Thread.sleep(5000);
-					//driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a[5]")).click();
-					driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
-
-					nextCounter++;
-
-					for(int j=0;j<10;j++)
+					try
 					{
-						try
+						Thread.sleep(3000);
+
+						List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
+						//   System.out.println("\n j value :" +listRadio.get(j).getText());
+						//	getLog().info(j +" : ");
+						listRadio.get(j).click();
+						event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
+						obj.ClickOnView.click();
+						Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
+						event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
+						//event.printSnap("Open Records in View Mode "+" for Row "+j);
+						getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
+
+						ReadRecords();
+						clickOnBackButton();
+						for(int k=0;k<tempCount-1;k++)
 						{
-							Thread.sleep(3000);
-
-							List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
-							//   System.out.println("\n j value :" +listRadio.get(j).getText());
-							//	getLog().info(j +" : ");
-							listRadio.get(j).click();
-							event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
-							obj.ClickOnView.click();
-							Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
-							event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							//event.printSnap("Open Records in View Mode "+" for Row "+j);
-							getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							
-							ReadRecords();
-							clickOnBackButton();
-							for(int k=0;k<tempCount-1;k++)
-							{
-								driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
-							}
+							driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
 						}
-						catch(Exception e)
-						{
-							getLog().info("No Further Records to view");
-							break;
-						}
-
-
 					}
-					consValue++;
-					
-				}
-			
-				else if(consValue>6 && (tempCount>6 && tempCount<=lastPage))
-				{
-					getLog().info("Search Process On Next Page No "+pageNumber);
-					event.printSnap("CRM SearchPage "+pageNumber);
-					
-
-					Thread.sleep(5000);
-					//driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a[5]")).click();
-					driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
-
-					nextCounter++;
-
-					for(int j=0;j<10;j++)
+					catch(Exception e)
 					{
-						try
-						{
-							Thread.sleep(3000);
-							List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
-							//   System.out.println("\n j value :" +listRadio.get(j).getText());
-							//getLog().info(j +" : ");
-							listRadio.get(j).click();
-							event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
-							obj.ClickOnView.click();
-							Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
-							event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							//event.printSnap("Open Records in View Mode "+" for Row "+j);
-							getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
-							
-							ReadRecords();
-							clickOnBackButton();
-							for(int k=0;k<tempCount-1;k++)
-							{
-								driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
-							}
-						}
-						catch(Exception e)
-						{
-							getLog().info("No Further Records to view");
-							break;
-						}
+						getLog().info("No Further Records to view");
+						break;
+					}
 
+
+				}
+				consValue++;
+
+			}
+
+			else if(consValue>6 && (tempCount>6 && tempCount<=lastPage))
+			{
+				getLog().info("Search Process On Next Page No "+pageNumber);
+				event.printSnap("CRM SearchPage "+pageNumber);
+
+
+				Thread.sleep(5000);
+				//driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a[5]")).click();
+				driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
+
+				nextCounter++;
+
+				for(int j=0;j<10;j++)
+				{
+					try
+					{
+						Thread.sleep(3000);
+						List<WebElement> listRadio=driver.findElements(By.xpath("//*[@id='radio']"));
+						//   System.out.println("\n j value :" +listRadio.get(j).getText());
+						//getLog().info(j +" : ");
+						listRadio.get(j).click();
+						event.printSnap("Record Selected on Page "+pageNumber+" for Row "+j);
+						obj.ClickOnView.click();
+						Assert.assertEquals("ePay Property File Configuration View",obj.ViewMenuName.getText());
+						event.printSnap("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
+						//event.printSnap("Open Records in View Mode "+" for Row "+j);
+						getLog().info("Open Records in View Mode on Page "+pageNumber+" for Row "+j);
+
+						ReadRecords();
+						clickOnBackButton();
+						for(int k=0;k<tempCount-1;k++)
+						{
+							driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
+						}
+					}
+					catch(Exception e)
+					{
+						getLog().info("No Further Records to view");
+						break;
 					}
 
 				}
-				else
-				{ 
-					break;
-				}
-			}  
+
+			}
+			else
+			{ 
+				break;
+			}
+		}  
 
 		//	} 
-		}
+	}
 	//}
 
 	public boolean CheckMatchedCriteria(String applicationName, String key, String value, String newValue,
@@ -892,312 +892,309 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 	public void Logout() throws Exception {
 		// TODO Auto-generated method stub
-	
-		try
-		{
-			if(retryCount<3)
-			{
-				System.out.println("\n Logout Retry Attempt : "+retryCount);
-				wait=new WebDriverWait(driver,Duration.ofSeconds(60));
+
+		while (retryCount < 3) {
+			try {
+				System.out.println("\n Logout Retry Attempt : " + retryCount);
+				wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
-				getLog().info("CRM-Logout Succesfully");
-				event.printSnap("CRM-Succesful LogOut");
+				getLog().info("CRM-Logout Successfully");
+				event.printSnap("CRM-Successful LogOut");
+				break; // Exit loop after successful logout
+			} catch (Exception e) {
+				retryCount++;
+				System.out.println("Retry attempt failed. Attempt: " + retryCount);
+				if (retryCount >= 3) {
+					System.out.println("All retry attempts failed.");
+					throw e; // After 3 retries, rethrow the exception
+				}
+
 			}
-			else
-			{
-				System.out.println("Logout retry Attempt Completed.!!!");
-			}
-		}
-		catch(Exception e)
-		{
-			retryCount++;
-			Logout();
-			//obj.ClickLogout.click();
-			/*wait=new WebDriverWait(driver,Duration.ofSeconds(180));
-			wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
-			getLog().info("CRM-Logout Succesfully");
-			event.printSnap("CRM-Succesful LogOut");*/
 		}
 	}
 
-	public void ClickOnVerifyButton() throws Exception
-	{
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
-		//Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
-		wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnVerifyButton)).click();
-
-		//obj.ClickOnVerifyButton.click();
-		Assert.assertEquals(obj.OnClickViewLabel.getText(), "ePay Property File Configuration Checker","Label Verification");
-		getLog().info("Checker Verification Process Started");
-		event.printSnap("CRM-Verification Page");
-	}
-
-	public void CheckerSearchCriteria(String ParentMenu,String ChildMenu,String ApplicationName,String Description,String Key,String Value,
-			String MakerRemarks,String Status,String CheckerRemarks,String Action) throws Exception
-	{
-		int count=0;
-
-		for(WebElement ApplicationNameValue:obj.GetApplicationNameList)
-		{
-			count++;
-			//System.out.println(ApplicationNameValue.getText());
-			if(ApplicationNameValue.getText().equals(ApplicationName))
+			public void ClickOnVerifyButton() throws Exception
 			{
-				//System.out.println(ApplicationNameValue.getText());
-				for(WebElement DescriptionValue:obj.GetDescriptionList)
+
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+				wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+				//Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
+				wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnVerifyButton)).click();
+
+				//obj.ClickOnVerifyButton.click();
+				Assert.assertEquals(obj.OnClickViewLabel.getText(), "ePay Property File Configuration Checker","Label Verification");
+				getLog().info("Checker Verification Process Started");
+				event.printSnap("CRM-Verification Page");
+			}
+
+			public void CheckerSearchCriteria(String ParentMenu,String ChildMenu,String ApplicationName,String Description,String Key,String Value,
+					String MakerRemarks,String Status,String CheckerRemarks,String Action) throws Exception
+			{
+				int count=0;
+
+				for(WebElement ApplicationNameValue:obj.GetApplicationNameList)
 				{
-					if(DescriptionValue.getText().equals(Description))
+					count++;
+					//System.out.println(ApplicationNameValue.getText());
+					if(ApplicationNameValue.getText().equals(ApplicationName))
 					{
-						//System.out.println(DescriptionValue.getText());
-						for(WebElement KeyValues:obj.GetCheckerKeyList)
+						//System.out.println(ApplicationNameValue.getText());
+						for(WebElement DescriptionValue:obj.GetDescriptionList)
 						{
-							//System.out.println(KeyValues.getText());
-							if(KeyValues.getText().equals(Key))
+							if(DescriptionValue.getText().equals(Description))
 							{
-
-								for(WebElement ListValues:obj.GetValueList)
+								//System.out.println(DescriptionValue.getText());
+								for(WebElement KeyValues:obj.GetCheckerKeyList)
 								{
-									//System.out.println("\n Values :"+ListValues.getText());
-
-									if(ListValues.getText().equals(Value))
+									//System.out.println(KeyValues.getText());
+									if(KeyValues.getText().equals(Key))
 									{
-										driver.findElement(By.xpath("//tbody/tr["+count+"]/td/input[1]")).click();
-										if(obj.ApproveBtn.getAttribute("value").equals(Action))
+
+										for(WebElement ListValues:obj.GetValueList)
 										{
-											//System.out.println("Enter-2");
-											getLog().info("Action Taken : "+Action);
-											obj.CheckerRemarks.sendKeys(CheckerRemarks);
-											event.printSnap("CRM-CHeckerRecord-ActionToTaken");
-											obj.ApproveBtn.click();
-											Thread.sleep(3000);
-											Assert.assertEquals(obj.ResponseMessage.getText(),"ePay Property File Configuration Verification Processed Successfully.","Checker Action- Verifcation");
-											event.printSnap("CheckerActionTakenMsg");
-											baseStep.SelectMainMenu(ParentMenu,ChildMenu);
-											CheckerGrid(ApplicationName,Key,Value,Description,Status);
-										}
-										else if(obj.RejectBtn.getAttribute("value").equals(Action))
-										{
-											getLog().info("Action Taken : "+Action);
-											obj.CheckerRemarks.sendKeys(CheckerRemarks);
-											event.printSnap("CRM-CHeckerRecord-ActionToTake");
-											obj.RejectBtn.click();
-											//Thread.sleep(4000);
-											wait=new WebDriverWait(driver,Duration.ofSeconds(20));
-											WebElement respMsg=wait.until(ExpectedConditions.visibilityOf(obj.ResponseMessage));
-											Assert.assertEquals(respMsg.getText(),"ePay Property File Configuration Verification Processed Successfully.","Checker Action- Verifcation");
-											event.printSnap("CheckerActionTakenMsg");
-											baseStep.SelectMainMenu(ParentMenu,ChildMenu);
-											CheckerGrid(ApplicationName,Key,Value,Description,Status);
-										}
+											//System.out.println("\n Values :"+ListValues.getText());
+
+											if(ListValues.getText().equals(Value))
+											{
+												driver.findElement(By.xpath("//tbody/tr["+count+"]/td/input[1]")).click();
+												if(obj.ApproveBtn.getAttribute("value").equals(Action))
+												{
+													//System.out.println("Enter-2");
+													getLog().info("Action Taken : "+Action);
+													obj.CheckerRemarks.sendKeys(CheckerRemarks);
+													event.printSnap("CRM-CHeckerRecord-ActionToTaken");
+													obj.ApproveBtn.click();
+													Thread.sleep(3000);
+													Assert.assertEquals(obj.ResponseMessage.getText(),"ePay Property File Configuration Verification Processed Successfully.","Checker Action- Verifcation");
+													event.printSnap("CheckerActionTakenMsg");
+													baseStep.SelectMainMenu(ParentMenu,ChildMenu);
+													CheckerGrid(ApplicationName,Key,Value,Description,Status);
+												}
+												else if(obj.RejectBtn.getAttribute("value").equals(Action))
+												{
+													getLog().info("Action Taken : "+Action);
+													obj.CheckerRemarks.sendKeys(CheckerRemarks);
+													event.printSnap("CRM-CHeckerRecord-ActionToTake");
+													obj.RejectBtn.click();
+													//Thread.sleep(4000);
+													wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+													WebElement respMsg=wait.until(ExpectedConditions.visibilityOf(obj.ResponseMessage));
+													Assert.assertEquals(respMsg.getText(),"ePay Property File Configuration Verification Processed Successfully.","Checker Action- Verifcation");
+													event.printSnap("CheckerActionTakenMsg");
+													baseStep.SelectMainMenu(ParentMenu,ChildMenu);
+													CheckerGrid(ApplicationName,Key,Value,Description,Status);
+												}
+												break;
+											}
+											else
+											{
+												continue;
+											}
+
+
+										} 
 										break;
 									}
+
 									else
 									{
 										continue;
 									}
+								}
 
-
-								} 
 								break;
 							}
-
 							else
 							{
 								continue;
 							}
-						}
 
+						}
 						break;
 					}
+
 					else
 					{
 						continue;
 					}
-
 				}
-				break;
+
+				getLog().info("Checker Verification Process Completed");
 			}
 
-			else
-			{
-				continue;
-			}
-		}
+			public void CheckerGrid(String applicationName, String key, String value, String Description, String status) throws Exception {
+				// TODO Auto-generated method stub
 
-		getLog().info("Checker Verification Process Completed");
-	}
+				obj.EnterSearchValue.sendKeys(applicationName);
+				event.printSnap("CRM-CheckerGridSearch");
 
-	public void CheckerGrid(String applicationName, String key, String value, String Description, String status) throws Exception {
-		// TODO Auto-generated method stub
+				getLog().info("Search Records Found " + driver.findElement(By.id("BBPSConfigData_info")).getText());
+				int chk = 0;
+				List<WebElement> pageList=driver.findElements(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a"));
 
-		obj.EnterSearchValue.sendKeys(applicationName);
-		event.printSnap("CRM-CheckerGridSearch");
-
-		getLog().info("Search Records Found " + driver.findElement(By.id("BBPSConfigData_info")).getText());
-		int chk = 0;
-		List<WebElement> pageList=driver.findElements(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a"));
-
-		int tempCount=0;
+				int tempCount=0;
 
 
-		int consValue=0;
+				int consValue=0;
 
-		int pageCounter=0;
-		String countRecord=obj.CountOfRecords.getText();
-		//System.out.println("\n Count : "+countRecord);
-		String recSplit[]=countRecord.split(" ");
-
-
-		String maxCount=recSplit[5];
-		int totalRecords=Integer.parseInt((recSplit[5].toString().replace(",", "")));
-		//System.out.println(maxCount);
-		driver.findElements(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a"));
-		for(WebElement pagNum:pageList)
-		{
-			pageCounter++;
+				int pageCounter=0;
+				String countRecord=obj.CountOfRecords.getText();
+				//System.out.println("\n Count : "+countRecord);
+				String recSplit[]=countRecord.split(" ");
 
 
-		}
-
-		//System.out.println("Last Page : "+pageCounter);
-		//System.out.println("Total Page : "+totalRecords);
-
-
-		for(int i=0;i<totalRecords;i++)
-		{
-			tempCount++;
-			if(tempCount<5)
-			{
-				getLog().info("Search Process On Page No "+tempCount);
-
-
-				try
+				String maxCount=recSplit[5];
+				int totalRecords=Integer.parseInt((recSplit[5].toString().replace(",", "")));
+				//System.out.println(maxCount);
+				driver.findElements(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a"));
+				for(WebElement pagNum:pageList)
 				{
-					driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
-					boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
-					if(Verify==true)
-					{
-						getLog().info("Search Record Found on Page No "+tempCount);
-						//LaunchBrowserConfig.WindowScrollHeight();
-						event.printSnap("CRM-CheckerGridPage "+tempCount);
-						break;
-					}	
-					else
-					{
-						getLog().info("No Record Found of Page No "+tempCount);
-						//LaunchBrowserConfig.WindowScrollHeight();
-						event.printSnap("CRM CheckerGridPage "+tempCount);
-						consValue=5;
-					}
-				}
-				catch(Exception e)
-				{
-					getLog().info("Page Not Available to check further");
+					pageCounter++;
 
-					event.printSnap("Page Not Available to check further "+tempCount);
-					break;
-				}
-			}
-			else if(tempCount==5)
-			{
-				getLog().info("Search Process On Page No "+tempCount);
-				event.printSnap("CRM-CheckerGridPage: "+tempCount);
 
-				Thread.sleep(5000);
-				if(consValue==5)
-				{
-					driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
-					boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
-					if(Verify==true)
-					{
-						getLog().info("Search Record Found on Page No "+tempCount);
-						//LaunchBrowserConfig.WindowScrollHeight();
-						event.printSnap("CRM-CheckerGridPage "+tempCount);
-						break;
-					}
-					else
-					{
-						getLog().info("No Record Found of Page No "+tempCount);
-						//LaunchBrowserConfig.WindowScrollHeight();
-						event.printSnap("CRM-CheckerGridPage "+tempCount);
-						consValue=6;
-
-						//break;
-					}	
 				}
 
-			}
+				//System.out.println("Last Page : "+pageCounter);
+				//System.out.println("Total Page : "+totalRecords);
 
-			else if(consValue>=6 && (tempCount>=6 && tempCount<=totalRecords))
-			{
-				getLog().info("Search Process On Page No. :"+tempCount);
-				event.printSnap("CRM-CheckerGridPage: "+tempCount);
-				Thread.sleep(5000);
 
-				driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
-				boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
-				if(Verify==true)
+				for(int i=0;i<totalRecords;i++)
 				{
-					getLog().info("Search Record Found on Page No "+tempCount);
-					//LaunchBrowserConfig.WindowScrollHeight();
-					event.printSnap("CRM-CheckerGridPage "+tempCount);
-					break;
-				}
-				else
-				{
-					getLog().info("No Record Found of Page No "+tempCount);
-					//LaunchBrowserConfig.WindowScrollHeight();
-					event.printSnap("CRM-CheckerGridPage "+tempCount);
-				}
-
-			}		
-		}
-
-	}
-
-
-	public boolean CheckerCriteria(String ApplicationName,String Key,String Value,String Description,String Status) throws Exception {
-
-		int temp=0;
-		int flagChk=0;
-		boolean flag=false;
-		int index=0;
-		//System.out.println("Method Called");
-
-		for(WebElement applNameValues:obj.getApplicationNameList)
-		{
-			//System.out.println(applNameValues.getText());
-			temp++;
-			if(applNameValues.getText().equals(ApplicationName))
-			{
-				//System.out.println("Application Name Value Matched ");
-				for(WebElement keyValue:obj.getKeyList)
-				{
-					//System.out.println(keyValue.getText()+" : "+Key);
-					index++;
-					if(keyValue.getText().equals(Key))
+					tempCount++;
+					if(tempCount<5)
 					{
-						//System.out.println("Key Value  Matched : "+keyValue.getText());
+						getLog().info("Search Process On Page No "+tempCount);
 
-						for(WebElement valueList:obj.getValue)
+
+						try
 						{
-
-							//System.out.println(valueList.getText());
-							if(valueList.getText().equals(Value))
+							driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
+							boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
+							if(Verify==true)
 							{
-								//System.out.println("Value  Matched : "+valueList.getText()+" : "+index); 
-								driver.findElement(By.xpath("//table/tbody/tr["+index+"]/td[1]")).click();
-								event.printSnap("CRM-ToBeViewedRecordSelected");
-								clickOnViewButton();
+								getLog().info("Search Record Found on Page No "+tempCount);
+								//LaunchBrowserConfig.WindowScrollHeight();
+								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								break;
+							}	
+							else
+							{
+								getLog().info("No Record Found of Page No "+tempCount);
+								//LaunchBrowserConfig.WindowScrollHeight();
+								event.printSnap("CRM CheckerGridPage "+tempCount);
+								consValue=5;
+							}
+						}
+						catch(Exception e)
+						{
+							getLog().info("Page Not Available to check further");
 
-								clickOnBackButton();
-								event.printSnap("Back to CheckerGrid");
+							event.printSnap("Page Not Available to check further "+tempCount);
+							break;
+						}
+					}
+					else if(tempCount==5)
+					{
+						getLog().info("Search Process On Page No "+tempCount);
+						event.printSnap("CRM-CheckerGridPage: "+tempCount);
 
-								//flagChk=1;
-								flag=true;
+						Thread.sleep(5000);
+						if(consValue==5)
+						{
+							driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
+							boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
+							if(Verify==true)
+							{
+								getLog().info("Search Record Found on Page No "+tempCount);
+								//LaunchBrowserConfig.WindowScrollHeight();
+								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								break;
+							}
+							else
+							{
+								getLog().info("No Record Found of Page No "+tempCount);
+								//LaunchBrowserConfig.WindowScrollHeight();
+								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								consValue=6;
+
+								//break;
+							}	
+						}
+
+					}
+
+					else if(consValue>=6 && (tempCount>=6 && tempCount<=totalRecords))
+					{
+						getLog().info("Search Process On Page No. :"+tempCount);
+						event.printSnap("CRM-CheckerGridPage: "+tempCount);
+						Thread.sleep(5000);
+
+						driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
+						boolean Verify=CheckerCriteria(applicationName,key,value,Description,status);
+						if(Verify==true)
+						{
+							getLog().info("Search Record Found on Page No "+tempCount);
+							//LaunchBrowserConfig.WindowScrollHeight();
+							event.printSnap("CRM-CheckerGridPage "+tempCount);
+							break;
+						}
+						else
+						{
+							getLog().info("No Record Found of Page No "+tempCount);
+							//LaunchBrowserConfig.WindowScrollHeight();
+							event.printSnap("CRM-CheckerGridPage "+tempCount);
+						}
+
+					}		
+				}
+
+			}
+
+
+			public boolean CheckerCriteria(String ApplicationName,String Key,String Value,String Description,String Status) throws Exception {
+
+				int temp=0;
+				int flagChk=0;
+				boolean flag=false;
+				int index=0;
+				//System.out.println("Method Called");
+
+				for(WebElement applNameValues:obj.getApplicationNameList)
+				{
+					//System.out.println(applNameValues.getText());
+					temp++;
+					if(applNameValues.getText().equals(ApplicationName))
+					{
+						//System.out.println("Application Name Value Matched ");
+						for(WebElement keyValue:obj.getKeyList)
+						{
+							//System.out.println(keyValue.getText()+" : "+Key);
+							index++;
+							if(keyValue.getText().equals(Key))
+							{
+								//System.out.println("Key Value  Matched : "+keyValue.getText());
+
+								for(WebElement valueList:obj.getValue)
+								{
+
+									//System.out.println(valueList.getText());
+									if(valueList.getText().equals(Value))
+									{
+										//System.out.println("Value  Matched : "+valueList.getText()+" : "+index); 
+										driver.findElement(By.xpath("//table/tbody/tr["+index+"]/td[1]")).click();
+										event.printSnap("CRM-ToBeViewedRecordSelected");
+										clickOnViewButton();
+
+										clickOnBackButton();
+										event.printSnap("Back to CheckerGrid");
+
+										//flagChk=1;
+										flag=true;
+										break;
+									}
+
+								}
 								break;
 							}
 
@@ -1206,12 +1203,8 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 					}
 
 				}
-				break;
+				return flag;
+
 			}
 
 		}
-		return flag;
-
-	}
-
-}
