@@ -85,7 +85,7 @@ public class BasePageSetup {
 		case "edge" :
 		{	  
 			EdgeOptions options=new EdgeOptions();
-		//	options.addArguments("--headless");
+			options.addArguments("--headless");
 			options.addArguments("--disable-gpu"); // Optional: Use to disable GPU rendering in headless mode
 			options.addArguments("--window-size=1920,1080"); // Optional: Set window size
 
