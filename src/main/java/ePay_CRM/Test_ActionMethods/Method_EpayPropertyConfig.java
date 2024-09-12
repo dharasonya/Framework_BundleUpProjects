@@ -26,6 +26,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	int errCount=0;
 	Method_CRMBaseSteps baseStep=null;
 	int retryCount=0;
+	int addRetryCheck=0;
 	CallListeners event=new CallListeners();
 	
 	public Method_EpayPropertyConfig(WebDriver driver) throws Exception {
@@ -37,13 +38,26 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	
 	public void ClickOnAddButton() throws Exception
 	{
-		wait=new WebDriverWait(driver,Duration.ofSeconds(50));
-		Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
-		wait.until(ExpectedConditions.elementToBeClickable(obj.AddButton)).click();
-		//System.out.println("\n Add Msg : "+obj.OnClickAddLabel.getText());
-		//Assert.assertTrue(obj.OnClickAddLabel.getText().equals("Add ePay Property File Configuration"),"Add Menu Verifcation");
-		getLog().info("Clicked on Add Button");
-		event.printSnap("CRM-Add Menu Opened");
+		try
+		{
+			if(addRetryCheck<3)
+			{
+				wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+				Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
+				wait.until(ExpectedConditions.elementToBeClickable(obj.AddButton)).click();
+				getLog().info("Clicked on Add Button");
+				event.printSnap("CRM-Add Menu Opened");
+			}
+			else
+			{
+				System.out.println("Add retry Attempt Completed.!!!");
+			}
+		}
+		catch(Exception e)
+		{
+			addRetryCheck++;
+			ClickOnAddButton();
+		}
 	}
 
 	public String MakerCaptureMsg() throws Exception

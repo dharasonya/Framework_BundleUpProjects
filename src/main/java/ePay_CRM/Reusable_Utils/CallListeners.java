@@ -40,7 +40,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
     }
 
     public String getBrowservalue() {
-        System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
+       // System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
         return browserNameThreadLocal.get();
     }
    

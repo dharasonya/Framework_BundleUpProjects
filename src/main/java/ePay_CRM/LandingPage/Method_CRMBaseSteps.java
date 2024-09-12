@@ -86,6 +86,7 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 						//mainMenuValues.click();
 						getLog().info("Main Menu Selected :-"+MainMenu);
 						
+						waitForPageToLoad();
 						List<WebElement> subMenuList=driver.findElements(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li["+temp1+"]/div/a"));
 						
 						//System.out.println("SubMenuValues size :"+subMenuValues.size());
@@ -133,7 +134,7 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 		
 	}	public void waitForPageToLoad()
 	{
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
 
 

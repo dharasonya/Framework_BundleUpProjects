@@ -29,8 +29,8 @@ public class ScreenShot_Handle extends BasePageSetup{
 	public String TakeScreen(String fileName) throws Exception
 	{ 
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String DestinationScreenshotPath="C:/Users/sonya/eclipse-workspace/Bundle_Automation_Projects/CRM_Screenshots";
-		ScreenshotPath=DestinationScreenshotPath+"/epay_TestScript_PropertyFileConfig/"+RefID+"_"+"1"+"_"+fileName+".jpeg";
+		//String DestinationScreenshotPath="C:/Users/sonya/eclipse-workspace/Bundle_Automation_Projects/CRM_Screenshots";
+		ScreenshotPath=System.getProperty("user.dir")+"/Bundle_Automation_Projects/CRM_Screenshots/"+RefID+"_"+"1"+"_"+fileName+".jpeg";
 		File destinationFile=new File(ScreenshotPath);
 		FileUtils.copyFile(src,destinationFile);
 		return ScreenshotPath;
