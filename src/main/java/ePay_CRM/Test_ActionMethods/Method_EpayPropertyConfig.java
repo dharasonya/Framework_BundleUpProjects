@@ -896,8 +896,9 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 		while (retryCount < 3) {
 			try {
 				System.out.println("\n Logout Retry Attempt : " + retryCount);
-				wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-				wait.until(ExpectedConditions.elementToBeClickable(obj.ClickLogout)).click();
+				obj.ClickLogout.click();
+				//wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+				//wait.until(ExpectedConditions.elementToBeClickable(obj.ClickLogout)).click();
 				getLog().info("CRM-Logout Successfully");
 				event.printSnap("CRM-Successful LogOut");
 				break; // Exit loop after successful logout
@@ -908,7 +909,6 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 					System.out.println("All retry attempts failed.");
 					throw e; // After 3 retries, rethrow the exception
 				}
-
 			}
 		}
 	}
