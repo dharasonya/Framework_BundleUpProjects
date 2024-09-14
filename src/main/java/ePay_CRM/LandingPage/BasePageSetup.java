@@ -148,7 +148,7 @@ public class BasePageSetup {
 	}*/
 
 	@Parameters("BrowserValue")
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void BrowserIntilization(String LaunchBrowserValue) throws Exception
 	{
 		getLog().info("Browser Initilzation Started");
@@ -180,7 +180,7 @@ public class BasePageSetup {
 	}
 
 	@Parameters("BrowserValue")
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void TearDown(String BrowserValue)
 	{
 		if (driver != null) {

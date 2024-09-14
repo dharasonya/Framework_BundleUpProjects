@@ -302,7 +302,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 						for(WebElement valueList:obj.getValue)
 						{
 							//System.out.println(valueList.getText());
-							if(valueList.getText().equals(Value))
+							if(valueList.getText().equalsIgnoreCase(Value))
 							{
 								getLog().info("Value  Matched : "+valueList.getText()+" / Available at Index: "+index); 
 								driver.findElement(By.xpath("//table/tbody/tr["+index+"]/td[1]")).click();
@@ -339,7 +339,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 		Assert.assertTrue(obj.EnterApplicationName.getAttribute("value").equals(ApplicationName), "Application Text Verification");
 		Assert.assertTrue(obj.EnterKey.getAttribute("value").equals(Key), "Key Text Verification");
-		Assert.assertTrue(obj.EnterValue.getAttribute("value").equals(Value), "Value Text Verification");
+		Assert.assertTrue(obj.EnterValue.getAttribute("value").equalsIgnoreCase(Value), "Value Text Verification");
 		Assert.assertTrue(obj.EnterDescription.getAttribute("value").equals(Description), "Description Text Verification");
 		Assert.assertTrue(obj.ActiveFlag.getAttribute("value").equals(Status), "Status Text Verification");	
 		getLog().info("Records Opened in View Mode");
@@ -892,24 +892,23 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 	public void Logout() throws Exception {
 		// TODO Auto-generated method stub
-
+	
 		while (retryCount < 3) {
-			try {
-				System.out.println("\n Logout Retry Attempt : " + retryCount);
-				obj.ClickLogout.click();
-				//wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-				//wait.until(ExpectedConditions.elementToBeClickable(obj.ClickLogout)).click();
-				getLog().info("CRM-Logout Successfully");
-				event.printSnap("CRM-Successful LogOut");
-				break; // Exit loop after successful logout
-			} catch (Exception e) {
-				retryCount++;
-				System.out.println("Retry attempt failed. Attempt: " + retryCount);
-				if (retryCount >= 3) {
-					System.out.println("All retry attempts failed.");
-					throw e; // After 3 retries, rethrow the exception
-				}
-			}
+		    try {
+		        System.out.println("\n Logout Retry Attempt : " + retryCount);
+		        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		        wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
+		        getLog().info("CRM-Logout Successfully");
+		        event.printSnap("CRM-Successful LogOut");
+		        break; // Exit loop after successful logout
+		    } catch (Exception e) {
+		        retryCount++;
+		        System.out.println("Retry attempt failed. Attempt: " + retryCount);
+		        if (retryCount >= 3) {
+		            System.out.println("All retry attempts failed.");
+		            throw e; // After 3 retries, rethrow the exception
+		        }
+		    }
 		}
 	}
 

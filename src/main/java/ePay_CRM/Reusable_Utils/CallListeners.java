@@ -15,12 +15,12 @@ import ePay_CRM.LandingPage.BasePageSetup;
 
 public class CallListeners extends BasePageSetup implements ITestListener{
 
-	/*
+	/*  
 	extentTestThreadLocal: Stores the ExtentTest instance for each thread.
 	browserNameThreadLocal: Stores the browser name for each thread.
 	screenshotHandleThreadLocal: Stores the ScreenShot_Handle instance for each thread.*/
 	
-    private WebDriver driver;   
+    private WebDriver driver;    
     private static final ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<String> browserNameThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<ScreenShot_Handle> screenshotHandleThreadLocal = new ThreadLocal<>();
@@ -29,8 +29,17 @@ public class CallListeners extends BasePageSetup implements ITestListener{
   //  private static int stepCount = 0;
     private ExtentReporterNG report = new ExtentReporterNG();
     private ExtentReports extent;
+    private static String caseName;
 
-    public void setDriver(WebDriver driver) {
+    public static String getCaseName() {
+		return caseName;
+	}
+
+	public static void setCaseName(String caseName) {
+		CallListeners.caseName = caseName;
+	}
+
+	public void setDriver(WebDriver driver) {
         this.driver = driver;
         screenshotHandleThreadLocal.set(new ScreenShot_Handle(driver));  
     }
@@ -40,7 +49,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
     }
 
     public String getBrowservalue() {
-       // System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
+       System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
         return browserNameThreadLocal.get();
     }
    
@@ -49,6 +58,8 @@ public class CallListeners extends BasePageSetup implements ITestListener{
     	ScenarioCount++;
         ExtentTest extentTest = report.getExtent().createTest("Browser Run : "+getBrowservalue().toUpperCase()+ " - " + result.getMethod().getMethodName() + " : " + "Data Set :" + ScenarioCount);
         extentTestThreadLocal.set(extentTest);
+        caseName=result.getMethod().getMethodName();
+        System.out.println("\n Method execution started: "+caseName);
     }
 
     @Override
