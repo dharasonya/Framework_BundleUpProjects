@@ -7,7 +7,7 @@
 	</listeners>
 
 	<test name="CRM-Edge Test-Add Functionality" enabled="true">
-		<parameter name="BrowserValue" value="edge" />
+		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Add_Data" />
 		<classes>
 			<class
