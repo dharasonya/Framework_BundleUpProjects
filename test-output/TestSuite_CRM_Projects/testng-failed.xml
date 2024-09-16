@@ -4,38 +4,17 @@
   <listeners>
     <listener class-name="ePay_CRM.Reusable_Utils.CallListeners"/>
   </listeners>
-  <test thread-count="1" parallel="tests" name="CRM-Edge Test-Search Functionality(failed)">
+  <test thread-count="1" parallel="tests" name="CRM-Edge Test-Add Functionality(failed)">
     <parameter name="BrowserValue" value="edge"/>
-    <parameter name="sheetName" value="View_Data"/>
-    <groups>
-      <run>
-        <include name="SanityTest"/>
-        <include name="NegativeTest"/>
-      </run>
-    </groups>
+    <parameter name="sheetName" value="Add_Data"/>
     <classes>
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
         <methods>
-          <include name="SearchRecords" invocation-numbers="0"/>
+          <include name="AddNewRecord" invocation-numbers="0"/>
+          <include name="TearDown"/>
+          <include name="BrowserIntilization"/>
         </methods>
       </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
     </classes>
-  </test> <!-- CRM-Edge Test-Search Functionality(failed) -->
-  <test thread-count="1" parallel="tests" name="CRM-Edge Test-Edit Functionality(failed)">
-    <parameter name="BrowserValue" value="edge"/>
-    <parameter name="sheetName" value="Edit_Data"/>
-    <groups>
-      <run>
-        <include name="SanityTest"/>
-        <include name="NegativeTest"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
-        <methods>
-          <include name="EditRecords" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
-    </classes>
-  </test> <!-- CRM-Edge Test-Edit Functionality(failed) -->
+  </test> <!-- CRM-Edge Test-Add Functionality(failed) -->
 </suite> <!-- Failed suite [TestSuite_CRM_Projects] -->

@@ -29,8 +29,11 @@ public class ExtentReporterNG {
 
 		String actualDate=format.format(date);
 
-		String path=System.getProperty("user.dir")+"/ExtentReports/TestReport_"+CallListeners.getCaseName()+"_"+actualDate+".html";
+		//String path=System.getProperty("user.dir")+"/ExtentReports/TestReport_"+CallListeners.getCaseName()+"_"+actualDate+".html";
 
+		String path=System.getProperty("user.dir")+"/ExtentReports/TestReport_"+actualDate+".html";
+
+		
 		ExtentSparkReporter reporter=new ExtentSparkReporter(path);
 
 		reporter.config().setReportName("Euronet Project Report");

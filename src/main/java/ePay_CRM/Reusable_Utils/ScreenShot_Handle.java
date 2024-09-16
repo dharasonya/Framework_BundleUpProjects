@@ -30,10 +30,12 @@ public class ScreenShot_Handle extends BasePageSetup{
 	{ 
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		//String DestinationScreenshotPath="C:/Users/sonya/eclipse-workspace/Bundle_Automation_Projects/CRM_Screenshots";
-		ScreenshotPath=System.getProperty("user.dir")+"/Bundle_Automation_Projects/CRM_Screenshots/"+RefID+"_"+"1"+"_"+fileName+".jpeg";
+		ScreenshotPath=System.getProperty("user.dir")+"/CRM_Screenshots/"+RefID+"_"+"1"+"_"+fileName+".jpeg";
 		File destinationFile=new File(ScreenshotPath);
 		FileUtils.copyFile(src,destinationFile);
+		System.out.println("\n Screenshot taken on Path :"+ScreenshotPath);
+		
 		return ScreenshotPath;
-	
+		
 	}
 }

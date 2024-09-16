@@ -99,8 +99,10 @@ public class Repo_EpayPropertyConfig {
 	@FindBy(id="btnVerify")
 	public WebElement ClickOnVerifyButton;
 	
-
-	@FindBy(xpath="//*[@id='mu-hero']/div/nav/i/img")
+	//"//*[@id='mu-hero']/div/nav/i/img"
+	
+	
+	@FindBy(xpath="//*[@src='/FEESCRM/Content/images/LogoutIcon.png']")
 	public WebElement ClickLogout;
 	////header/div[1]/nav[1]/i[1]/img[1]
 	
