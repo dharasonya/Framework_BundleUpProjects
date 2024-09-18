@@ -893,7 +893,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 	public void Logout() throws Exception {
 		// TODO Auto-generated method stub
 	
-		while (retryCount < 3) {
+		while (retryCount < 5) {
 		    try {
 		        System.out.println("\n Logout Retry Attempt : " + retryCount);
 		        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -905,7 +905,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 		    } catch (Exception e) {
 		        retryCount++;
 		        System.out.println("Retry attempt failed. Attempt: " + retryCount);
-		        if (retryCount >= 3) {
+		        if (retryCount >= 5) {
 		            System.out.println("All retry attempts failed.");
 		            throw e; // After 3 retries, rethrow the exception
 		        }

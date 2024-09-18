@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="7.43" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="25.163" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Windows\Temp\surefire1737825545903754889\surefirebooter-20240916132713643_3.jar C:\Windows\Temp\surefire1737825545903754889 2024-09-16T13-27-13_260-jvmRun1 surefire-20240916132713643_1tmp surefire_0-20240916132713643_2tmp"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire6563642261833654462\surefirebooter-20240917195952865_3.jar C:\Windows\Temp\surefire6563642261833654462 2024-09-17T19-59-52_379-jvmRun1 surefire-20240917195952865_1tmp surefire_0-20240917195952865_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects\target\test-classes;C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects\target\classes;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\4.20.0\selenium-java-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\4.20.0\selenium-api-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.20.0\selenium-chrome-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.20.0\selenium-chromium-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-json\4.20.0\selenium-json-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.20.0\selenium-manager-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.20.0\selenium-devtools-v122-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.20.0\selenium-devtools-v123-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.20.0\selenium-devtools-v124-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.20.0\selenium-devtools-v85-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.20.0\selenium-edge-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.20.0\selenium-firefox-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-http\4.20.0\selenium-http-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.20.0\selenium-ie-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.20.0\selenium-remote-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-api\1.37.0\opentelemetry-api-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-context\1.37.0\opentelemetry-context-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.37.0\opentelemetry-exporter-logging-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.37.0\opentelemetry-sdk-common-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.37.0\opentelemetry-sdk-extension-autoconfigure-spi-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.37.0\opentelemetry-sdk-extension-autoconfigure-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.37.0-alpha\opentelemetry-api-incubator-1.37.0-alpha.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.37.0\opentelemetry-sdk-trace-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.37.0\opentelemetry-sdk-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.37.0\opentelemetry-sdk-metrics-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.37.0\opentelemetry-sdk-logs-1.37.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.14.14\byte-buddy-1.14.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-os\4.20.0\selenium-os-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.20.0\selenium-safari-driver-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\4.20.0\selenium-support-4.20.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\plugins\maven-deploy-plugin\2.8.2\maven-deploy-plugin-2.8.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-plugin-api\2.2.1\maven-plugin-api-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-project\2.2.1\maven-project-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-settings\2.2.1\maven-settings-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-profile\2.2.1\maven-profile-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-artifact-manager\2.2.1\maven-artifact-manager-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-repository-metadata\2.2.1\maven-repository-metadata-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-6\wagon-provider-api-1.0-beta-6.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-plugin-registry\2.2.1\maven-plugin-registry-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.11\plexus-interpolation-1.11.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9-stable-1\plexus-container-default-1.0-alpha-9-stable-1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-model\2.2.1\maven-model-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\maven\maven-artifact\2.2.1\maven-artifact-2.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.15\plexus-utils-3.0.15.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire1737825545903754889\surefirebooter-20240916132713643_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire6563642261833654462\surefirebooter-20240917195952865_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -56,59 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="BrowserIntilization[edge](0)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="6.813">
-    <failure message="Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.&#10;  (session not created: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) &#10;Host info: host: &apos;LAPTOP-KD6JVA8H&apos;, ip: &apos;192.168.0.103&apos;&#10;Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--headless, --disable-gpu, --window-size=1920,1080], binary: C:\Program Files (x86)\Micr..., extensions: []}}]}]" type="org.openqa.selenium.SessionNotCreatedException"><![CDATA[org.openqa.selenium.SessionNotCreatedException: 
-Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
-  (session not created: DevToolsActivePort file doesn't exist)
-  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
-Host info: host: 'LAPTOP-KD6JVA8H', ip: '192.168.0.103'
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--headless, --disable-gpu, --window-size=1920,1080], binary: C:\Program Files (x86)\Micr..., extensions: []}}]}]
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
-	at ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile(BasePageSetup.java:95)
-	at ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization(BasePageSetup.java:155)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-]]></failure>
+  <testcase name="AddNewRecord[PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0005, key05, 4505.0, Active, Index to Test, Test Added, Reject, Got it Reject](1)" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="12.112">
     <system-out><![CDATA[Extent Report called
 
  Sheet name : Add_Data
@@ -118,39 +66,66 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEd
  Total No. of Fields (Columns) ::11
 
  Imported Records: [PhonePe, BBPS Configuration, EPay Property File Configuration, TestNameApp0005, key05, 4505.0, Active, Index to Test, Test Added, Reject, Got it Reject]
+Listener Get Browser value: chrome
+
+ Method execution started: AddNewRecord
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_Navigated to URL.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_Maker Username Entered.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_Maker Password Entered.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_CRM-Succesful Login.jpeg
+Listener Get Browser value: chrome
+Event type :ePay_CRM.Reusable_Utils.CallListeners@5b6f483c
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_CRM-Enivornment Selected.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_CRM-Menu Selected.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_CRM-Add Menu Opened.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_CRM-Added New Details.jpeg
+Listener Get Browser value: chrome
+
+ Screenshot taken on Path :C:\Users\sonya\eclipse-workspace\Bundle_Automation_Projects/CRM_Screenshots/658741_1_Maker Status Message.jpeg
+Listener Get Browser value: chrome
 ]]></system-out>
     <system-err><![CDATA[log4j:ERROR Could not find value for key log4j.appender.CONSOLE
 log4j:ERROR Could not instantiate appender named "CONSOLE".
-Sep 16, 2024 1:27:18 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
+Sep 17, 2024 7:59:58 PM ePay_CRM.LandingPage.BasePageSetup BrowserIntilization
 INFO: Browser Initilzation Started
+Sep 17, 2024 8:00:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 124; Please update to a Selenium version that supports CDP version 128
+Sep 17, 2024 8:00:06 PM ePay_CRM.LandingPage.BasePageSetup LoadConfigFile
+INFO: Browser Launched :- chrome
+Sep 17, 2024 8:00:09 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserName
+INFO: Maker Username Entered
+Sep 17, 2024 8:00:09 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials EnterMakerUserPassword
+INFO: Maker Password Entered
+Sep 17, 2024 8:00:10 PM ePay_CRM.LoginProcess.Method_LoginWithCredentials clickOnLoginButton
+INFO: Succesfully Login with Entered Credentials
+Sep 17, 2024 8:00:11 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectEnviornmentType
+INFO: Enviornment Selected :-PhonePe
+Sep 17, 2024 8:00:13 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Main Menu Selected :-BBPS Configuration
+Sep 17, 2024 8:00:14 PM ePay_CRM.LandingPage.Method_CRMBaseSteps SelectMainMenu
+INFO: Child Menu Opened :-EPay Property File Configuration
+Sep 17, 2024 8:00:14 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig ClickOnAddButton
+INFO: Clicked on Add Button
+Sep 17, 2024 8:00:16 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FillInAddDetails
+INFO: Added all the Details,Proceed to Save
+Sep 17, 2024 8:00:18 PM ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig FieldError
+INFO: Any Error Messages on Save/Update : 0
+Sep 17, 2024 8:00:18 PM BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig AddNewRecord
+INFO: On Save : Kindly approve/reject previous added record.
 ]]></system-err>
-  </testcase>
-  <testcase name="AddNewRecord" classname="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig" time="0.003">
-    <failure message="Cannot invoke &quot;String.toUpperCase()&quot; because the return value of &quot;ePay_CRM.Reusable_Utils.CallListeners.getBrowservalue()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.toUpperCase()" because the return value of "ePay_CRM.Reusable_Utils.CallListeners.getBrowservalue()" is null
-	at ePay_CRM.Reusable_Utils.CallListeners.onTestStart(CallListeners.java:59)
-	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
-	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-	at org.testng.internal.TestInvoker.registerSkippedTestResult(TestInvoker.java:712)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:538)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-]]></failure>
-    <system-out><![CDATA[Listener Get Browser value: null
-]]></system-out>
   </testcase>
 </testsuite>

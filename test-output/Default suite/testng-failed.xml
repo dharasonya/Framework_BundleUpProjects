@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
+      <class name="com.RestAssured.Validate_Get_Request">
         <methods>
-          <include name="Sanity"/>
-          <include name="TearDown"/>
-          <include name="LoadConfigFile"/>
+          <include name="FieldLenghtValueCheck"/>
+          <include name="get_Request"/>
         </methods>
-      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+      </class> <!-- com.RestAssured.Validate_Get_Request -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
