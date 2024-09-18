@@ -9,10 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">TestSuite_CRM_Projects</th></tr>
-<tr><td><a href="#t0">CRM-Edge Test-Add Functionality</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23,170</td><td></td><td></td></tr>
+<tr><td><a href="#t0">CRM-Edge Test-Add Functionality</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">23,651</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite_CRM_Projects</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CRM-Edge Test-Add Functionality &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig</td><td><a href="#m0">AddNewRecord</a></td><td rowspan="1">1726583406239</td><td rowspan="1">12112</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite_CRM_Projects</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CRM-Edge Test-Add Functionality &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig</td><td><a href="#m0">AddNewRecord</a></td><td rowspan="1">1726681934544</td><td rowspan="1">8100</td></tr></tbody>
 </table>
-<h2>CRM-Edge Test-Add Functionality</h2><h3 id="m0">BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig#AddNewRecord</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>PhonePe</td><td>BBPS Configuration</td><td>EPay Property File Configuration</td><td>TestNameApp0005</td><td>key05</td><td>4505.0</td><td>Active</td><td>Index to Test</td><td>Test Added</td><td>Reject</td><td>Got it Reject</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CRM-Edge Test-Add Functionality</h2><h3 id="m0">BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig#AddNewRecord</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>PhonePe</td><td>BBPS Configuration</td><td>EPay Property File Configuration</td><td>TestNameApp0005</td><td>key05</td><td>4505.0</td><td>Active</td><td>Index to Test</td><td>Test Added</td><td>Reject</td><td>Got it Reject</td></tr><tr><th colspan="11">Exception</th></tr><tr><td colspan="11"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos; Welcome to epay&apos;]&quot;}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4f5952e10631d3223fb1d3949b682dc0, findElement {using=xpath, value=//*[text()=&apos; Welcome to epay&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\sonya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58872}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58872/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f5952e10631d3223fb1d3949b682dc0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+	at ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton(Method_LoginWithCredentials.java:71)
+	at BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig.AddNewRecord(TestCollection_CRM_ePayPropertyConfig.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
