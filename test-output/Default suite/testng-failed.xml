@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.Validate_Get_Request">
+      <class name="com.RestAssured.HeadersTest">
         <methods>
-          <include name="FieldLenghtValueCheck"/>
-          <include name="get_Request"/>
+          <include name="multiple_Headers_UsingMap"/>
         </methods>
-      </class> <!-- com.RestAssured.Validate_Get_Request -->
+      </class> <!-- com.RestAssured.HeadersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
