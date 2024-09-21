@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.HeadersTest">
+      <class name="com.RestAssured.SanityTestCollection">
         <methods>
-          <include name="multiple_Headers_UsingMap"/>
+          <include name="VerifyDynamicAddingExtractingOfHeaders"/>
         </methods>
-      </class> <!-- com.RestAssured.HeadersTest -->
+      </class> <!-- com.RestAssured.SanityTestCollection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
