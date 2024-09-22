@@ -5,7 +5,7 @@
     <classes>
       <class name="com.RestAssured.SanityTestCollection">
         <methods>
-          <include name="VerifyDynamicAddingExtractingOfHeaders"/>
+          <include name="Verify_PresenceOfKey_credit_debit_advice_Fields"/>
         </methods>
       </class> <!-- com.RestAssured.SanityTestCollection -->
     </classes>
