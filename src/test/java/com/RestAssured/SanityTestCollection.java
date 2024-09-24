@@ -17,6 +17,11 @@ import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import jdk.internal.net.http.common.Log;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.isA;
 public class SanityTestCollection {
 
 
@@ -320,19 +325,202 @@ public class SanityTestCollection {
 		.get("/openapi/subscriptions/v2/get/")
 		.then()
 		.contentType(ContentType.JSON)
-		.log().headers().extract().response();
+		.log().body().extract().response();
 		
 		
 		JsonPath jsonPath=new JsonPath(res.asString());
-		List<Object> filterArray=jsonPath.getList("credit-debit-advice.filters");
+		List<Map<String, Object>> filterArray=jsonPath.getList("credit-debit-advice.filters");
 		System.out.println("\n Filter arrary size :"+filterArray.size());
 		
-		 for (Object filter : filterArray) {
-		        Assert.assertEquals(filter, hasKey("fieldName"));///---------------to work
-		        
-		    }
+		 
+		for(int i=0;i<filterArray.size();i++)
+		{
+			String path=String.format("credit-debit-advice.filters[%d]", i);
+			Map<String, Object> filter = jsonPath.getMap(path);
+
+			// Assert that the filter has the key 'fieldName'
+			assertThat(filter, hasKey("fieldName"));
+			assertThat(filter, hasKey("filterType"));
+			assertThat(filter, hasKey("fieldValues"));
+		}
 		
+
 	   
+	}	
+	
+	@Test(priority=13)
+	public void Verify_Count_credit_debit_advice_Fields()
+	{
+		Response res=given()
+		.baseUri("https://3af23ad0-0933-4db1-b3b8-7ddb08339e5e.mock.pstmn.io")
+		.headers("Token", "49020100029000011")
+		.headers("x-Mock-Request-Headers", "Token")
+		.headers("x-mock-response-code", 200)
+		.accept(ContentType.JSON)  // Request JSON response from the server
+		 .contentType(ContentType.JSON)  // Send JSON formatted request if applicable
+		.log().headers()
+		.when()
+		.get("/openapi/subscriptions/v2/get/")
+		.then()
+		.contentType(ContentType.JSON)
+		.log().body().extract().response();
+		
+		
+		JsonPath jsonPath=new JsonPath(res.asString());
+		List<Map<String, Object>> filterArray=jsonPath.getList("credit-debit-advice.filters");
+		//System.out.println("\n Filter arrary size :"+filterArray.size());
+		
+		Assert.assertEquals(filterArray.size(), 2,"Verification Credit-debit-advice Fields Filters should contain at least 2 objects");
+	}	
+
+	
+	@Test(priority=14)
+	public void Verify_CheckNoAdditionalFields()
+	{
+		given()
+		.baseUri("https://3af23ad0-0933-4db1-b3b8-7ddb08339e5e.mock.pstmn.io")
+		.headers("Token", "49020100029000011")
+		.headers("x-Mock-Request-Headers", "Token")
+		.headers("x-mock-response-code", 200)
+		.accept(ContentType.JSON)  // Request JSON response from the server
+		 .contentType(ContentType.JSON)  // Send JSON formatted request if applicable
+		.log().headers()
+		.when()
+		.get("/openapi/subscriptions/v2/get/")
+		.then()
+			.contentType(ContentType.JSON)
+			.log().all().
+			body("", hasKey("payment-status")).
+				body("payment-status", allOf(
+                hasKey("filters"),
+                hasKey("webhookPath"),
+                hasKey("deliveryType")// Ensures no additional fields
+        )).
+			body("", hasKey("credit-debit-advice")).
+				body("credit-debit-advice", allOf(
+                hasKey("filters"),
+                hasKey("webhookPath"),
+                hasKey("deliveryType")
+                // Ensures no additional fields
+        ));
+		
+	}
+		@Test(priority=15)
+		public void Verify_CountOfRootElements()
+		{
+			Response res=given()
+			.baseUri("https://3af23ad0-0933-4db1-b3b8-7ddb08339e5e.mock.pstmn.io")
+			.headers("Token", "49020100029000011")
+			.headers("x-Mock-Request-Headers", "Token")
+			.headers("x-mock-response-code", 200)
+			.accept(ContentType.JSON)  // Request JSON response from the server
+			 .contentType(ContentType.JSON)  // Send JSON formatted request if applicable
+			.log().headers()
+			.when()
+			.get("/openapi/subscriptions/v2/get/")
+			.then().
+			log().body().statusCode(200).extract().response();
+			
+			JsonPath jsonPath= new JsonPath(res.asString());
+			Map<String,Object> rootElement=jsonPath.getMap("$");
+			
+			Assert.assertEquals(rootElement.size(),2,"Verify_CountOfRootElements");
+	}	
+		
+		@Test(priority=16)
+		public void Verify_CountOfBank_codes()
+		{
+			Response res=given()
+			.baseUri("https://3af23ad0-0933-4db1-b3b8-7ddb08339e5e.mock.pstmn.io")
+			.headers("Token", "49020100029000011")
+			.headers("x-Mock-Request-Headers", "Token")
+			.headers("x-mock-response-code", 200)
+			.accept(ContentType.JSON)  // Request JSON response from the server
+			 .contentType(ContentType.JSON)  // Send JSON formatted request if applicable
+			.log().headers()
+			.when()
+			.get("/openapi/subscriptions/v2/get/")
+			.then().
+			log().body().statusCode(200).extract().response();
+			
+			JsonPath jsonPath= new JsonPath(res.asString());
+			
+			List<Object> countBankCodes=jsonPath.getList("credit-debit-advice.filters[0].fieldValues");
+			List<Object> countBankamount=jsonPath.getList("credit-debit-advice.filters[1].fieldValues");
+			
+			Assert.assertTrue(countBankCodes.size()>=2,"Verification of fieldValues should contain three specific bank codes.");
+			Assert.assertTrue(countBankCodes.size()>=1,"Verification of fieldValues should contain three specific bank codes.");
+			
+			
+		
+	}	
+		@Test(priority=17)
+		public void Verify_DataStructure()
+		{
+			Response response=given()
+			.baseUri("https://3af23ad0-0933-4db1-b3b8-7ddb08339e5e.mock.pstmn.io")
+			.headers("Token", "49020100029000011")
+			.headers("x-Mock-Request-Headers", "Token")
+			.headers("x-mock-response-code", 200)
+			.accept(ContentType.JSON)  // Request JSON response from the server
+			 .contentType(ContentType.JSON)  // Send JSON formatted request if applicable
+			.log().headers()
+			.when()
+			.get("/openapi/subscriptions/v2/get/")
+			.then()
+	            .log().all()  // Log the response body
+	            .statusCode(200)  // Validate status code
+	            // Validate data structure types
+	            .body("payment-status.filters", isA(List.class))  // Check if filters is a List
+	            .body("payment-status.webhookPath", isA(String.class))  // Check if webhookPath is a String
+	            .body("payment-status.deliveryType", isA(String.class))  // Check if deliveryType is a String
+	            .body("credit-debit-advice.filters", isA(List.class))  // Check if filters is a List
+	            .body("credit-debit-advice.webhookPath", isA(String.class))  // Check if webhookPath is a String
+	            .body("credit-debit-advice.deliveryType", isA(String.class))  // Check if deliveryType is a String
+	            .extract().response();
+			
+			JsonPath jsonPath=new JsonPath(response.asString());
+			
+			List<Object> filterArray=jsonPath.getList("credit-debit-advice.filters");
+			for(int i=0;i<filterArray.size();i++)
+			{
+				String path_fieldName=String.format("credit-debit-advice.filters[%d].fieldName", i);
+				String path_filterType=String.format("credit-debit-advice.filters[%d].filterType", i);
+				String path_filterValues=String.format("credit-debit-advice.filters[%d].filterType", i);
+				
+				
+				if(path_fieldName.equals("accountIdentifier.bankCode"))
+				{
+					assertThat(path_fieldName,isA(String.class));
+					assertThat(path_filterType,isA(String.class));
+					assertThat(path_filterType,isA(List.class));
+					List<Object> fieldValues=jsonPath.getList("credit-debit-advice.filters.fieldValues");
+					
+					for(Object fieldList:fieldValues)
+					{
+						assertThat(fieldList,isA(String.class));
+					}
+					
+				}
+				else if(path_fieldName.equals("postExecutionBalance.amount"))
+				{
+					assertThat(path_fieldName,isA(String.class));
+					assertThat(path_filterType,isA(String.class));
+					assertThat(path_filterType,isA(List.class));
+					
+					List<Object> fieldValues=jsonPath.getList("credit-debit-advice.filters.fieldValues");
+					
+					for(Object fieldList:fieldValues)
+					{
+						assertThat(fieldList,isA(float.class));
+					}
+				}
+
+				
+			}
+			
+			
+		
 	}	
 
 	
