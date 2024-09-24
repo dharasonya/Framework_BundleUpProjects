@@ -513,7 +513,9 @@ public class SanityTestCollection {
 					for(Object fieldList:fieldValues)
 					{
 						assertThat(fieldList,isA(float.class));
+						
 					}
+					
 				}
 
 				
