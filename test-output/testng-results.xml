@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-24T22:32:19 IST" name="Default suite" finished-at="2024-09-24T22:32:27 IST" duration-ms="7838">
+  <suite started-at="2024-10-02T22:38:48 IST" name="Default suite" finished-at="2024-10-02T22:38:57 IST" duration-ms="8527">
     <groups>
     </groups>
-    <test started-at="2024-09-24T22:32:19 IST" name="Default test" finished-at="2024-09-24T22:32:27 IST" duration-ms="7838">
-      <class name="com.RestAssured.SanityTestCollection">
-        <test-method signature="Verify_DataStructure()[pri:17, instance:com.RestAssured.SanityTestCollection@38425407]" started-at="2024-09-24T22:32:19 IST" name="Verify_DataStructure" finished-at="2024-09-24T22:32:27 IST" duration-ms="7719" status="PASS">
+    <test started-at="2024-10-02T22:38:48 IST" name="Default test" finished-at="2024-10-02T22:38:57 IST" duration-ms="8527">
+      <class name="com.RestAssured.Req_Res_Specification">
+        <test-method signature="ResponseSpec_Type_6()[pri:0, instance:com.RestAssured.Req_Res_Specification@408d971b]" started-at="2024-10-02T22:38:48 IST" name="ResponseSpec_Type_6" finished-at="2024-10-02T22:38:57 IST" duration-ms="8360" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_DataStructure -->
-      </class> <!-- com.RestAssured.SanityTestCollection -->
+        </test-method> <!-- ResponseSpec_Type_6 -->
+      </class> <!-- com.RestAssured.Req_Res_Specification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

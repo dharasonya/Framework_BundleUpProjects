@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.SanityTestCollection">
+      <class name="com.RestAssured.Req_Res_Specification">
         <methods>
-          <include name="Verify_DataStructure"/>
+          <include name="SecondtEST"/>
         </methods>
-      </class> <!-- com.RestAssured.SanityTestCollection -->
+      </class> <!-- com.RestAssured.Req_Res_Specification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -450,10 +450,9 @@ public class SanityTestCollection {
 			
 			Assert.assertTrue(countBankCodes.size()>=2,"Verification of fieldValues should contain three specific bank codes.");
 			Assert.assertTrue(countBankCodes.size()>=1,"Verification of fieldValues should contain three specific bank codes.");
-			
-			
+		}	
 		
-	}	
+		
 		@Test(priority=17)
 		public void Verify_DataStructure()
 		{
