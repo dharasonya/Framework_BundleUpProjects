@@ -45,9 +45,7 @@ public class Req_Res_Specification {
 				
 		Response response=requestSpecification.get("/openapi/subscriptions/v2/get/").then().log().all().extract().response();  // Log the response b
 		assertThat(response.statusCode(),is(equalTo(200)));
-		assertThat(response.path("payment-status.deliveryType").toString(),is(equalTo("WEBHOOKDELIVERY")));
-		
-		
+		assertThat(response.path("payment-status.deliveryType").toString(),is(equalTo("WEBHOOKDELIVERY")));	
 	}
 	
 	@Test

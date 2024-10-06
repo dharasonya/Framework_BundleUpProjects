@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.Req_Res_Specification">
+      <class name="com.RestAssured.GetRequest_Sanity">
         <methods>
-          <include name="SecondtEST"/>
+          <include name="HitEndPoint_Setup"/>
+          <include name="ValidateStatusCode"/>
         </methods>
-      </class> <!-- com.RestAssured.Req_Res_Specification -->
+      </class> <!-- com.RestAssured.GetRequest_Sanity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
