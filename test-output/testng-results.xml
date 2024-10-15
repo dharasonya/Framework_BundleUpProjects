@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-06T14:59:47 IST" name="Default suite" finished-at="2024-10-06T14:59:53 IST" duration-ms="5813">
+  <suite started-at="2024-10-15T22:25:44 IST" name="Default suite" finished-at="2024-10-15T22:25:49 IST" duration-ms="5583">
     <groups>
     </groups>
-    <test started-at="2024-10-06T14:59:47 IST" name="Default test" finished-at="2024-10-06T14:59:53 IST" duration-ms="5813">
+    <test started-at="2024-10-15T22:25:44 IST" name="Default test" finished-at="2024-10-15T22:25:49 IST" duration-ms="5583">
       <class name="com.RestAssured.Final_GetRequest_Sanity">
-        <test-method is-config="true" signature="HitEndPoint_Setup()[pri:0, instance:com.RestAssured.Final_GetRequest_Sanity@233795b6]" started-at="2024-10-06T14:59:47 IST" name="HitEndPoint_Setup" finished-at="2024-10-06T14:59:50 IST" duration-ms="2490" status="PASS">
+        <test-method is-config="true" signature="HitEndPoint_Setup()[pri:0, instance:com.RestAssured.Final_GetRequest_Sanity@6ed3ccb2]" started-at="2024-10-15T22:25:44 IST" name="HitEndPoint_Setup" finished-at="2024-10-15T22:25:45 IST" duration-ms="1755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HitEndPoint_Setup -->
-        <test-method signature="ValidateStatusCode()[pri:0, instance:com.RestAssured.Final_GetRequest_Sanity@233795b6]" started-at="2024-10-06T14:59:50 IST" name="ValidateStatusCode" finished-at="2024-10-06T14:59:53 IST" duration-ms="3202" status="PASS">
+        <test-method signature="Verify_PaymentRefNo()[pri:5, instance:com.RestAssured.Final_GetRequest_Sanity@6ed3ccb2]" started-at="2024-10-15T22:25:45 IST" name="Verify_PaymentRefNo" finished-at="2024-10-15T22:25:49 IST" duration-ms="3755" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateStatusCode -->
+        </test-method> <!-- Verify_PaymentRefNo -->
       </class> <!-- com.RestAssured.Final_GetRequest_Sanity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
