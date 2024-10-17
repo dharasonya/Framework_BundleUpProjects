@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.Final_GetRequest_Sanity">
+      <class name="com.RestAssured.Final_PostRequest_Sanity">
         <methods>
-          <include name="Verify_MerchantRefNoRefNo"/>
+          <include name="VerifyStatusCode"/>
           <include name="HitEndPoint_Setup"/>
         </methods>
-      </class> <!-- com.RestAssured.Final_GetRequest_Sanity -->
+      </class> <!-- com.RestAssured.Final_PostRequest_Sanity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
