@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-17T22:13:49 IST" name="Default suite" finished-at="2024-10-17T22:13:57 IST" duration-ms="7892">
+  <suite started-at="2024-10-20T22:04:48 IST" name="Default suite" finished-at="2024-10-20T22:04:54 IST" duration-ms="6532">
     <groups>
     </groups>
-    <test started-at="2024-10-17T22:13:49 IST" name="Default test" finished-at="2024-10-17T22:13:57 IST" duration-ms="7892">
-      <class name="com.RestAssured.Final_PostRequest_Sanity">
-        <test-method is-config="true" signature="HitEndPoint_Setup()[pri:0, instance:com.RestAssured.Final_PostRequest_Sanity@233795b6]" started-at="2024-10-17T22:13:49 IST" name="HitEndPoint_Setup" finished-at="2024-10-17T22:13:51 IST" duration-ms="2646" status="PASS">
+    <test started-at="2024-10-20T22:04:48 IST" name="Default test" finished-at="2024-10-20T22:04:54 IST" duration-ms="6532">
+      <class name="com.RestAssured.Post_PayloadReq_File">
+        <test-method is-config="true" signature="HitEndPoint_Setup()[pri:0, instance:com.RestAssured.Post_PayloadReq_File@5bda8e08]" started-at="2024-10-20T22:04:48 IST" name="HitEndPoint_Setup" finished-at="2024-10-20T22:04:49 IST" duration-ms="1825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HitEndPoint_Setup -->
-        <test-method signature="VerifyStatusCode()[pri:0, instance:com.RestAssured.Final_PostRequest_Sanity@233795b6]" started-at="2024-10-17T22:13:51 IST" name="VerifyStatusCode" finished-at="2024-10-17T22:13:57 IST" duration-ms="5123" status="PASS">
+        <test-method signature="VerifyStatusCode()[pri:0, instance:com.RestAssured.Post_PayloadReq_File@5bda8e08]" started-at="2024-10-20T22:04:50 IST" name="VerifyStatusCode" finished-at="2024-10-20T22:04:54 IST" duration-ms="4630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyStatusCode -->
-      </class> <!-- com.RestAssured.Final_PostRequest_Sanity -->
+      </class> <!-- com.RestAssured.Post_PayloadReq_File -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
