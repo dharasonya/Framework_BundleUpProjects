@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.Post_PayloadReq_File">
+      <class name="com.RestAssured.epay.tests.epay_DirectRequest_NPCI">
         <methods>
-          <include name="VerifyStatusCode"/>
           <include name="HitEndPoint_Setup"/>
+          <include name="PostCreate_User"/>
         </methods>
-      </class> <!-- com.RestAssured.Post_PayloadReq_File -->
+      </class> <!-- com.RestAssured.epay.tests.epay_DirectRequest_NPCI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test" enabled="false">
+  	<parameter name="FileName" value="APITestData" />
+		<parameter name="sheetName" value="Add" />
+		
+    <classes>
+      <class name="com.RestAssured.Collection.EmpPersonal_RootMain"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="epay_Test_DirectService_OCNS00000TMN02">
+  	<parameter name="FileName" value="API_Billeri_OCNS00000TMN02" />
+		<parameter name="sheetName" value="Add" />
+    <classes>
+      <class name="com.RestAssured.epay.tests.epay_DirectRequest_NPCI"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

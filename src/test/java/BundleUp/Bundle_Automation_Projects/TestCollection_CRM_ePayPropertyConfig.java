@@ -12,12 +12,13 @@ import ePay_CRM.LoginProcess.Method_LoginWithCredentials;
 import ePay_CRM.Reusable_Utils.RetryHandling;
 import ePay_CRM.Reusable_Utils.TestReader_ExcelData;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
+import ePay_CRM.Test_DataDriven.TestData_ePayPropertyConfig;
 
 
  
 public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 
-	//(priority=1,dataProvider="Add_Data",groups= {"SanityTest"} ,dataProviderClass=TestData_ePayPropertyConfig.class,enabled=true)
+	//@Test(priority=1,dataProvider="Add_Data",groups= {"SanityTest"} ,dataProviderClass=TestData_ePayPropertyConfig.class,enabled=true)
 	@Test(priority=1,dataProvider="ExcelDataProvider",groups={"SanityTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)///Working
 	public void AddNewRecord(String Environment,String ParentMenu,String ChildMenu,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks,String Action,String CheckerRemarks) throws Exception {  
 		{

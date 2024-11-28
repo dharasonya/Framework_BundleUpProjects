@@ -13,11 +13,14 @@ import org.testng.annotations.DataProvider;
 public class TestReader_ExcelData {
 
 	 // Generic method to get data based on sheet name
-	public static String[][] getData(String sheetName) throws Exception
+	public static String[][] getData(String sheetName,String FileName) throws Exception
 	{
 		String[][] data = null;
-
-		File src=new File(System.getProperty("user.dir")+"//src//main//resources//FetchData//CRM_EpayPropertyConfig_Data.xlsx");
+		File src=new File(System.getProperty("user.dir")+"//src//main//resources//FetchData//"+FileName+".xlsx");
+		
+		//File src=new File(System.getProperty("user.dir")+"//src//main//resources//FetchData//APITestData.xlsx");
+		//File src=new File(System.getProperty("user.dir")+"//src//main//resources//FetchData//CRM_EpayPropertyConfig_Data.xlsx");
+		
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet(sheetName);  
@@ -65,8 +68,11 @@ public class TestReader_ExcelData {
     @DataProvider(name = "ExcelDataProvider")
     public static Object[][] getExcelDataProvider(ITestContext context) throws Exception {
         String sheetName = context.getCurrentXmlTest().getParameter("sheetName");
+        String fileName=context.getCurrentXmlTest().getParameter("FileName");
+        System.out.println("\n File name : "+fileName);
         System.out.println("\n Sheet name : "+sheetName);
-        return getData(sheetName);
+      return getData(sheetName,fileName);// Commented coz this value we are referring from testng xml file
+      // return getData("Add");
     }
 
 }

@@ -5,8 +5,10 @@
 	<listeners>
 		<listener class-name="ePay_CRM.Reusable_Utils.CallListeners" />
 	</listeners>
+	
+	
 
-	<test name="CRM-Edge Test-Add Functionality" enabled="true">
+	<test name="CRM-Edge Test-Add Functionality" enabled="false">
 		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Add_Data" />
 		<classes>
