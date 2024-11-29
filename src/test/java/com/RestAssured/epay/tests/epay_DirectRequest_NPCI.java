@@ -1,6 +1,5 @@
 package com.RestAssured.epay.tests;
 
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -16,6 +15,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.RestAssured.Collection.ResponseAction.epay_Validate_ValueConstraints;
 import com.RestAssured.Collection.Service.Service_MerchantServReqDet;
 import com.RestAssured.Collection.pojo.MerchantServiceRequestDetails;
 import com.RestAssured.Collection.response.AdditionalInformation;
@@ -91,42 +91,52 @@ public class epay_DirectRequest_NPCI {
 
 		Response response = RestAssured
 				.given()
-	            .spec(requestSpecification)
-	            .body(mainBodyPayload)
-	         .when()
-	            .post("enserviceAES256DR/API/EnService")
-	            .then().contentType("text/plain").spec(responseSpecification).extract().response();
-		
+				.spec(requestSpecification)
+				.body(mainBodyPayload)
+				.when()
+				.post("enserviceAES256DR/API/EnService")
+				.then().contentType("text/plain").spec(responseSpecification).extract().response();
+
 		// Get response as a string
 		String responseBody = response.getBody().asPrettyString();
-		
+
 		// Create an ObjectMapper instance
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 
+		if (response.getStatusCode() == 200) { // Check for successful response
+			try {
+				//System.out.println("\n Response Data :-"+response);
+				// Deserialize response to POJO
+				epay_ResponseData responseData = objectMapper.readValue(responseBody, epay_ResponseData.class);
+				epay_Validate_ValueConstraints verify=new epay_Validate_ValueConstraints(responseData);
+				verify.Validate_EuronetRefNo();
+				verify.Validate_MerchantRefNo();
+				verify.Validate_PaymentRefNo();
+				verify.Validate_ApprovalRefNo();
+				verify.Validate_ResponseCode();
+				verify.Validate_BillerID();
+				verify.Validate_StateCode();
+				verify.Validate_BBPSRefId();
+				verify.Validate_OperatorRefId();
+				verify.Validate_BBPSONUSRefId();
+				verify.Validate_NetworkMode();
 
-		 if (response.getStatusCode() == 200) { // Check for successful response
-		        try {
-		        	 //System.out.println("\n Response Data :-"+response);
-		            // Deserialize response to POJO
-		        	  epay_ResponseData responseData = objectMapper.readValue(responseBody, epay_ResponseData.class);
-		        	    
-		            // Access fields
-		            System.out.println("EuronetRefNo: " + responseData.getEuronetRefNo());
-		            System.out.println("MerchantRefNo: " + responseData.getMerchantRefNo());
+//				System.out.println("EuronetRefNo: " + responseData.getEuronetRefNo());
+//				System.out.println("MerchantRefNo: " + responseData.getMerchantRefNo());
 
-		            // Access nested AdditionalInformation
-		            for (AdditionalInformation info : responseData.getAdditionalInformation()) {
-		                System.out.println("Name: " + info.getName() + ", Value: " + info.getValue());
-		            }
-		        } catch (Exception e) {
-		            System.out.println("Error deserializing response: " + e.getMessage());
-		        }
-		    } else {
-		        // Log error details for non-200 responses
-		        System.out.println("Error: Received HTTP " + response.getStatusCode());
-		        System.out.println("Response Body: " + response.getBody().asString());
-		    }
+				// Access nested AdditionalInformation 
+				/*for (AdditionalInformation info : responseData.getAdditionalInformation()) {
+					System.out.println("Name: " + info.getName() + ", Value: " + info.getValue());
+				}*/
+			} catch (Exception e) {
+				System.out.println("Error deserializing response: " + e.getMessage());
+			}
+		} else {
+			// Log error details for non-200 responses
+			System.out.println("Error: Received HTTP " + response.getStatusCode());
+			System.out.println("Response Body: " + response.getBody().asString());
+		}
 
 	}
 
