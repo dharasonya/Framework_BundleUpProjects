@@ -115,13 +115,22 @@ public class epay_DirectRequest_NPCI {
 				verify.Validate_PaymentRefNo();
 				verify.Validate_ApprovalRefNo();
 				verify.Validate_ResponseCode();
-				verify.Validate_BillerID();
+				verify.Validate_BillerID(BillerId);
 				verify.Validate_StateCode();
 				verify.Validate_BBPSRefId();
 				verify.Validate_OperatorRefId();
 				verify.Validate_BBPSONUSRefId();
 				verify.Validate_NetworkMode();
-
+				verify.Validate_AdditionalInformation(SubscriptionDetails_Name1,SubscriptionDetails_Value1,SubscriptionDetails_Name2,SubscriptionDetails_Value2,
+						SubscriptionDetails_Name3,SubscriptionDetails_Value3,SubscriptionDetails_Name4,SubscriptionDetails_Value4,
+						SubscriptionDetails_Name5,SubscriptionDetails_Value5);
+	
+			/*	for (AdditionalInformation info : responseData.getAdditionalInformation()) {
+					System.out.println("Name: " + info.getName() + ", Value: " + info.getValue());
+					//Assert.assertEquals(info.getName(), false)
+				}*/
+				
+			
 //				System.out.println("EuronetRefNo: " + responseData.getEuronetRefNo());
 //				System.out.println("MerchantRefNo: " + responseData.getMerchantRefNo());
 
