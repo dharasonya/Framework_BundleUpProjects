@@ -1,48 +1,39 @@
 package com.RestAssured.epay.tests;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
 
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
-import org.openqa.selenium.bidi.network.ResponseData;
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.RestAssured.Collection.ResponseAction.epay_Validate_ValueConstraints;
+import com.RestAssured.Collection.ResponseAction.epay_Validate_AdditionalInfoArray;
+import com.RestAssured.Collection.ResponseAction.epay_Validate_DataTypeValidations;
+import com.RestAssured.Collection.ResponseAction.epay_Validate_Field_Presence_Structure;
 import com.RestAssured.Collection.Service.Service_MerchantServReqDet;
-import com.RestAssured.Collection.pojo.MerchantServiceRequestDetails;
 import com.RestAssured.Collection.response.AdditionalInformation;
+import com.RestAssured.Collection.response.epay_ResponseData;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ePay_CRM.Reusable_Utils.TestReader_ExcelData;
-import ePay_CRM.Test_DataDriven.TestData_ePayPropertyConfig;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
-import io.restassured.response.Response;
-import com.RestAssured.Collection.response.epay_ResponseData;
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import static org.hamcrest.Matchers.*;
 
 public class epay_DirectRequest_NPCI {
 
 	RequestSpecification requestSpecification;
 	ResponseSpecification responseSpecification;
 	Response res;
-
+	
 	@BeforeTest(alwaysRun=true)
 	public void HitEndPoint_Setup()
 	{
@@ -72,7 +63,7 @@ public class epay_DirectRequest_NPCI {
 			String SubscriptionDetails_Name1,String SubscriptionDetails_Value1,String SubscriptionDetails_Name2,String SubscriptionDetails_Value2,
 			String SubscriptionDetails_Name3,String SubscriptionDetails_Value3,String SubscriptionDetails_Name4,String SubscriptionDetails_Value4,
 			String SubscriptionDetails_Name5,String SubscriptionDetails_Value5,String PaymentMode,String PaymentParams_Name1,String PaymentParams_Value1,
-			String AdditionalInformation
+			String AdditionalInformation1
 			) throws Exception
 	//String name, String username,String email,String street,String suite,String city,String zipcode,String lat,String lng) {
 	{
@@ -87,7 +78,7 @@ public class epay_DirectRequest_NPCI {
 				SubscriptionDetails_Name1,SubscriptionDetails_Value1,SubscriptionDetails_Name2,SubscriptionDetails_Value2,
 				SubscriptionDetails_Name3,SubscriptionDetails_Value3,SubscriptionDetails_Name4,SubscriptionDetails_Value4,
 				SubscriptionDetails_Name5,SubscriptionDetails_Value5,PaymentMode,PaymentParams_Name1,PaymentParams_Value1,
-				AdditionalInformation));
+				AdditionalInformation1));
 
 		Response response = RestAssured
 				.given()
@@ -107,9 +98,10 @@ public class epay_DirectRequest_NPCI {
 		if (response.getStatusCode() == 200) { // Check for successful response
 			try {
 				//System.out.println("\n Response Data :-"+response);
+				
 				// Deserialize response to POJO
 				epay_ResponseData responseData = objectMapper.readValue(responseBody, epay_ResponseData.class);
-				epay_Validate_ValueConstraints verify=new epay_Validate_ValueConstraints(responseData);
+				epay_Validate_Field_Presence_Structure verify=new epay_Validate_Field_Presence_Structure(responseData);
 				verify.Validate_EuronetRefNo();
 				verify.Validate_MerchantRefNo();
 				verify.Validate_PaymentRefNo();
@@ -121,23 +113,20 @@ public class epay_DirectRequest_NPCI {
 				verify.Validate_OperatorRefId();
 				verify.Validate_BBPSONUSRefId();
 				verify.Validate_NetworkMode();
-				verify.Validate_AdditionalInformation(SubscriptionDetails_Name1,SubscriptionDetails_Value1,SubscriptionDetails_Name2,SubscriptionDetails_Value2,
-						SubscriptionDetails_Name3,SubscriptionDetails_Value3,SubscriptionDetails_Name4,SubscriptionDetails_Value4,
-						SubscriptionDetails_Name5,SubscriptionDetails_Value5);
-	
-			/*	for (AdditionalInformation info : responseData.getAdditionalInformation()) {
-					System.out.println("Name: " + info.getName() + ", Value: " + info.getValue());
-					//Assert.assertEquals(info.getName(), false)
-				}*/
 				
-			
-//				System.out.println("EuronetRefNo: " + responseData.getEuronetRefNo());
-//				System.out.println("MerchantRefNo: " + responseData.getMerchantRefNo());
+				if(responseData.getResponseCode()=="00")
+				{
+					verify.Validate_AdditionalInformation(SubscriptionDetails_Name1,SubscriptionDetails_Value1,SubscriptionDetails_Name2,SubscriptionDetails_Value2,
+							SubscriptionDetails_Name3,SubscriptionDetails_Value3,SubscriptionDetails_Name4,SubscriptionDetails_Value4,
+							SubscriptionDetails_Name5,SubscriptionDetails_Value5);
+		
+					epay_Validate_DataTypeValidations validateType=new epay_Validate_DataTypeValidations(responseData);
+					validateType.Validate_DataType();
 
-				// Access nested AdditionalInformation 
-				/*for (AdditionalInformation info : responseData.getAdditionalInformation()) {
-					System.out.println("Name: " + info.getName() + ", Value: " + info.getValue());
-				}*/
+					epay_Validate_AdditionalInfoArray Validate_AdditionalInfoStructure=new epay_Validate_AdditionalInfoArray(responseData);
+					Validate_AdditionalInfoStructure.Validate_AdditionalInfoSize();
+					Validate_AdditionalInfoStructure.Validate_AdditionalInfoStructure();
+				}
 			} catch (Exception e) {
 				System.out.println("Error deserializing response: " + e.getMessage());
 			}
@@ -147,6 +136,9 @@ public class epay_DirectRequest_NPCI {
 			System.out.println("Response Body: " + response.getBody().asString());
 		}
 
+		
+		
+		
 	}
 
 }  

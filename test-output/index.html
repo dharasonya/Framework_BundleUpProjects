@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.RestAssured.epay.tests.epay_DirectRequest_NPCI" class="method navigator-link" hash-for-method="PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, 100000, 0,...)">PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, 100000, 0,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.RestAssured.epay.tests.epay_DirectRequest_NPCI" class="method navigator-link" hash-for-method="PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, -100000, 0...)">PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, -100000, 0...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -130,6 +135,14 @@
                   </a> <!-- PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, 100000, 0,...) -->
                   <span class="method-name">PostCreate_User</span>
                   <span class="parameters">(Service,10.13.139.44,BBS,BBS_01,BBS_01,BBS_01,EU01EU02000000000001,OCNS00000TMN02,100000,0,MOB,INITIATING_CHANNEL,MOB,IP,122.15.121.179,OS,Android,APP,1.23456789E8,IMEI,1234567gdf89,No,MOBILE,N6aeAZ76ZIgz36Tl5jIh9Q==,EMAIL,2GqSrdtRgkF7UxaQPOfV71cZmwLCKz7tYMu5ZmvO1Y0=,a,10,a b,20,a b c,30,a b c d,40,a b c d e,50,Wallet,WalletName|MobileNo,2kNWfZfGuTHZSHTb92+QhXc1Lg5RqJ3GnTovfruYSEk=,null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, -100000, 0...)">
+                  </a> <!-- PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, -100000, 0...) -->
+                  <span class="method-name">PostCreate_User</span>
+                  <span class="parameters">(Service,10.13.139.44,BBS,BBS_01,BBS_01,BBS_01,EU01EU02000000000001,OCNS00000TMN02,-100000,0,MOB,INITIATING_CHANNEL,MOB,IP,122.15.121.179,OS,Android,APP,1.23456789E8,IMEI,1234567gdf89,No,MOBILE,N6aeAZ76ZIgz36Tl5jIh9Q==,EMAIL,2GqSrdtRgkF7UxaQPOfV71cZmwLCKz7tYMu5ZmvO1Y0=,a,10,a b,20,a b c,30,a b c d,40,a b c d e,50,Wallet,WalletName|MobileNo,2kNWfZfGuTHZSHTb92+QhXc1Lg5RqJ3GnTovfruYSEk=,null)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,16 +209,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PostCreate_User')
 data.setCell(0, 2, 'com.RestAssured.epay.tests.epay_DirectRequest_NPCI')
-data.setCell(0, 3, 12989);
+data.setCell(0, 3, 12558);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'PostCreate_User')
+data.setCell(1, 2, 'com.RestAssured.epay.tests.epay_DirectRequest_NPCI')
+data.setCell(1, 3, 624);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -238,7 +255,11 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, 100000, 0,...)</span>
-                <span class="method-start">4376 ms</span>
+                <span class="method-start">3223 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PostCreate_User(Service, 10.13.139.44, BBS, BBS_01, BBS_01, BBS_01, EU01EU02000000000001, OCNS00000TMN02, -100000, 0...)</span>
+                <span class="method-start">15788 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
