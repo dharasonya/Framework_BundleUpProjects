@@ -5,7 +5,8 @@
     <listener class-name="ePay_CRM.Reusable_Utils.CallListeners"/>
   </listeners>
   <test thread-count="1" parallel="tests" name="CRM-Edge Test-Add Functionality(failed)">
-    <parameter name="BrowserValue" value="edge"/>
+    <parameter name="fileName" value="CRM_EpayPropertyConfig_Data"/>
+    <parameter name="BrowserValue" value="chrome"/>
     <parameter name="sheetName" value="Add_Data"/>
     <classes>
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">

@@ -68,7 +68,7 @@ public class TestReader_ExcelData {
     @DataProvider(name = "ExcelDataProvider")
     public static Object[][] getExcelDataProvider(ITestContext context) throws Exception {
         String sheetName = context.getCurrentXmlTest().getParameter("sheetName");
-        String fileName=context.getCurrentXmlTest().getParameter("FileName");
+        String fileName=context.getCurrentXmlTest().getParameter("fileName");
         System.out.println("\n File name : "+fileName);
         System.out.println("\n Sheet name : "+sheetName);
       return getData(sheetName,fileName);// Commented coz this value we are referring from testng xml file

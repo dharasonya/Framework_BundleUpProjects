@@ -1,432 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T22:29:45 IST" name="Suite" finished-at="2024-12-04T22:30:02 IST" duration-ms="16439">
+  <suite started-at="2025-01-24T23:05:50 IST" name="TestSuite_CRM_Projects" finished-at="2025-01-24T23:07:18 IST" duration-ms="88297">
     <groups>
-      <group name="SanityTest">
-        <method signature="epay_DirectRequest_NPCI.PostCreate_User(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.RestAssured.epay.tests.epay_DirectRequest_NPCI@229f66ed]" name="PostCreate_User" class="com.RestAssured.epay.tests.epay_DirectRequest_NPCI"/>
-      </group> <!-- SanityTest -->
     </groups>
-    <test started-at="2024-12-04T22:29:45 IST" name="epay_Test_DirectService_OCNS00000TMN02" finished-at="2024-12-04T22:30:02 IST" duration-ms="16439">
-      <class name="com.RestAssured.epay.tests.epay_DirectRequest_NPCI">
-        <test-method is-config="true" signature="HitEndPoint_Setup()[pri:0, instance:com.RestAssured.epay.tests.epay_DirectRequest_NPCI@229f66ed]" started-at="2024-12-04T22:29:46 IST" name="HitEndPoint_Setup" finished-at="2024-12-04T22:29:47 IST" duration-ms="1432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HitEndPoint_Setup -->
-        <test-method signature="PostCreate_User(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.RestAssured.epay.tests.epay_DirectRequest_NPCI@229f66ed]" started-at="2024-12-04T22:29:49 IST" name="PostCreate_User" data-provider="ExcelDataProvider" finished-at="2024-12-04T22:30:01 IST" duration-ms="12558" status="PASS">
+    <test started-at="2025-01-24T23:05:50 IST" name="CRM-Edge Test-Edit Functionality" finished-at="2025-01-24T23:07:18 IST" duration-ms="88297">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@179ece50]" started-at="2025-01-24T23:05:54 IST" name="BrowserIntilization" finished-at="2025-01-24T23:06:02 IST" duration-ms="7632" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Service]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[10.13.139.44]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[BBS]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[BBS_01]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[BBS_01]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[BBS_01]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[EU01EU02000000000001]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[OCNS00000TMN02]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[100000]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[MOB]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[INITIATING_CHANNEL]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[MOB]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[IP]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[122.15.121.179]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[OS]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[APP]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[1.23456789E8]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[IMEI]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[1234567gdf89]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[MOBILE]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[N6aeAZ76ZIgz36Tl5jIh9Q==]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[EMAIL]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[2GqSrdtRgkF7UxaQPOfV71cZmwLCKz7tYMu5ZmvO1Y0=]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[a b]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[a b c]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[a b c d]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[a b c d e]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[50]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[Wallet]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[WalletName|MobileNo]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[2kNWfZfGuTHZSHTb92+QhXc1Lg5RqJ3GnTovfruYSEk=]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[null]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PostCreate_User -->
-        <test-method signature="PostCreate_User(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.RestAssured.epay.tests.epay_DirectRequest_NPCI@229f66ed]" started-at="2024-12-04T22:30:01 IST" name="PostCreate_User" data-provider="ExcelDataProvider" finished-at="2024-12-04T22:30:02 IST" duration-ms="624" status="PASS">
+        </test-method> <!-- BrowserIntilization -->
+        <test-method signature="EditRecords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@179ece50]" started-at="2025-01-24T23:06:02 IST" name="EditRecords" data-provider="ExcelDataProvider" finished-at="2025-01-24T23:07:17 IST" duration-ms="75445" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Service]]>
+                <![CDATA[BBPS2.0]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[10.13.139.44]]>
+                <![CDATA[BBPS Configuration]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[BBS]]>
+                <![CDATA[EPay Property File Configuration]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[BBS_01]]>
+                <![CDATA[finance]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[BBS_01]]>
+                <![CDATA[SK_biller]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[BBS_01]]>
+                <![CDATA[requestChannel]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[EU01EU02000000000001]]>
+                <![CDATA[INTERNET_BANKING]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[OCNS00000TMN02]]>
+                <![CDATA[Active]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[-100000]]>
+                <![CDATA[This value is requestChannel used for SK finance biller]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Test Added]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[MOB]]>
+                <![CDATA[New Value added 1]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[INITIATING_CHANNEL]]>
+                <![CDATA[New Desc added 1]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[MOB]]>
+                <![CDATA[InActive]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[IP]]>
+                <![CDATA[Reject]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[122.15.121.179]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[OS]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[APP]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[1.23456789E8]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[IMEI]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[1234567gdf89]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[MOBILE]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[N6aeAZ76ZIgz36Tl5jIh9Q==]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[EMAIL]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[2GqSrdtRgkF7UxaQPOfV71cZmwLCKz7tYMu5ZmvO1Y0=]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[a b]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[a b c]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[a b c d]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[a b c d e]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[50]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[Wallet]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[WalletName|MobileNo]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[2kNWfZfGuTHZSHTb92+QhXc1Lg5RqJ3GnTovfruYSEk=]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[null]]>
+                <![CDATA[Reject to Do]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PostCreate_User -->
-      </class> <!-- com.RestAssured.epay.tests.epay_DirectRequest_NPCI -->
-    </test> <!-- epay_Test_DirectService_OCNS00000TMN02 -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- EditRecords -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@179ece50]" started-at="2025-01-24T23:07:17 IST" name="TearDown" finished-at="2025-01-24T23:07:18 IST" duration-ms="956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+    </test> <!-- CRM-Edge Test-Edit Functionality -->
+  </suite> <!-- TestSuite_CRM_Projects -->
 </testng-results>

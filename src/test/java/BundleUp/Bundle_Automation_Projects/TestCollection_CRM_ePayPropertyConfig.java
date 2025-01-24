@@ -14,12 +14,12 @@ import ePay_CRM.Reusable_Utils.TestReader_ExcelData;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
 import ePay_CRM.Test_DataDriven.TestData_ePayPropertyConfig;
 
-
+  
  
 public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 
 	//@Test(priority=1,dataProvider="Add_Data",groups= {"SanityTest"} ,dataProviderClass=TestData_ePayPropertyConfig.class,enabled=true)
-	@Test(priority=1,dataProvider="ExcelDataProvider",groups={"SanityTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)///Working
+	@Test(priority=1,dataProvider="ExcelDataProvider",groups={"SanityTest"},dataProviderClass=TestReader_ExcelData.class,enabled=false)///Working
 	public void AddNewRecord(String Environment,String ParentMenu,String ChildMenu,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks,String Action,String CheckerRemarks) throws Exception {  
 		{
 			Method_LoginWithCredentials login=GetLoginCredentials();
@@ -58,7 +58,7 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 	
 	//@Test(priority=2,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)
 	
-	@Test(priority=2,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)
+	@Test(priority=2,dataProvider="ExcelDataProvider",dataProviderClass=TestReader_ExcelData.class,enabled=false)
 	public void ResetRecord(String Environment,String ParentMenu,String ChildMenu,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks) throws Exception
 	{
 
@@ -69,14 +69,14 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 		login.EnterMakerUserName();
 		login.EnterMakerUserPassword();
 		login.clickOnLoginButton();  
-		step.SelectEnviornmentType("BBPS2.0");
-		step.SelectMainMenu("BBPS Configuration","EPay Property File Configuration");
+		step.SelectEnviornmentType(Environment);
+		step.SelectMainMenu(ParentMenu,ChildMenu);
 		corestep.ClickOnAddButton();
 		corestep.FillInAddDetails(ApplicationName,Key,Value,Status,Description,Remarks);
 		corestep.clickOnResetButton();
 	}
 
-	@Test(priority=3,groups={"NegativeTest"},enabled=true) ///Working
+	@Test(priority=3,groups={"NegativeTest"},enabled=false) ///Working
 	public void GoBack() throws Exception
 	{
 		Method_LoginWithCredentials login=GetLoginCredentials();
@@ -93,7 +93,7 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 	} 
 
 	@Test(priority=4,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)
-	public void SearchRecords(String SearchCriteria,String ApplicationName,String Key,String Value,String Description,String Status) throws Exception
+	public void SearchRecords(String Environment,String ParentMenu,String ChildMenu,String SearchCriteria,String ApplicationName,String Key,String Value,String Description,String Status) throws Exception
 	{
 		Method_LoginWithCredentials login=GetLoginCredentials();
 		Method_CRMBaseSteps step=CRMBaseStep();
@@ -102,8 +102,8 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 		login.EnterMakerUserName();
 		login.EnterMakerUserPassword();
 		login.clickOnLoginButton();  
-		step.SelectEnviornmentType("BBPS2.0");
-		step.SelectMainMenu("BBPS2.0","ePay Property File Configuration");
+		step.SelectEnviornmentType(Environment);
+		step.SelectMainMenu(ParentMenu,ChildMenu);
 		corestep.EnterSearchValue(SearchCriteria);
 		boolean chk=corestep.ViewMatchedCriteria(ApplicationName,Key,Value,Description,Status);
 		
@@ -128,10 +128,10 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 		step.SelectEnviornmentType("BBPS2.0");
 		step.SelectMainMenu("BBPS2.0","ePay Property File Configuration");
 		corestep.ViewAllRecords();
-	}
+	}  
 
-	@Test(priority=6,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true,retryAnalyzer=RetryHandling.class)
-	public void EditRecords(String SearchCriteria,String ApplicationName,String Enviornment,String ParentMenu,String ChildMenu,String Key,String Value,String Status,String Description,String Remarks,
+	@Test(priority=6,dataProvider="ExcelDataProvider",dataProviderClass=TestReader_ExcelData.class,enabled=true,retryAnalyzer=RetryHandling.class)
+	public void EditRecords(String Enviornment,String ParentMenu,String ChildMenu,String SearchCriteria,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks,
 			String NewValue,String NewDescription,String NewStatus,String CheckerRemarks,String Action) throws Exception///Working
 	{
 		Method_LoginWithCredentials login=GetLoginCredentials();
@@ -141,8 +141,8 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 		login.EnterMakerUserName();
 		login.EnterMakerUserPassword();
 		login.clickOnLoginButton();  
-		step.SelectEnviornmentType("BBPS2.0");
-		step.SelectMainMenu("BBPS2.0","ePay Property File Configuration");
+		step.SelectEnviornmentType(Enviornment);
+		step.SelectMainMenu(ParentMenu,ChildMenu);
 		corestep.EnterSearchValue(SearchCriteria);
 		//call.EnterSearchCriteria(ApplicationName,Key,Value);
 		boolean flag=corestep.CheckMatchedCriteria(ApplicationName,Key,Value,Status,Description,Remarks,

@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.epay.tests.epay_DirectRequest_NPCI">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
         <methods>
-          <include name="HitEndPoint_Setup"/>
-          <include name="PostCreate_User"/>
+          <include name="EditRecords"/>
+          <include name="AddNewRecord"/>
+          <include name="TearDown"/>
+          <include name="ResetRecord"/>
+          <include name="GoBack"/>
+          <include name="SearchRecords"/>
+          <include name="BrowserIntilization"/>
         </methods>
-      </class> <!-- com.RestAssured.epay.tests.epay_DirectRequest_NPCI -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

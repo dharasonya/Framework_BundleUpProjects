@@ -11,19 +11,24 @@
 	<test name="CRM-Edge Test-Add Functionality" enabled="false">
 		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Add_Data" />
+		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
 		<classes>
 			<class
 				name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
 				<methods>
 					<!-- Specify the method names that you want to run -->
+					<include name="SanityTest" />
 					<include name="AddNewRecord" />
 				</methods>
 			</class>
 		</classes>
 	</test>
+	
 	<test name="CRM-Edge Test-Reset Functionality" enabled="false">
-		<parameter name="BrowserValue" value="edge" />
+		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Reset_Data" />
+		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
+		
 		<classes>
 			<class
 				name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
@@ -36,11 +41,12 @@
 	</test>
 
 	<test name="CRM-Edge Test-Search Functionality" enabled="false">
-		<parameter name="BrowserValue" value="edge" />
+		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="View_Data" />
+		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
 		<groups>
 			<run>
-				<include name="SanityTest" />
+			
 				<include name="NegativeTest" />
 			</run>
 		</groups>
@@ -56,15 +62,10 @@
 	</test>
 
 
-	<test name="CRM-Edge Test-Edit Functionality" enabled="false">
-		<parameter name="BrowserValue" value="edge" />
+	<test name="CRM-Edge Test-Edit Functionality" enabled="true">
+		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Edit_Data" />
-		<groups>
-			<run>
-				<include name="SanityTest" />
-				<include name="NegativeTest" />
-			</run>
-		</groups>
+		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
 		<classes>
 			<class
 				name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">

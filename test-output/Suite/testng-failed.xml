@@ -8,7 +8,7 @@
       <class name="com.RestAssured.epay.tests.epay_DirectRequest_NPCI">
         <methods>
           <include name="HitEndPoint_Setup"/>
-          <include name="PostCreate_User" invocation-numbers="0"/>
+          <include name="PostCreate_User" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.RestAssured.epay.tests.epay_DirectRequest_NPCI -->
     </classes>
