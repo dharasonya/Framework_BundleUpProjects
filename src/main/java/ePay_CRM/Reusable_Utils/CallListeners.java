@@ -11,6 +11,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+
+import ePay_CRM.CommonPageObjects.ObjRepo_CRMBaseSteps;
 import ePay_CRM.LandingPage.BasePageSetup;
 
 public class CallListeners extends BasePageSetup implements ITestListener{
@@ -30,6 +32,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
     private ExtentReporterNG report = new ExtentReporterNG();
     private ExtentReports extent;
     private static String caseName;
+    ObjRepo_CRMBaseSteps base =new ObjRepo_CRMBaseSteps(driver);
 
     public static String getCaseName() {
 		return caseName;
@@ -49,7 +52,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
     }
 
     public String getBrowservalue() {
-       System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
+     //  System.out.println("Listener Get Browser value: " + browserNameThreadLocal.get());
         return browserNameThreadLocal.get();
     }
    
@@ -59,7 +62,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
         ExtentTest extentTest = report.getExtent().createTest("Browser Run : "+getBrowservalue().toUpperCase()+ " - " + result.getMethod().getMethodName() + " : " + "Data Set :" + ScenarioCount);
         extentTestThreadLocal.set(extentTest);
         caseName=result.getMethod().getMethodName();
-        System.out.println("\n Method execution started: "+caseName);
+       getLog().info("Method execution started: "+caseName);
     }
 
     @Override

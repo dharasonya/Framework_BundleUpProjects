@@ -33,7 +33,7 @@ public class ScreenShot_Handle extends BasePageSetup{
 		ScreenshotPath=System.getProperty("user.dir")+"/CRM_Screenshots/"+RefID+"_"+fileName+".jpeg";
 		File destinationFile=new File(ScreenshotPath);
 		FileUtils.copyFile(src,destinationFile);
-		System.out.println("\n Screenshot taken on Path :"+ScreenshotPath);
+		//System.out.println("\n Screenshot taken on Path :"+ScreenshotPath);
 		
 		return ScreenshotPath;
 		

@@ -25,6 +25,7 @@ import org.testng.annotations.Test;
 import ePay_CRM.LoginProcess.Method_LoginWithCredentials;
 import ePay_CRM.Reusable_Utils.CallListeners;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
+import ePay_CRM.Test_ActionMethods.Method_SpRspCodeMapping;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -178,9 +179,14 @@ public class BasePageSetup {
 		Method_EpayPropertyConfig corestep=new Method_EpayPropertyConfig(driver);
 		return corestep;
 	}
+	public Method_SpRspCodeMapping CRM_SpRspCodeMapping_CoreStep() throws Exception
+	{
+		Method_SpRspCodeMapping corestep=new Method_SpRspCodeMapping(driver);
+		return corestep;  
+	}
 
-	@Parameters("BrowserValue")
-	@AfterMethod(alwaysRun=true)
+	//@Parameters("BrowserValue")
+	//@AfterMethod(alwaysRun=true)
 	public void TearDown(String BrowserValue)
 	{
 		if (driver != null) {

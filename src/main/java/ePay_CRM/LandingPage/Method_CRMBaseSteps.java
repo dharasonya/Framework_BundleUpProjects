@@ -62,6 +62,7 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 			int temp1=0;
 			int temp2=0;
 			
+			//System.out.println("\n -------------MENU NAME : "+MainMenu);
 			List<WebElement> mainMenuList;
 			//System.out.println("Size :"+ Base.SelectMainMenu.size());
 			//wait=new WebDriverWait(LaunchBrowserConfig.getDriver(),Duration.ofSeconds(10));
@@ -124,7 +125,7 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 		{
 			retryAttempt++;
 			getLog().info("Menu/Sub-Menu Not availabele for Selection , Retry Attempt :"+retryAttempt);
-			SelectMainMenu("BBPS Configuration","EPay Property File Configuration");
+			SelectMainMenu(MainMenu,SubMenu);
 		}
 		
 		else if(retryAttempt>=4 && flag==false)
