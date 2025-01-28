@@ -19,7 +19,7 @@ import ePay_CRM.Test_DataDriven.TestData_ePayPropertyConfig;
 public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 
 	//@Test(priority=1,dataProvider="Add_Data",groups= {"SanityTest"} ,dataProviderClass=TestData_ePayPropertyConfig.class,enabled=true)
-	@Test(priority=1,dataProvider="ExcelDataProvider",groups={"SanityTest"},dataProviderClass=TestReader_ExcelData.class,enabled=false)///Working
+	@Test(priority=1,dataProvider="ExcelDataProvider",groups={"SanityTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)///Working
 	public void AddNewRecord(String Environment,String ParentMenu,String ChildMenu,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks,String Action,String CheckerRemarks) throws Exception {  
 		{
 			Method_LoginWithCredentials login=GetLoginCredentials();
@@ -58,7 +58,7 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 	
 	//@Test(priority=2,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=true)
 	
-	@Test(priority=2,dataProvider="ExcelDataProvider",dataProviderClass=TestReader_ExcelData.class,enabled=false)
+	@Test(priority=2,dataProvider="ExcelDataProvider",dataProviderClass=TestReader_ExcelData.class,enabled=true)
 	public void ResetRecord(String Environment,String ParentMenu,String ChildMenu,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks) throws Exception
 	{
 
@@ -76,7 +76,7 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 		corestep.clickOnResetButton();
 	}
 
-	@Test(priority=3,groups={"NegativeTest"},enabled=false) ///Working
+	@Test(priority=3,groups={"NegativeTest"},enabled=true) ///Working
 	public void GoBack() throws Exception
 	{
 		Method_LoginWithCredentials login=GetLoginCredentials();

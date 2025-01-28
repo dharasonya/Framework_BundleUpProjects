@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-26T20:39:13 IST" name="Suite" finished-at="2025-01-26T20:40:49 IST" duration-ms="95525">
+  <suite started-at="2025-01-28T21:51:45 IST" name="Suite" finished-at="2025-01-28T21:53:28 IST" duration-ms="102498">
     <groups>
     </groups>
-    <test started-at="2025-01-26T20:39:13 IST" name="Test" finished-at="2025-01-26T20:40:49 IST" duration-ms="95525">
+    <test started-at="2025-01-28T21:51:45 IST" name="Test" finished-at="2025-01-28T21:53:28 IST" duration-ms="102498">
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@71c3b41]" started-at="2025-01-26T20:39:17 IST" name="BrowserIntilization" finished-at="2025-01-26T20:39:24 IST" duration-ms="6882" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:51:49 IST" name="BrowserIntilization" finished-at="2025-01-28T21:51:58 IST" duration-ms="8482" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@71c3b41]" started-at="2025-01-26T20:39:24 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-01-26T20:40:20 IST" duration-ms="55898" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:51:58 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-01-28T21:52:53 IST" duration-ms="54799" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@71c3b41]" started-at="2025-01-26T20:40:20 IST" name="BrowserIntilization" finished-at="2025-01-26T20:40:22 IST" duration-ms="2574" status="PASS">
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:52:53 IST" name="TearDown" finished-at="2025-01-28T21:52:53 IST" duration-ms="573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:52:53 IST" name="BrowserIntilization" finished-at="2025-01-28T21:52:56 IST" duration-ms="3007" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -100,7 +111,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@71c3b41]" started-at="2025-01-26T20:40:22 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-01-26T20:40:49 IST" duration-ms="26491" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:52:56 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-01-28T21:53:27 IST" duration-ms="31012" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -171,6 +182,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
+        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-01-28T21:53:27 IST" name="TearDown" finished-at="2025-01-28T21:53:28 IST" duration-ms="556" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
       </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
