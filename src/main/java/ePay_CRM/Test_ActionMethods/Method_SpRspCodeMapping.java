@@ -63,34 +63,47 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 	public void FillInAddDetails(String NetWorkMode,String ServiceProviderName,String ServiceproviderResponsCode,String EuronetResponseCode,String ResponseAction,String ServiceProviderResposneMessage,String Status,String MakerRemark) throws Exception {
 
-		WebElement selectNetworkMode=obj.selectNetworkMode;
-		Select selectEnv=new Select(selectNetworkMode);
-		selectEnv.selectByVisibleText("ONUS");
-		Assert.assertTrue(selectNetworkMode.getAttribute("value").equalsIgnoreCase(NetWorkMode));
-
-		obj.EnterServiceproviderName.sendKeys(ServiceProviderName);
-
-		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectServiceProvider));
-		//Thread.sleep(5000);
-		//System.out.println("\n Size : "+obj.SelectServiceProvider.size());
-
-		for(WebElement spname:obj.SelectServiceProvider)
+		
+		if(NetWorkMode.toLowerCase().equalsIgnoreCase("onus"))
 		{
-			//	System.out.println("\n Values : --"+spname.getText());
-			if(spname.getText().contains("Airtel"))
+			WebElement selectNetworkMode=obj.selectNetworkMode;
+			Select selectEnv=new Select(selectNetworkMode);
+			selectEnv.selectByVisibleText("ONUS");
+			Assert.assertTrue(selectNetworkMode.getAttribute("value").equalsIgnoreCase(NetWorkMode));
+			obj.EnterServiceproviderName.sendKeys(ServiceProviderName);
+			wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectServiceProvider));
+			for(WebElement spname:obj.SelectServiceProvider)
 			{
-				spname.click();
+				//	System.out.println("\n Values : --"+spname.getText());
+				if(spname.getText().contains("Airtel"))
+				{
+					spname.click();
+				}
 			}
 		}
+		else 
+		{
+			WebElement selectNetworkMode=obj.selectNetworkMode;
+			Select selectEnv=new Select(selectNetworkMode);
+			selectEnv.selectByVisibleText("OFFUS");
+			Assert.assertTrue(selectNetworkMode.getAttribute("value").equalsIgnoreCase(NetWorkMode));
+			Assert.assertEquals(obj.EnterServiceproviderName.getAttribute("disabled"),"true");
+			
+		}
+		
+		
+
+	//Thread.sleep(5000);
+		//System.out.println("\n Size : "+obj.SelectServiceProvider.size());
+
+		
 
 		obj.EnterServiceProviderResponseCode.sendKeys(ServiceproviderResponsCode);
 
 		obj.EnterEuronetResponseCode.sendKeys("EI");
-
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectEuronetResponseCode));
-
 		//	System.out.println("--Euronet Response code----:"+obj.SelectEuronetResponseCode.size());
 		for(WebElement enrspcode:obj.SelectEuronetResponseCode)
 		{
@@ -225,9 +238,10 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		List<WebElement> OperatorResponseCode=wait.until(ExpectedConditions.visibilityOfAllElements(obj.OperatorResponseCodeList));
 		List<WebElement> ENResponseCode=wait.until(ExpectedConditions.visibilityOfAllElements(obj.EnrspCodeList));
 
+		
 		for(int i=0;i<Operator.size();i++)
 		{
-			if(Operator.get(i).getText().equalsIgnoreCase(ServiceProviderName))
+			if(Operator.get(i).getText().equalsIgnoreCase(ServiceProviderName) || Operator.get(i).getText().equals(""))
 			{
 				//	System.out.println("if loop---1");
 				//SpNameCounter++;
@@ -250,10 +264,11 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 							//System.out.println("for loop :"+"EuronetResponseCode :"+EuronResponseCode+" --tempenrspcode : "+tempEnrspCode+" ENResponseCode Code:"+ENResponseCode.get(k).getText());
 							if(ENResponseCode.get(k).getText().equals(tempEnrspCode))
 							{	
-
-								Thread.sleep(4000);
 								int sum=count+k;
-								driver.findElement(By.xpath("//table/tbody/tr["+ sum +"]/td/input")).click();
+								wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+								wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table/tbody/tr["+ sum +"]/td/input"))).click();
+								
+								//driver.findElement(By.xpath("//table/tbody/tr["+ sum +"]/td/input")).click();
 								getLog().info("On CheckerView-Record Found: "+ServiceProviderName+" / "+ServiceProviderResponseCode+" / "+EuronResponseCode+" ->"+Action);
 								event.printSnap("CRM-Record Selected by Checker to Take Action");
 								break;
