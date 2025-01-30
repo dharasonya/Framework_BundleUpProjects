@@ -63,7 +63,7 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 	public void FillInAddDetails(String NetWorkMode,String ServiceProviderName,String ServiceproviderResponsCode,String EuronetResponseCode,String ResponseAction,String ServiceProviderResposneMessage,String Status,String MakerRemark) throws Exception {
 
-		
+
 		if(NetWorkMode.toLowerCase().equalsIgnoreCase("onus"))
 		{
 			WebElement selectNetworkMode=obj.selectNetworkMode;
@@ -89,19 +89,19 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 			selectEnv.selectByVisibleText("OFFUS");
 			Assert.assertTrue(selectNetworkMode.getAttribute("value").equalsIgnoreCase(NetWorkMode));
 			Assert.assertEquals(obj.EnterServiceproviderName.getAttribute("disabled"),"true");
-			
-		}
-		
-		
 
-	//Thread.sleep(5000);
+		}
+
+
+
+		//Thread.sleep(5000);
 		//System.out.println("\n Size : "+obj.SelectServiceProvider.size());
 
-		
+
 
 		obj.EnterServiceProviderResponseCode.sendKeys(ServiceproviderResponsCode);
 
-		obj.EnterEuronetResponseCode.sendKeys("EI");
+		obj.EnterEuronetResponseCode.sendKeys(EuronetResponseCode);
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectEuronetResponseCode));
 		//	System.out.println("--Euronet Response code----:"+obj.SelectEuronetResponseCode.size());
@@ -187,7 +187,6 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 	public void Logout() throws Exception {
 		// TODO Auto-generated method stub
-
 		while (retryCount < 5) {
 			try {
 				System.out.println("\n Logout Retry Attempt : " + retryCount);
@@ -215,7 +214,6 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		return alert;
 	}
 
-
 	public void ClickOnVerifyButton() throws Exception
 	{
 
@@ -224,7 +222,8 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 		//Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
 		wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnVerifyBtn)).click();
-		Assert.assertEquals(obj.OnClickViewLabel.getText(), "Service Provider Response Code Configuration Checker","Label Verification");
+		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+		Assert.assertEquals(obj.OnClickVerifyMode.getText(), "Service Provider Response Code Configuration Checker","Label Verification");
 		getLog().info("Checker Verification Process Started");
 		event.printSnap("CRM-Verification Page");
 	}
@@ -238,7 +237,7 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		List<WebElement> OperatorResponseCode=wait.until(ExpectedConditions.visibilityOfAllElements(obj.OperatorResponseCodeList));
 		List<WebElement> ENResponseCode=wait.until(ExpectedConditions.visibilityOfAllElements(obj.EnrspCodeList));
 
-		
+
 		for(int i=0;i<Operator.size();i++)
 		{
 			if(Operator.get(i).getText().equalsIgnoreCase(ServiceProviderName) || Operator.get(i).getText().equals(""))
@@ -267,10 +266,43 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 								int sum=count+k;
 								wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 								wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table/tbody/tr["+ sum +"]/td/input"))).click();
-								
+
 								//driver.findElement(By.xpath("//table/tbody/tr["+ sum +"]/td/input")).click();
 								getLog().info("On CheckerView-Record Found: "+ServiceProviderName+" / "+ServiceProviderResponseCode+" / "+EuronResponseCode+" ->"+Action);
 								event.printSnap("CRM-Record Selected by Checker to Take Action");
+								
+
+								//
+								wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+								wait.until(ExpectedConditions.visibilityOf(obj.CheckerRemarks)).sendKeys(CheckerRemarks);
+							
+							//	obj.CheckerRemarks.sendKeys(CheckerRemarks);
+								getLog().info("Checker Remarks entered");
+
+								if(Action.equalsIgnoreCase("Reject"))
+								{
+									event.printSnap("CRM Action Taken "+Action);
+									obj.ClickOnReject.click();
+								}
+								else if(Action.equalsIgnoreCase("Approve"))
+								{
+									event.printSnap("CRM-Action Taken "+Action);
+									obj.ClickOnApprove.click();
+								}
+
+								wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+								String checkerAlert=wait.until(ExpectedConditions.visibilityOf(obj.CheckerAlertMsg)).getText();
+								getLog().info(checkerAlert);
+
+								getLog().info("Checker Process Ended");
+								event.printSnap("CRM-Checker Process Done");
+
+								//
+
+								baseStep.SelectMainMenu(ParentMenu,ChildMenu);// added new
+								
+								
+								CheckerGrid(ServiceProviderName,ServiceProviderResponseCode,EuronResponseCode,Action,CheckerRemarks);
 								break;
 							}
 							else
@@ -296,30 +328,216 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 			}
 
 		}
+
 		
-		obj.CheckerRemarks.sendKeys(CheckerRemarks);
-		getLog().info("Checker Remarks entered");
+	}
+	public void CheckerGrid(String ServiceProviderName,String ServiceProviderResponseCode, String EuronResponseCode, String Action,String CheckerRemarks) throws Exception {
+		// TODO Auto-generated method stub
 
-		if(Action.equalsIgnoreCase("Reject"))
+		obj.EnterSearchValue.sendKeys(ServiceProviderName);
+		event.printSnap("CRM-CheckerGridSearch");
+
+		getLog().info("Search Records Found " + driver.findElement(By.id("tblReport_info")).getText());
+		int chk = 0;
+		List<WebElement> pageList=driver.findElements(By.xpath("//div[@id='tblReport_paginate']/span/a"));
+
+		int tempCount=0;
+
+
+		int consValue=0;
+
+		int pageCounter=0;
+		String countRecord=obj.CountOfRecords.getText();
+		//System.out.println("\n Count : "+countRecord);
+		String recSplit[]=countRecord.split(" ");
+
+
+		String maxCount=recSplit[5];
+		int totalRecords=Integer.parseInt((recSplit[5].toString().replace(",", "")));
+		//System.out.println(maxCount);
+		driver.findElements(By.xpath("//div[@id='tblReport_paginate']/span/a"));
+		for(WebElement pagNum:pageList)
 		{
-			event.printSnap("CRM Action Taken "+Action);
-			obj.ClickOnReject.click();
+			pageCounter++;
+
+
 		}
-		else if(Action.equalsIgnoreCase("Approve"))
+
+		//System.out.println("Last Page : "+pageCounter);
+		//System.out.println("Total Page : "+totalRecords);
+
+
+		for(int i=0;i<totalRecords;i++)
 		{
-			event.printSnap("CRM-Action Taken "+Action);
-			obj.ClickOnApprove.click();
+			tempCount++;
+			if(tempCount<5)
+			{
+				getLog().info("Search Process On Page No-1 "+tempCount);
+
+
+				try
+				{
+					driver.findElement(By.xpath("//div[@id='tblReport_paginate']/span/a["+tempCount+"]")).click();
+					boolean Verify=CheckerCriteria(ServiceProviderName,ServiceProviderResponseCode,EuronResponseCode);
+					//System.out.println("\n Verify : "+Verify);
+					if(Verify==true)
+					{
+											
+						event.printSnap("Back to CheckerGrid");
+
+						getLog().info("Search Record Found on Page No "+tempCount);
+						//LaunchBrowserConfig.WindowScrollHeight();
+						//event.printSnap("CRM-CheckerGridPage 2"+tempCount);
+						break;
+					}	
+					else
+					{
+						getLog().info("No Record Found of Page No "+tempCount);
+						//LaunchBrowserConfig.WindowScrollHeight();
+						event.printSnap("CRM CheckerGridPage "+tempCount);
+						consValue=5;
+					}
+				}
+				catch(Exception e)
+				{
+					//e.printStackTrace();
+					getLog().info("Page Not Available to check further");
+
+					event.printSnap("Page Not Available to check further "+tempCount);
+					break;
+				}
+			}
+			else if(tempCount==5)
+			{
+				getLog().info("Search Process On Page No "+tempCount);
+				event.printSnap("CRM-CheckerGridPage: "+tempCount);
+
+				Thread.sleep(5000);
+				if(consValue==5)
+				{
+					driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/span/a["+tempCount+"]")).click();
+					boolean Verify=CheckerCriteria(ServiceProviderName,ServiceProviderResponseCode,EuronResponseCode);
+					if(Verify==true)
+					{
+						getLog().info("Search Record Found on Page No "+tempCount);
+						//LaunchBrowserConfig.WindowScrollHeight();
+						event.printSnap("CRM-CheckerGridPage "+tempCount);
+						break;
+					}
+					else
+					{
+						getLog().info("No Record Found of Page No "+tempCount);
+						//LaunchBrowserConfig.WindowScrollHeight();
+						event.printSnap("CRM-CheckerGridPage "+tempCount);
+						consValue=6;
+
+						//break;
+					}	
+				}
+
+			}
+
+			else if(consValue>=6 && (tempCount>=6 && tempCount<=totalRecords))
+			{
+				getLog().info("Search Process On Page No. :"+tempCount);
+				event.printSnap("CRM-CheckerGridPage: "+tempCount);
+				Thread.sleep(5000);
+
+				driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
+				boolean Verify=CheckerCriteria(ServiceProviderName,ServiceProviderResponseCode,EuronResponseCode);
+				if(Verify==true)
+				{
+					getLog().info("Search Record Found on Page No "+tempCount);
+					//LaunchBrowserConfig.WindowScrollHeight();
+					event.printSnap("CRM-CheckerGridPage "+tempCount);
+					break;
+				}
+				else
+				{
+					getLog().info("No Record Found of Page No "+tempCount);
+					//LaunchBrowserConfig.WindowScrollHeight();
+					event.printSnap("CRM-CheckerGridPage "+tempCount);
+				}
+
+			}		
 		}
-
-		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		String checkerAlert=wait.until(ExpectedConditions.visibilityOf(obj.CheckerAlertMsg)).getText();
-		getLog().info(checkerAlert);
-
-		getLog().info("Checker Process Ended");
-		event.printSnap("CRM-Checker Process Done");
 
 	}
 
 
+	public boolean CheckerCriteria(String ServiceProviderName,String ServiceProviderResponseCode, String EuronResponseCode) throws Exception {
+
+		int temp=0;
+		int flagChk=0;
+		boolean flag=false;
+		int index=0;
+	//	System.out.println("Method Called");
+
+		for(WebElement serviceProviderNameList:driver.findElements(By.xpath("//tbody/tr/td[3]")))
+		{
+			//System.out.println(serviceProviderNameList.getText());
+			temp++;
+			if(serviceProviderNameList.getText().equalsIgnoreCase(ServiceProviderName))
+			{
+				//System.out.println("ServiceProviderName  Value Matched ");
+				for(WebElement ServiceProviderResponseCodeValueList:driver.findElements(By.xpath("//tbody/tr/td[4]")))
+				{
+				//	System.out.println("\n ServiceProviderResponseCode : "+ServiceProviderResponseCodeValueList.getText());
+					index++;
+					if(ServiceProviderResponseCodeValueList.getText().equals(ServiceProviderResponseCode))
+					{
+					//	System.out.println("ServiceProviderResponseCodeValue Value  Matched : "+ServiceProviderResponseCodeValueList.getText());
+
+						for(WebElement EuronResponseCodeList:driver.findElements(By.xpath("//tbody/tr/td[5]")))
+						{
+
+							//System.out.println(valueList.getText());
+							if(EuronResponseCodeList.getText().equals(EuronResponseCode))
+							{
+								//System.out.println("Value  Matched : "+valueList.getText()+" : "+index); 
+								driver.findElement(By.xpath("//table/tbody/tr["+index+"]/td[1]")).click();
+								event.printSnap("CRM-ToBeViewedRecordSelected");
+								clickOnViewButton();
+
+								clickOnBackButton();
+
+								//flagChk=1;
+								flag=true;
+								break;
+							}
+
+						}
+						break;
+					}
+
+				}
+				break;
+			}
+
+		}
+		return flag;
+
+	}
+
+	public void clickOnViewButton() throws Exception {
+
+		obj.ClickOnView.click();
+		Assert.assertTrue(obj.OnClickViewMode.getText().equals("Service Provider Response Code View"),"View Menu Verifcation");
+		getLog().info("Clicked on View Button");
+		event.printSnap("CRM-View Mode");
+		
+		
+
+	}
+	public void clickOnBackButton() throws Exception
+	{
+		
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(obj.ClickOnBack)).click();
+		//obj.ClickOnBack.click();
+		Assert.assertTrue(obj.MenuHeaderName.getText().equals("Service Provider Response Code Mapping"));
+		getLog().info("Clicked on Back Button");
+		event.printSnap("CRM-Navigated Back");
+	}
 
 }

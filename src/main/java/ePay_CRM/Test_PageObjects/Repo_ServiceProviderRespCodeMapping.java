@@ -81,8 +81,11 @@ public class Repo_ServiceProviderRespCodeMapping {
 	public WebElement ClickOnVerifyBtn;
 	
 	
-	@FindBy(xpath="//span[@id='lblFormHeaderLabel']")
-	public WebElement OnClickViewLabel;
+	@FindBy(xpath="//*[text()='Service Provider Response Code Configuration Checker']")
+	public WebElement OnClickVerifyMode;
+	
+	@FindBy(xpath="//*[text()='Service Provider Response Code View']")
+	public WebElement OnClickViewMode;
 	
 	@FindBy(xpath="//div[@class='dataTables_scroll']/div[2]/table/tbody/tr/td[4]")
 	public List<WebElement> OperatorList;
@@ -105,4 +108,20 @@ public class Repo_ServiceProviderRespCodeMapping {
 	
 	@FindBy(xpath="//span[@id='ResponseMsg']")
 	public WebElement CheckerAlertMsg;
+	
+	@FindBy(xpath="//input[@type='search']")
+	public WebElement EnterSearchValue;
+	
+	@FindBy(id="tblReport_info")
+	public WebElement CountOfRecords;
+	
+	@FindBy(id="btnView")
+	public WebElement ClickOnView;
+	
+	@FindBy(xpath="//a[contains(text(),'Back')]")
+	public WebElement ClickOnBack;
+	
+	@FindBy(xpath="//*[contains(text(),'Service Provider Response Code Mapping')]")
+	public WebElement MenuHeaderName;
+	
 }

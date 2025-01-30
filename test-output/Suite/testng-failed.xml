@@ -11,8 +11,7 @@
     <classes>
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
         <methods>
-          <include name="TearDown"/>
-          <include name="AddNewRecord" invocation-numbers="1"/>
+          <include name="AddNewRecord" invocation-numbers="0"/>
           <include name="BrowserIntilization"/>
         </methods>
       </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
