@@ -53,10 +53,11 @@ public class TestCollection_CRM_ServiceProviderResponseCodeMapping extends BaseP
 				corestep.GoForCheckerProcess(ParentMenu,ChildMenu,ServiceProvider,ServiceProviderResponseCode,EuronetResponseCode,Action,CheckerRemarks) ;
 			}
 			
-			/*else 
+			else if(errCount==0 && flag==false)
 			{
 				getLog().info("On Save : "+corestep.MakerCaptureMsg().toString());
-			}*/
+			}
+			
 		}	  
 	}
 	

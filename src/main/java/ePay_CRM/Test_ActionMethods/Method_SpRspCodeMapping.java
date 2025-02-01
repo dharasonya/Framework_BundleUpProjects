@@ -15,7 +15,6 @@ import org.testng.Assert;
 import ePay_CRM.LandingPage.BasePageSetup;
 import ePay_CRM.LandingPage.Method_CRMBaseSteps;
 import ePay_CRM.Reusable_Utils.CallListeners;
-import ePay_CRM.Test_PageObjects.Repo_EpayPropertyConfig;
 import ePay_CRM.Test_PageObjects.Repo_ServiceProviderRespCodeMapping;
 
 public class Method_SpRspCodeMapping extends BasePageSetup{
@@ -127,8 +126,8 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 		obj.EnterRemark.sendKeys(MakerRemark);
 
-		getLog().info("Added all the Details,Proceed to Save");
-		event.printSnap("CRM-Added New Details");
+		getLog().info("Fill_In all the Details,Proceed to Save");
+		event.printSnap("CRM-Filled New Details");
 	}  
 
 	public boolean clickOnSaveButton() throws Exception {
@@ -141,19 +140,27 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		String onSaveDupExpMsg="Service Provider Response Code already exists.";
 
 
-		if(onSaveNewExpMsg.equals(obj.ResponseMsg.getText().trim()))
+		try
 		{
-			Assert.assertTrue(onSaveNewExpMsg.equals(obj.ResponseMsg.getText()),"On Save Sucess Msg Verifcation");
-			flag=true;
-			getLog().info(obj.ResponseMsg.getText());
-			event.printSnap("CRM-Save Success Msg");
+			if(onSaveNewExpMsg.equals(obj.ResponseMsg.getText().trim()))
+			{
+				Assert.assertTrue(onSaveNewExpMsg.equals(obj.ResponseMsg.getText()),"On Save Sucess Msg Verifcation");
+				flag=true;
+				getLog().info(obj.ResponseMsg.getText());
+				event.printSnap("CRM-Save Success Msg");
+			}
+			else if(onSaveDupExpMsg.equals(obj.ResponseMsg.getText()))
+			{
+				Assert.assertTrue(onSaveDupExpMsg.equals(obj.ResponseMsg.getText()),"On Duplicate Save Sucess Msg Verifcation");
+				getLog().info(obj.ResponseMsg.getText());
+				event.printSnap("CRM-Save Duplicate Msg");
+			}
 		}
-		else if(onSaveDupExpMsg.equals(obj.ResponseMsg.getText()))
+		catch(Exception e)
 		{
-			Assert.assertTrue(onSaveDupExpMsg.equals(obj.ResponseMsg.getText()),"On Duplicate Save Sucess Msg Verifcation");
-			getLog().info(obj.ResponseMsg.getText());
-			event.printSnap("CRM-Save Duplicate Msg");
+			getLog().info("Unable to Save Records due to error occured");
 		}
+		
 		return flag;
 
 
@@ -166,13 +173,14 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 		if(errorMsg.size()!=0)
 		{	
-			getLog().info("Error Messages: ");
+			
 			for(WebElement ErrList:errorMsg)
 			{
 				errCount++;
-				getLog().info(ErrList.getText());
+				getLog().info("Error Messages: "+errCount+" - "+ErrList.getText());
+				//getLog().info(ErrList.getText());
 				////event.printSnap("Maker Screen-ErrorMsg :"+epay_TestScript_PropertyFileConfig.errCount);
-				event.printSnap("Maker Screen-ErrorMsg :"+errCount);
+				event.printSnap("Maker Screen ErrorMsg "+errCount);
 			}
 		}
 		else{

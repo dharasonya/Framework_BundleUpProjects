@@ -66,7 +66,7 @@ public class Repo_ServiceProviderRespCodeMapping {
 	@FindBy(id="ResponseMsg")
 	public WebElement ResponseMsg;
 	
-	@FindBy(id="field-validation-error")
+	@FindBy(xpath="//span[@class='field-validation-error']")
 	public List<WebElement> GetFieldOnSaveError;
 	
 	@FindBy(xpath="//*[@src='/FEESCRM/Content/images/LogoutIcon.png']")
