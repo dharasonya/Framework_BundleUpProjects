@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-02T12:44:18 IST" name="TestSuite_CRM_Projects" finished-at="2025-02-02T12:46:08 IST" duration-ms="109633">
+  <suite started-at="2025-02-02T19:15:35 IST" name="TestSuite_CRM_Projects" finished-at="2025-02-02T19:17:30 IST" duration-ms="115015">
     <groups>
       <group name="SanityTest">
         <method signature="TestCollection_CRM_ePayPropertyConfig.AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" name="AddNewRecord" class="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig"/>
       </group> <!-- SanityTest -->
     </groups>
-    <test started-at="2025-02-02T12:44:18 IST" name="CRM-Edge Test-Add Functionality" finished-at="2025-02-02T12:46:08 IST" duration-ms="109633">
+    <test started-at="2025-02-02T19:15:35 IST" name="CRM-Edge Test-Add Functionality" finished-at="2025-02-02T19:17:30 IST" duration-ms="115015">
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T12:44:22 IST" name="BrowserIntilization" finished-at="2025-02-02T12:44:30 IST" duration-ms="7542" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T19:15:41 IST" name="BrowserIntilization" finished-at="2025-02-02T19:15:54 IST" duration-ms="13417" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T12:44:30 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-02T12:46:08 IST" duration-ms="97927" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T19:15:54 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-02T19:17:30 IST" duration-ms="95754" status="PASS">
           <params>
             <param index="0">
               <value>
