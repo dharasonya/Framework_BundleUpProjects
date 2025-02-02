@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-01T10:48:41 IST" name="Suite" finished-at="2025-02-01T10:50:49 IST" duration-ms="128052">
+  <suite started-at="2025-02-02T12:44:18 IST" name="TestSuite_CRM_Projects" finished-at="2025-02-02T12:46:08 IST" duration-ms="109633">
     <groups>
+      <group name="SanityTest">
+        <method signature="TestCollection_CRM_ePayPropertyConfig.AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" name="AddNewRecord" class="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig"/>
+      </group> <!-- SanityTest -->
     </groups>
-    <test started-at="2025-02-01T10:48:41 IST" name="Test" finished-at="2025-02-01T10:50:49 IST" duration-ms="128052">
-      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:48:44 IST" name="BrowserIntilization" finished-at="2025-02-01T10:48:50 IST" duration-ms="5646" status="PASS">
+    <test started-at="2025-02-02T12:44:18 IST" name="CRM-Edge Test-Add Functionality" finished-at="2025-02-02T12:46:08 IST" duration-ms="109633">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T12:44:22 IST" name="BrowserIntilization" finished-at="2025-02-02T12:44:30 IST" duration-ms="7542" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:48:50 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-01T10:49:32 IST" duration-ms="42548" status="PASS">
+        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig@671a5887]" started-at="2025-02-02T12:44:30 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-02T12:46:08 IST" duration-ms="97927" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,266 +30,59 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Service Configuration]]>
+                <![CDATA[BBPS Configuration]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Sevice Provider Response Code Mapping]]>
+                <![CDATA[EPay Property File Configuration]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[ONUS]]>
+                <![CDATA[IDFC]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[AIRTEL]]>
+                <![CDATA[key0712]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[E24]]>
+                <![CDATA[4505.0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[CI]]>
+                <![CDATA[Active]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[D]]>
+                <![CDATA[Index to Test]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[EN Failed]]>
+                <![CDATA[Test Added]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[Reject]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[Added..]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[Approve]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Approval to do]]>
+                <![CDATA[Got it Reject]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:49:32 IST" name="TearDown" finished-at="2025-02-01T10:49:33 IST" duration-ms="522" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:49:33 IST" name="BrowserIntilization" finished-at="2025-02-01T10:49:36 IST" duration-ms="3262" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:49:36 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-01T10:50:09 IST" duration-ms="33103" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GooglePay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Service Configuration]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sevice Provider Response Code Mapping]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[ONUS]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[AIRTEL]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[E26]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[CI]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[EN Failed]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[Added]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[Approve]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Approval to do]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:50:09 IST" name="TearDown" finished-at="2025-02-01T10:50:09 IST" duration-ms="380" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:50:09 IST" name="BrowserIntilization" finished-at="2025-02-01T10:50:12 IST" duration-ms="2922" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BrowserIntilization -->
-        <test-method signature="AddNewRecord(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:50:12 IST" name="AddNewRecord" data-provider="ExcelDataProvider" finished-at="2025-02-01T10:50:49 IST" duration-ms="36446" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GooglePay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Service Configuration]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sevice Provider Response Code Mapping]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[ONUS]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[AIRTEL]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[E29]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[CI]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[EN Failed]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[Added]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[Approve]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Approval to do]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddNewRecord -->
-        <test-method is-config="true" signature="TearDown(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping@3cc1435c]" started-at="2025-02-01T10:50:49 IST" name="TearDown" finished-at="2025-02-01T10:50:49 IST" duration-ms="385" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+    </test> <!-- CRM-Edge Test-Add Functionality -->
+  </suite> <!-- TestSuite_CRM_Projects -->
 </testng-results>

@@ -2,6 +2,7 @@ package ePay_CRM.LoginProcess;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,7 @@ public class Method_LoginWithCredentials extends BasePageSetup {
 	{
 		driver.manage().window().maximize();
 		driver.navigate().to(prop.getProperty("URL"));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));// newly added
 		event.printSnap("Navigated to URL");
 	}
 	

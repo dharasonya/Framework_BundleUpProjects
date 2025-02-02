@@ -49,7 +49,7 @@ public class TestCollection_CRM_ePayPropertyConfig extends BasePageSetup{
 				corestep.ClickOnVerifyButton();
 				corestep.CheckerSearchCriteria(ParentMenu,ChildMenu,ApplicationName,Description,Key,Value,Remarks,Status,CheckerRemarks,Action);
 			}
-			else 
+			else if(errCount==0 && flag==false)
 			{
 				getLog().info("On Save : "+corestep.MakerCaptureMsg().toString());
 			}

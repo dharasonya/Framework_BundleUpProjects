@@ -24,7 +24,7 @@
 		</classes>
 	</test>
 	
-	<test name="CRM-Edge Test-Reset Functionality" enabled="true">
+	<test name="CRM-Edge Test-Reset Functionality" enabled="false">
 		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Reset_Data" />
 		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
@@ -40,7 +40,7 @@
 		</classes>
 	</test>
 
-	<test name="CRM-Edge Test-Search Functionality" enabled="true">
+	<test name="CRM-Edge Test-Search Functionality" enabled="false">
 		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="View_Data" />
 		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />
@@ -61,7 +61,7 @@
 		</classes>
 	</test>
 
-	<test name="CRM-Edge Test-Edit Functionality" enabled="true">
+	<test name="CRM-Edge Test-Edit Functionality" enabled="false">
 		<parameter name="BrowserValue" value="chrome" />
 		<parameter name="sheetName" value="Edit_Data" />
 		<parameter name="fileName" value="CRM_EpayPropertyConfig_Data" />

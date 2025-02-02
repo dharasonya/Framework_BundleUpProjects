@@ -124,4 +124,7 @@ public class Repo_ServiceProviderRespCodeMapping {
 	@FindBy(xpath="//*[contains(text(),'Service Provider Response Code Mapping')]")
 	public WebElement MenuHeaderName;
 	
+
+    // Web element for the pagination link
+  
 }

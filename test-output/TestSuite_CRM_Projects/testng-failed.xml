@@ -11,7 +11,7 @@
     <classes>
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
         <methods>
-          <include name="AddNewRecord" invocation-numbers="0"/>
+          <include name="AddNewRecord" invocation-numbers="0 1"/>
           <include name="TearDown"/>
           <include name="BrowserIntilization"/>
         </methods>

@@ -60,80 +60,8 @@ public class TestCollection_CRM_ServiceProviderResponseCodeMapping extends BaseP
 			
 		}	  
 	}
-	
-	
-
-
-	//@Test(priority=4,dataProvider="ExcelDataProvider",groups={"NegativeTest"},dataProviderClass=TestReader_ExcelData.class,enabled=false)
-	public void SearchRecords(String Environment,String ParentMenu,String ChildMenu,String SearchCriteria,String ApplicationName,String Key,String Value,String Description,String Status) throws Exception
-	{
-		Method_LoginWithCredentials login=GetLoginCredentials();
-		Method_CRMBaseSteps step=CRMBaseStep();
-		Method_EpayPropertyConfig corestep=CRMCoreStep();
-		login.getUrl();
-		login.EnterMakerUserName();
-		login.EnterMakerUserPassword();
-		login.clickOnLoginButton();  
-		step.SelectEnviornmentType(Environment);
-		step.SelectMainMenu(ParentMenu,ChildMenu);
-		corestep.EnterSearchValue(SearchCriteria);
-		boolean chk=corestep.ViewMatchedCriteria(ApplicationName,Key,Value,Description,Status);
-		
-		if(chk)
-		{
-			corestep.clickOnViewButton();
-			corestep.ViewRecords(ApplicationName,Key,Value,Description,Status);
-		}  
-		
-	}
-	
-	//@Test(priority=6,dataProvider="ExcelDataProvider",dataProviderClass=TestReader_ExcelData.class,enabled=falseē,retryAnalyzer=RetryHandling.class)
-	public void EditRecords(String Enviornment,String ParentMenu,String ChildMenu,String SearchCriteria,String ApplicationName,String Key,String Value,String Status,String Description,String Remarks,
-			String NewValue,String NewDescription,String NewStatus,String CheckerRemarks,String Action) throws Exception///Working
-	{
-		Method_LoginWithCredentials login=GetLoginCredentials();
-		Method_CRMBaseSteps step=CRMBaseStep();
-		Method_EpayPropertyConfig corestep=CRMCoreStep();
-		login.getUrl();
-		login.EnterMakerUserName();
-		login.EnterMakerUserPassword();
-		login.clickOnLoginButton();  
-		step.SelectEnviornmentType(Enviornment);
-		step.SelectMainMenu(ParentMenu,ChildMenu);
-		corestep.EnterSearchValue(SearchCriteria);
-		//call.EnterSearchCriteria(ApplicationName,Key,Value);
-		boolean flag=corestep.CheckMatchedCriteria(ApplicationName,Key,Value,Status,Description,Remarks,
-				NewValue,NewDescription,NewStatus);
-		//=call.clickOnUpdateButton();
-		//System.out.println("Check flag : -"+call.clickOnUpdateButton());
-
-		//errCount = call.FieldError(); 
-		//flag==true && 
-		if(flag==true)
-		{
-			//String MakerStatusMsg=call.MakerCaptureMsg();
-			//LaunchBrowserConfig.getLog().info("Maker Status :"+MakerStatusMsg);
-			//Thread.sleep(3000);
-			corestep.Logout();
-			login.EnterCheckerUserName();
-			login.EnterCheckerUserPassword();
-			login.clickOnLoginButton();
-			step.SelectEnviornmentType(Enviornment);
-			step.SelectMainMenu(ParentMenu,ChildMenu);
-			corestep.ClickOnVerifyButton();
-			corestep.CheckerSearchCriteria(ParentMenu,ChildMenu,ApplicationName,NewDescription,Key,NewValue,Remarks,NewStatus,Action,CheckerRemarks);
-			//break;
-			
-		}
-		/*else 
-		{
-			LaunchBrowserConfig.getLog().info("On Save : "+call.MakerCaptureMsg().toString());
-			
-		}*/
-	}
-
 }
-
+	
 
 /*
 

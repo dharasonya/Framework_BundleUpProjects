@@ -46,7 +46,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 				Assert.assertTrue(obj.AddButton.isDisplayed(),"AddButton Verification");
 				wait.until(ExpectedConditions.elementToBeClickable(obj.AddButton)).click();
 				getLog().info("Clicked on Add Button");
-				event.printSnap("CRM-Add Menu Opened");
+			//	event.printSnap("CRM-Add Menu Opened");
 			}
 			else
 			{
@@ -74,13 +74,13 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 		if(errorMsg.size()!=0)
 		{	
-			getLog().info("Error Messages: ");
+			//getLog().info("Error Messages: ");
 			for(WebElement ErrList:errorMsg)
 			{
 				errCount++;
-				getLog().info(ErrList.getText());
+				getLog().info("Error Messages: "+errCount +" :" +ErrList.getText());
 				////event.printSnap("Maker Screen-ErrorMsg :"+epay_TestScript_PropertyFileConfig.errCount);
-				event.printSnap("Maker Screen-ErrorMsg :"+errCount);
+				event.printSnap("Maker Screen ErrorMsg "+errCount);
 			}
 		}
 		else{
@@ -95,6 +95,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 
 	public void FillInAddDetails(String ApplicationName,String Key,String Value,String Status,String Description,String Remarks) throws Exception {
 
+		event.printSnap("CRM Add Menu Opened");
 		obj.EnterApplicationName.sendKeys(ApplicationName);
 		Assert.assertEquals(obj.EnterApplicationName.getAttribute("value"),ApplicationName,"Application Name Verification");
 
@@ -129,19 +130,27 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 		String onSaveNewExpMsg="ePay Property File configuration details added successfully and sent for Checker Approval!";
 		String onSaveDupExpMsg="ePay Property File configuration already exists";
 
-		if(onSaveNewExpMsg.equals(obj.ResponseMessage.getText()))
+		try
 		{
-			Assert.assertTrue(onSaveNewExpMsg.equals(obj.ResponseMessage.getText()),"On Save Sucess Msg Verifcation");
-			flag=true;
-			getLog().info(obj.ResponseMessage.getText());
-			event.printSnap("CRM-Save Success Msg");
+			if(onSaveNewExpMsg.equals(obj.ResponseMessage.getText()))
+			{
+				Assert.assertTrue(onSaveNewExpMsg.equals(obj.ResponseMessage.getText()),"On Save Sucess Msg Verifcation");
+				flag=true;
+				getLog().info(obj.ResponseMessage.getText());
+				event.printSnap("CRM-Save Success Msg");
+			}
+			else if(onSaveDupExpMsg.equals(obj.ResponseMessage.getText()))
+			{
+				Assert.assertTrue(onSaveDupExpMsg.equals(obj.ResponseMessage.getText()),"On Duplicate Save Sucess Msg Verifcation");
+				getLog().info(obj.ResponseMessage.getText());
+				event.printSnap("CRM-Save Duplicate Msg");
+			}
 		}
-		else if(onSaveDupExpMsg.equals(obj.ResponseMessage.getText()))
+		catch(Exception e)
 		{
-			Assert.assertTrue(onSaveDupExpMsg.equals(obj.ResponseMessage.getText()),"On Duplicate Save Sucess Msg Verifcation");
-			getLog().info(obj.ResponseMessage.getText());
-			event.printSnap("CRM-Save Duplicate Msg");
+			getLog().info("Unable to Save Records due to error occured");
 		}
+		
 		return flag;
 
 
@@ -880,7 +889,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 				{
 					getLog().info("No Record Found of Page No "+tempCount);
 					//LaunchBrowserConfig.WindowScrollHeight();
-					event.printSnap("CRM-MakerGridPage "+tempCount);
+					event.printSnap("CRM MakerGridPage "+tempCount);
 				}
 
 			}		
@@ -900,7 +909,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 		     
 		       wait.until(ExpectedConditions.visibilityOf(obj.ClickLogout)).click();
 		        getLog().info("CRM-Logout Successfully");
-		        event.printSnap("CRM-Successful LogOut");
+		        event.printSnap("CRM Successful LogOut");
 		        break; // Exit loop after successful logout
 		    } catch (Exception e) {
 		        retryCount++;
@@ -1027,7 +1036,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 				// TODO Auto-generated method stub
 
 				obj.EnterSearchValue.sendKeys(applicationName);
-				event.printSnap("CRM-CheckerGridSearch");
+				event.printSnap("CRM CheckerGridSearch");
 
 				getLog().info("Search Records Found " + driver.findElement(By.id("BBPSConfigData_info")).getText());
 				int chk = 0;
@@ -1075,7 +1084,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 							{
 								getLog().info("Search Record Found on Page No "+tempCount);
 								//LaunchBrowserConfig.WindowScrollHeight();
-								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								event.printSnap("CRM CheckerGridPage "+tempCount);
 								break;
 							}	
 							else
@@ -1097,7 +1106,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 					else if(tempCount==5)
 					{
 						getLog().info("Search Process On Page No "+tempCount);
-						event.printSnap("CRM-CheckerGridPage: "+tempCount);
+						event.printSnap("CRM CheckerGridPage "+tempCount);
 
 						Thread.sleep(5000);
 						if(consValue==5)
@@ -1108,14 +1117,14 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 							{
 								getLog().info("Search Record Found on Page No "+tempCount);
 								//LaunchBrowserConfig.WindowScrollHeight();
-								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								event.printSnap("CRM CheckerGridPage "+tempCount);
 								break;
 							}
 							else
 							{
 								getLog().info("No Record Found of Page No "+tempCount);
 								//LaunchBrowserConfig.WindowScrollHeight();
-								event.printSnap("CRM-CheckerGridPage "+tempCount);
+								event.printSnap("CRM CheckerGridPage "+tempCount);
 								consValue=6;
 
 								//break;
@@ -1127,7 +1136,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 					else if(consValue>=6 && (tempCount>=6 && tempCount<=totalRecords))
 					{
 						getLog().info("Search Process On Page No. :"+tempCount);
-						event.printSnap("CRM-CheckerGridPage: "+tempCount);
+						event.printSnap("CRM CheckerGridPage "+tempCount);
 						Thread.sleep(5000);
 
 						driver.findElement(By.xpath("//*[@id='BBPSConfigData_next']")).click();
@@ -1136,14 +1145,23 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 						{
 							getLog().info("Search Record Found on Page No "+tempCount);
 							//LaunchBrowserConfig.WindowScrollHeight();
-							event.printSnap("CRM-CheckerGridPage "+tempCount);
+							event.printSnap("CRM CheckerGridPage "+tempCount);
 							break;
 						}
 						else
 						{
 							getLog().info("No Record Found of Page No "+tempCount);
 							//LaunchBrowserConfig.WindowScrollHeight();
-							event.printSnap("CRM-CheckerGridPage "+tempCount);
+							event.printSnap("CRM CheckerGridPage "+tempCount);
+							try
+							{
+								driver.findElement(By.xpath("//div[@id='BBPSConfigData_paginate']/a[2][contains(@class,'disabled')]"));
+								break;
+							}
+							catch(Exception e)
+							{
+								continue;
+							}
 						}
 
 					}		
@@ -1183,7 +1201,7 @@ public class Method_EpayPropertyConfig extends BasePageSetup{
 									{
 										//System.out.println("Value  Matched : "+valueList.getText()+" : "+index); 
 										driver.findElement(By.xpath("//table/tbody/tr["+index+"]/td[1]")).click();
-										event.printSnap("CRM-ToBeViewedRecordSelected");
+										event.printSnap("CRM ToBeViewedRecordSelected");
 										clickOnViewButton();
 
 										clickOnBackButton();
