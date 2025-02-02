@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ePay_CRM.Reusable_Utils.CallListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)(failed)(failed)(failed)">
+    <parameter name="fileName" value="CRM_SpRspCodeMapping_Data"/>
+    <parameter name="BrowserValue" value="chrome"/>
+    <parameter name="sheetName" value="Add_Data"/>
+    <classes>
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
+        <methods>
+          <include name="AddNewRecord" invocation-numbers="1"/>
+          <include name="BrowserIntilization"/>
+        </methods>
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]] -->
