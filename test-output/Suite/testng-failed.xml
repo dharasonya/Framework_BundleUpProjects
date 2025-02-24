@@ -4,17 +4,15 @@
   <listeners>
     <listener class-name="ePay_CRM.Reusable_Utils.CallListeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="fileName" value="CRM_SpRspCodeMapping_Data"/>
+  <test thread-count="5" name="CRM-Edge Test-Add Functionality(failed)">
     <parameter name="BrowserValue" value="chrome"/>
-    <parameter name="sheetName" value="Add_Data"/>
     <classes>
-      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_AirtelConfiguration">
         <methods>
-          <include name="AddNewRecord" invocation-numbers="0 1"/>
+          <include name="Verify_BAL_Wallets_Switch"/>
           <include name="BrowserIntilization"/>
         </methods>
-      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_AirtelConfiguration -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- CRM-Edge Test-Add Functionality(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -69,9 +69,19 @@ public class Method_LoginWithCredentials extends BasePageSetup {
 	public void clickOnLoginButton() throws Exception {
 
 		obj.ClickLoginButton.click();
-		getLog().info("Succesfully Login with Entered Credentials");
-		Assert.assertEquals(obj.WelcomeMsg.getText(), "Welcome to epay","On Login-Welcome Message Verification");
-		event.printSnap("CRM-Succesful Login");
+		try
+		{
+			Assert.assertEquals(obj.WelcomeMsg.getText(), "Welcome to epay","On Login-Welcome Message Verification");
+			getLog().info("Succesfully Login with Entered Credentials");
+			event.printSnap("CRM-Succesful Login");
+		}
+		catch(Exception e)
+		{
+			getLog().info("Failed to Login / Invalid Credentials");
+			Assert.assertTrue(false,"Verifcation of Login Credentials ");
+			
+		}
+		
 		//System.out.println(base.GetLoginErrors.getText());
 	//	LoginVerifcation();
 		

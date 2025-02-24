@@ -24,6 +24,8 @@ import org.testng.annotations.Test;
 
 import ePay_CRM.LoginProcess.Method_LoginWithCredentials;
 import ePay_CRM.Reusable_Utils.CallListeners;
+import ePay_CRM.Test_ActionMethods.Method_AirtelConfiguration;
+import ePay_CRM.Test_ActionMethods.Method_BillerConfigOnus;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
 import ePay_CRM.Test_ActionMethods.Method_SpRspCodeMapping;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -86,14 +88,15 @@ public class BasePageSetup {
 		case "edge" :
 		{	  
 			EdgeOptions options=new EdgeOptions();
-			options.addArguments("--headless");
-			options.addArguments("--disable-gpu"); // Optional: Use to disable GPU rendering in headless mode
-			options.addArguments("--window-size=1920,1080"); // Optional: Set window size
+			//options.addArguments("--headless");
+			//options.addArguments("--disable-gpu"); // Optional: Use to disable GPU rendering in headless mode
+			//options.addArguments("--window-size=1920,1080"); // Optional: Set window size
 
 			//WebDriverManager.edgedriver().setup();
 			//options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 			//driver=new EdgeDriver();
-			setDriver(new EdgeDriver(options));
+			//setDriver(new EdgeDriver(options));
+			setDriver(new EdgeDriver());
 			break;
 		}
 		default:
@@ -170,7 +173,7 @@ public class BasePageSetup {
 	}
 	public Method_CRMBaseSteps CRMBaseStep() throws Exception
 	{
-		Method_CRMBaseSteps step=new Method_CRMBaseSteps(driver);
+		Method_CRMBaseSteps step=new Method_CRMBaseSteps(driver); 
 		return step;
 	}
 
@@ -178,10 +181,20 @@ public class BasePageSetup {
 	{
 		Method_EpayPropertyConfig corestep=new Method_EpayPropertyConfig(driver);
 		return corestep;
-	}
+	}  
 	public Method_SpRspCodeMapping CRM_SpRspCodeMapping_CoreStep() throws Exception
 	{
 		Method_SpRspCodeMapping corestep=new Method_SpRspCodeMapping(driver);
+		return corestep;  
+	}
+	public Method_BillerConfigOnus CRM_BillerConfigOnus_CoreStep() throws Exception
+	{
+		Method_BillerConfigOnus corestep=new Method_BillerConfigOnus(driver);
+		return corestep;  
+	}
+	public Method_AirtelConfiguration CRM_AirtelConfiguration_CoreStep() throws Exception
+	{
+		Method_AirtelConfiguration corestep=new Method_AirtelConfiguration(driver);
 		return corestep;  
 	}
 

@@ -1,5 +1,8 @@
 package ePay_CRM.Reusable_Utils;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -11,6 +14,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.Media;
 
 import ePay_CRM.CommonPageObjects.ObjRepo_CRMBaseSteps;
 import ePay_CRM.LandingPage.BasePageSetup;
@@ -117,4 +121,26 @@ public class CallListeners extends BasePageSetup implements ITestListener{
         System.out.println("Report got flushed");
         ScenarioCount=0;
     }
+
+	public void createAlertTest(String path, String screenshotPath,String Enviornment, String DataCentre) {
+		// TODO Auto-generated method stub
+		  ExtentTest extentTest = extentTestThreadLocal.get();
+         // extentTest.log(Status.PASS,"Alert :- " +" || Executed on Browser : "+getBrowservalue().toUpperCase());
+          //extentTest.pass(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+		  System.out.println("\n -- called----");
+          try {
+        	  extentTest.log(Status.PASS,"On Env :"+Enviornment+"To Confirm AlertBox Appears to Switch on Centre :-  "+DataCentre+"|| Executed on Browser : "+getBrowservalue().toUpperCase());
+              
+        	  extentTest.pass(MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+          } catch (Exception e) {
+              extentTest.log(Status.FAIL, "Failed to attach screenshot: " + e.getMessage());
+          }
+
+       
+	}
+
+	
+	
+    
+
 }

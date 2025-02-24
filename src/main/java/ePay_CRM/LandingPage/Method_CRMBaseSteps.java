@@ -36,7 +36,8 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 		Select env=new Select(Base.SelectEnviornmentType);
 		
 		try
-		{		System.out.println("Event type :"+ event);	
+		{	 
+			
 			
 				env.selectByVisibleText(EnvType);
 				//Utility_ScreenShot_Handle.TakeScreen("CRM-Enivornment Selected");
@@ -50,9 +51,7 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 		catch(Exception e)
 		{
 			//LaunchBrowserConfig.getLog().info("Invalid Environment Type Provided :"+EnvType);
-			Assert.assertFalse(false,"Environment Selection Verification");
-		  
-
+			Assert.assertTrue(false,"Unable to Select Enviornment");
 		}
 	}
 	
@@ -131,7 +130,9 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 		else if(retryAttempt>=4 && flag==false)
 		{
 			getLog().info("Menu/Sub-Menu Seach Selection Stopped-RETRY ATTEMPT REACH MAX LIMIT : "+retryAttempt);
+			Assert.assertTrue(false,"Specified Main Menu/SubMenu-Not found");
 		}
+		
 		
 	}	public void waitForPageToLoad()
 	{
@@ -141,3 +142,8 @@ public class Method_CRMBaseSteps extends BasePageSetup {
 
 
 }
+
+
+
+
+
