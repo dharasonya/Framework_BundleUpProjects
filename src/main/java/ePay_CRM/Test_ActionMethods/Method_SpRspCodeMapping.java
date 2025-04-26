@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import ePay_CRM.LandingPage.BasePageSetup;
 import ePay_CRM.LandingPage.Method_CRMBaseSteps;
@@ -159,6 +160,9 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 
 	public int FieldError() throws Exception
 	{
+	
+		SoftAssert softAssert=new SoftAssert();
+
 		errCount=0;	
 		List<WebElement> errorMsg=obj.GetFieldOnSaveError;
 
@@ -172,6 +176,7 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 				//getLog().info(ErrList.getText());
 				////event.printSnap("Maker Screen-ErrorMsg :"+epay_TestScript_PropertyFileConfig.errCount);
 				event.printSnap("Maker Screen ErrorMsg "+errCount);
+				softAssert.assertEquals(ErrList.getText(),"On Save Sucess Msg Verifcation");
 			}
 		}
 		else{
@@ -180,7 +185,9 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 			errCount=0;
 
 		}
+		softAssert.assertAll();
 		return errCount;
+		
 
 	}
 

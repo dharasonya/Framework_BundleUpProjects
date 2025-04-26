@@ -40,7 +40,7 @@ public class ExtentReporterNG {
 
 		reporter.config().setDocumentTitle("Automated Test Results");
 
-		reporter.config().setTheme(Theme.DARK);
+		reporter.config().setTheme(Theme.STANDARD);
 
 		extent=new ExtentReports();
 

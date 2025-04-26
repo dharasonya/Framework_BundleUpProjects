@@ -34,7 +34,7 @@ import ePay_CRM.LandingPage.Method_CRMBaseSteps;
 import ePay_CRM.Reusable_Utils.CallListeners;
 import ePay_CRM.Reusable_Utils.WaitUtils;
 import ePay_CRM.Test_PageObjects.Repo_AirtelDataCenterMigration;
-
+import ePay_CRM.Test_PageObjects.Repo_BillerConfig_Onus;
 import ePay_CRM.Test_PageObjects.Repo_ServiceProviderRespCodeMapping;
 
 public class Method_AirtelConfiguration extends BasePageSetup{
@@ -74,8 +74,11 @@ public class Method_AirtelConfiguration extends BasePageSetup{
 			{
 				System.out.println("\n enter");
 				driver.findElement(obj.getButtonLocator(counter)).click();
-				Assert.assertEquals(obj.MakerEditMenuName.getText(), "Airtel DataCentre Migration Edit","Verification of Edit Menu Name");
-				break;
+				
+					Assert.assertEquals(wait.waitForElementToBeVisible(obj.MakerEditMenuName, 10).getText(), "Airtel DataCentre Migration Edit","Verification of Edit Menu Name");
+					break;
+				
+				
 			}
 		}
 	}
@@ -500,30 +503,19 @@ public class Method_AirtelConfiguration extends BasePageSetup{
 				          
 		        }
 		    
-			
+			for (int j = 1; j <= 1; j++) {
 				String currentDataCentre,currentEnviornment;
 				counter++;
+				
 				
 					currentDataCentre = obj.getBal_Current_DataCentre(counter).getText();
 					currentEnviornment=obj.getBal_CurrentEnviornment(counter).getText();
 					System.out.println("\n Process started -Centre :"+currentDataCentre+" -- env--:"+currentEnviornment);
 				
-					
-				
 				if ("Banglore".equals(currentDataCentre) && !SwitchedDataCentres.contains("Banglore")) {
 					logInfo("Current Data_Centre: " + currentDataCentre+"--counter--"+counter);
 					event.printSnap("On Environment " + currentEnviornment + "_Current Datacentre " + currentDataCentre);
 					assertEquals(currentDataCentre, "Banglore", "Verify Currently Mapped Centre");
-
-					handleDataCentreSwitch(counter,currentEnviornment,currentDataCentre);
-					scrollToElementAndSnap(obj.getBal_Current_DataCentre(counter),counter);
-					SwitchedDataCentres.add(currentDataCentre);
-					//break;
-				}
-				else if ("Chennai".equals(currentDataCentre) && !SwitchedDataCentres.contains("Chennai")) {
-					logInfo("Current Data_Centre: " + currentDataCentre+"--counter--"+counter);
-					event.printSnap("On Environment " + currentEnviornment + "_Current Datacentre " + currentDataCentre);
-					assertEquals(currentDataCentre, "Chennai", "Verify Currently Mapped Centre");
 
 					handleDataCentreSwitch(counter,currentEnviornment,currentDataCentre);
 					scrollToElementAndSnap(obj.getBal_Current_DataCentre(counter),counter);
@@ -536,7 +528,7 @@ public class Method_AirtelConfiguration extends BasePageSetup{
 				}
 				
 
-			
+			}
 			SwitchedDataCentres.remove("Banglore");
 			SwitchedDataCentres.remove("Chennai");	
 		}

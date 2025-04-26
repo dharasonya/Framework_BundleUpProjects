@@ -42,10 +42,11 @@ public class Repo_BillerConfig_Onus {
 	@FindBy(id="ServiceProviderCode")
 	public WebElement EnterServiceProviderCode; 
 	
-	@FindBy(id="ValidateAmountFlag")
+	@FindBy(xpath="//select[@id='ValidateAmountFlag']")
 	public WebElement SelectValidateAmountFlag; 
 	
-	@FindBy(id="FetchRequirement")
+	@FindBy(xpath="//select[@id='FetchRequirement']")
+	//id="FetchRequirement"
 	public WebElement SelectFetchRequirement; 
 	
 	@FindBy(id="SubServiceProviderName")
@@ -63,47 +64,50 @@ public class Repo_BillerConfig_Onus {
 	@FindBy(id="btnNext2")
 	public WebElement ClickOnUploadButton1; 
 	
-	@FindBy(xpath="//div[@id='GenericPopUp']/div/div[2][@class='modal-body']")
+	@FindBy(xpath="//*[text()='Record Successfully Added for STEP - 1']")
 	//(xpath="//div[@class='modal-body'][contains(text(),'Record Successfully Added for STEP - 1')]")
 	public WebElement verifyOnSaveSuccessMsg1;
 
 	// WEBELEMENTS FOR STEP -2
 	
-	@FindBy(id="SPField1")
+	@FindBy(xpath="//input[@id='SPField1']")
 	public WebElement EnterSPField1; 
 	
-	@FindBy(id="SPField2")
+	@FindBy(xpath="//input[@id='SPField2']")
 	public WebElement EnterSPField2; 
 	
-	@FindBy(id="SPField3")
+	@FindBy(xpath="//input[@id='SPField3']")
 	public WebElement EnterSPField3; 
 	
-	@FindBy(id="SPField4")
+	@FindBy(xpath="//input[@id='SPField4']")
 	public WebElement EnterSPField4; 
 	
-	@FindBy(id="SPField5")
+	@FindBy(xpath="//input[@id='SPField5']")
 	public WebElement EnterSPField5; 
 
-	@FindBy(id="SPField6")
+	@FindBy(xpath="//input[@id='SPField6']")
 	public WebElement EnterSPField6; 
 	
-	@FindBy(id="SPField7")
+	@FindBy(xpath="//input[@id='SPField7']")
 	public WebElement EnterSPField7; 
 
-	@FindBy(id="SPField8")
+	@FindBy(xpath="//input[@id='SPField8']")
 	public WebElement EnterSPField8; 
 	
-	@FindBy(id="SPField9")
+	@FindBy(xpath="//input[@id='SPField9']")
 	public WebElement EnterSPField9; 
 	
-	@FindBy(id="SPField10")
+	@FindBy(xpath="//input[@id='SPField10']")
 	public WebElement EnterSPField10; 
 	
 	@FindBy(id="IsQuickPay")
 	public WebElement ChooseQuickPay; 
 
-	@FindBy(id="ValidateAmountFlag")
+	@FindBy(xpath="//input[@id='ValidationFlag']")
 	public WebElement ChooseValidationFlag; 
+	
+	@FindBy(id="ValidationFlag")
+	public WebElement ChooseStep2ValidationFlag; 
 	
 	@FindBy(id="AmountFlag")
 	public WebElement ChooseAmountFlag; 
@@ -117,8 +121,15 @@ public class Repo_BillerConfig_Onus {
 	@FindBy(id="btnClearStep2")
 	public WebElement ClickOnClear2; 
 	
+	@FindBy(xpath="/html/body/div[1]/div/div[7]/div/div[3]/div[2]/button")
+	public WebElement clickOnClose_ErrorModal;
+	
+	@FindBy(xpath="//button[@class='btn btn-info' and @onclick='InfoClose();']")
+	public WebElement clickonCheckerErrorModal;
+	
 	@FindBy(xpath="//div[@id='dvInfo']/button[@onclick='InfoClose();']")
-	public WebElement clickOnClose;
+	public WebElement clickOnClose_SuccessModal;
+	////div[@id='dvInfo']/button[@onclick='InfoClose();']
 	
 	@FindBy(xpath="//div[@class='modal-body'][contains(text(),'Record Successfully Added for STEP - 2')]")
 	public WebElement verifyOnSaveSuccessMsg2;
@@ -143,6 +154,9 @@ public class Repo_BillerConfig_Onus {
 	
 	@FindBy(id="DCOprStatusUrl")
 	public WebElement EnterDCOprStatusUrl;
+	
+	@FindBy(id="DCBilStatusCheckUrl")
+	public WebElement EnterDCBillStatusCheckURL;
 	
 	@FindBy(id="DCOprTokenUrl")
 	public WebElement EnterDCOprTokenUrl;
@@ -207,6 +221,9 @@ public class Repo_BillerConfig_Onus {
 	@FindBy(id="DROprStatusUrl")
 	public WebElement EnterDROprStatusUrl;
 	
+	@FindBy(id="DRBilStatusCheckUrl")
+	public WebElement EnterDRBillStatusCheckURL;
+	
 	@FindBy(id="DROprTokenUrl")
 	public WebElement EnterDROprTokenUrl;
 	
@@ -261,7 +278,99 @@ public class Repo_BillerConfig_Onus {
 	@FindBy(xpath="//div[@id='GenericPopUp']/div/div[2]")
 	public WebElement getOnSaveErrorMsg;
 	
+	@FindBy(xpath="//div[@class='modal-body'][contains(text(),'Error ! Privious request pending for Checker Approval')]")
+	public WebElement getOnSaveCheckerErrorMsg;
+	
 	@FindBy(xpath="//div[@class='modal-body'][contains(text(),'Record Successfully Added for STEP - 3 and sent for Checker Approval')]")
 	public WebElement verifyOnSaveSuccessMsg3;
 	
+	@FindBy(xpath="//div[@class='modal-body']")
+	public WebElement onSaveMakerGenericMsg;
+	
+	
+	///-- STEP PAGE REPOSITORY
+	
+	@FindBy(xpath="//span[contains(text(),'STEP 1 - Service Details')]")
+	public WebElement StepPage1;
+
+	@FindBy(xpath="//span[contains(text(),'STEP 2 - Service Provider Services Details')]")
+	public WebElement StepPage2;
+	
+	@FindBy(xpath="//span[contains(text(),'STEP 3 - Operator URL Configuration')]")
+	public WebElement StepPage3;
+	
+	@FindBy(xpath="//span[contains(text(),'STEP 4 - Service Provider Response Code Upload')]")
+	public WebElement StepPage4;
+	
+	@FindBy(xpath="//*[@src='/FEESCRM/Content/images/LogoutIcon.png']")
+	public WebElement ClickLogout;
+	
+	
+	////-----CHECKER VIEW
+	
+	@FindBy(xpath="//*[text()='Biller Configuration ONUS Checker']")
+	public WebElement OnClickVerifyMode;
+	
+	@FindBy(xpath="//input[@type='search']")
+	public WebElement EnterSearchText;
+	
+	@FindBy(xpath="//*[text()='View']")
+	public List<WebElement> clickOnView;
+	
+	@FindBy(xpath="//tbody/tr/td[3]")
+	public WebElement ListOfBillerId;
+	  
+	@FindBy(xpath="//tbody/tr/td[4]")
+	public WebElement ListOfServiceCode;
+
+	@FindBy(xpath="//tbody/tr/td[5]")
+	public WebElement ListOfServiceProviderName;
+
+	@FindBy(xpath="//tbody/tr/td[6]")
+	public WebElement ListOfServiceProviderCode;
+
+	@FindBy(xpath="//tbody/tr/td[7]")
+	public WebElement ListOfSubServiceProviderCode;
+
+	@FindBy(xpath="//tbody/tr/td[8]")
+	public WebElement ListOfSubServiceProviderName;
+	
+	@FindBy(xpath="//tbody/tr/td[1]")
+	public WebElement ListOfViewButton;
+	
+	
+	// CHECKER TABLE- FIELD ALL DATA
+	
+	@FindBy(xpath="//div[@id='CheckerTable2']/div/div/div/div[3]/div[2]/table[@id='CheckerReportData2']/tbody/tr/td[2]")
+	public List<WebElement> checkerTableColumn2FieldValues;
+	
+
+	@FindBy(xpath="//div[@id='CheckerReportData2_paginate']/span/a")
+	public List<WebElement> TotalPageCountCheckerTbl;
+
+	@FindBy(xpath="//div[@id='CheckerReportData2_wrapper']")
+	public WebElement CheckerTableView_2;
+	
+	
+	// Checker action
+	
+	@FindBy(id="btnApprove")
+	public WebElement ClickOnApprove;
+	
+	@FindBy(id="btnReject")
+	public WebElement ClickOnReject;
+		
+	@FindBy(id="txtChecker")
+	public WebElement CheckerRemarks;
+	
+	@FindBy(xpath="//div[@id='CheckerPopUp']/div/div[2]")
+	public WebElement CheckerAlertMsg;
+	
+	@FindBy(xpath="//button[@onclick='ApproveRejectInfoClose();']")
+	public WebElement CheckerModalInfoClosed;
+	
 }
+
+
+
+

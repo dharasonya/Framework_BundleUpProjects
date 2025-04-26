@@ -66,7 +66,9 @@ public class CallListeners extends BasePageSetup implements ITestListener{
         ExtentTest extentTest = report.getExtent().createTest("Browser Run : "+getBrowservalue().toUpperCase()+ " - " + result.getMethod().getMethodName() + " : " + "Data Set :" + ScenarioCount);
         extentTestThreadLocal.set(extentTest);
         caseName=result.getMethod().getMethodName();
-       getLog().info("Method execution started: "+caseName);
+      //  System.out.println("------RECORD COUNT ---:"+ScenarioCount++);
+        CommonLogger.log("-------Execution Started for Record : ------"+ScenarioCount);
+       // CommonLogger.log("Method execution started: "+caseName);
     }
 
     @Override
@@ -80,6 +82,18 @@ public class CallListeners extends BasePageSetup implements ITestListener{
         try {
         	stepCount++;
         	String path = screenshotHandleThreadLocal.get().TakeScreen(MethodName);
+            ExtentTest extentTest = extentTestThreadLocal.get();
+            extentTest.log(Status.PASS,"Test Step :- " + MethodName+" || Executed on Browser : "+getBrowservalue().toUpperCase());
+            extentTest.pass(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+                  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void fullprintSnap(String MethodName) {
+        try {
+        	stepCount++;
+        	String path = screenshotHandleThreadLocal.get().takeFullPageScreenshot(MethodName);
             ExtentTest extentTest = extentTestThreadLocal.get();
             extentTest.log(Status.PASS,"Test Step :- " + MethodName+" || Executed on Browser : "+getBrowservalue().toUpperCase());
             extentTest.pass(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
@@ -118,7 +132,8 @@ public class CallListeners extends BasePageSetup implements ITestListener{
         if (extent != null) {
             extent.flush();
         }
-        System.out.println("Report got flushed");
+       // System.out.println("Report got flushed");
+        CommonLogger.log("Report got flushed");
         ScenarioCount=0;
     }
 
@@ -127,7 +142,7 @@ public class CallListeners extends BasePageSetup implements ITestListener{
 		  ExtentTest extentTest = extentTestThreadLocal.get();
          // extentTest.log(Status.PASS,"Alert :- " +" || Executed on Browser : "+getBrowservalue().toUpperCase());
           //extentTest.pass(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-		  System.out.println("\n -- called----");
+		 // System.out.println("\n -- called----");
           try {
         	  extentTest.log(Status.PASS,"On Env :"+Enviornment+"To Confirm AlertBox Appears to Switch on Centre :-  "+DataCentre+"|| Executed on Browser : "+getBrowservalue().toUpperCase());
               

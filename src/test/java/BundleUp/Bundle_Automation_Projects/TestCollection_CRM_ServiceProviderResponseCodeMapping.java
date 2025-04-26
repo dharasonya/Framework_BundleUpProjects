@@ -1,10 +1,12 @@
 	package BundleUp.Bundle_Automation_Projects;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import ePay_CRM.LandingPage.BasePageSetup;
 import ePay_CRM.LandingPage.Method_CRMBaseSteps;
@@ -32,8 +34,8 @@ public class TestCollection_CRM_ServiceProviderResponseCodeMapping extends BaseP
 			login.clickOnLoginButton();
 
 			step.SelectEnviornmentType(Environment); 
-			step.SelectMainMenu(ParentMenu,ChildMenu);
-			corestep.ClickOnAddButton();
+			step.SelectMainMenu("BBPS Configuration","Biller Configuration ONUS");
+			//corestep.ClickOnAddButton();
 			corestep.FillInAddDetails(NetworkMode,ServiceProvider,ServiceProviderResponseCode,EuronetResponseCode,ResponseAction,ServiceProviderResponseMessage,Status,MakerRemark);
 			boolean flag=corestep.clickOnSaveButton();
 			int errCount = corestep.FieldError();
@@ -58,6 +60,7 @@ public class TestCollection_CRM_ServiceProviderResponseCodeMapping extends BaseP
 				getLog().info("On Save : "+corestep.MakerCaptureMsg().toString());
 			}
 			
+		
 		}	  
 	}
 }

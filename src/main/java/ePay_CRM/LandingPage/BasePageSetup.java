@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,26 +12,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.ITestListener;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import ePay_CRM.LoginProcess.Method_LoginWithCredentials;
 import ePay_CRM.Reusable_Utils.CallListeners;
+import ePay_CRM.Reusable_Utils.CommonLogger;
 import ePay_CRM.Test_ActionMethods.Method_AirtelConfiguration;
 import ePay_CRM.Test_ActionMethods.Method_BillerConfigOnus;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
 import ePay_CRM.Test_ActionMethods.Method_SpRspCodeMapping;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class BasePageSetup {
-
 
 	WebDriver driver;
 	private int count=0;
@@ -87,6 +80,7 @@ public class BasePageSetup {
 		}
 		case "edge" :
 		{	  
+			
 			EdgeOptions options=new EdgeOptions();
 			//options.addArguments("--headless");
 			//options.addArguments("--disable-gpu"); // Optional: Use to disable GPU rendering in headless mode
@@ -97,15 +91,15 @@ public class BasePageSetup {
 			//driver=new EdgeDriver();
 			//setDriver(new EdgeDriver(options));
 			setDriver(new EdgeDriver());
+			
+			System.out.println(" driver : "+getDriver());
 			break;
 		}
 		default:
 			throw new IllegalArgumentException("Unsupported Browser :- " + BrowserValue);
 		}
-		getLog().info("Browser Launched :- "+BrowserValue);
-
-		//System.out.println("\n Base browser : "+);
-
+		//getLog().info("Browser Launched :- "+BrowserValue);
+		CommonLogger.log("Browser Launched :- "+BrowserValue);
 		return getDriver();
 
 
@@ -141,10 +135,6 @@ public class BasePageSetup {
 	public void setCount(int count) {
 		this.count = count;
 	}
-
-
-
-
 	/*public void getUrl()
 	{
 		getDriver().manage().window().maximize();
@@ -155,13 +145,22 @@ public class BasePageSetup {
 	@BeforeMethod(alwaysRun=true)
 	public void BrowserIntilization(String LaunchBrowserValue) throws Exception
 	{
-		getLog().info("Browser Initilzation Started");
+		//getLog().info("----Browser Initilzation Started : "+LaunchBrowserValue);
+		
+		CommonLogger.log("Browser Initilzation Started : "+LaunchBrowserValue);
 		driver=LoadConfigFile(LaunchBrowserValue);
 		event.setBrowservalue(LaunchBrowserValue);
 
 		if (driver == null) {
 			throw new IllegalStateException("Driver is not initialized.");
 		}
+
+		/*System.setProperty("atu.reporter.config", "C://Users//sdhara//OneDrive - Euronet Worldwide//Documents//New_Auto_WorkSpace//Framework_BundleUpProjects-main//atu.properties");
+		ATUReports.setWebDriver(driver);
+        ATUReports.indexPageDescription = "Test_Sample Project";
+        ATUReports.currentRunDescription = "Test_Sample Run";
+       // ATUReports.add("Navigated to Url", LogAs.PASSED, null);
+*/
 
 	}
 
@@ -198,19 +197,21 @@ public class BasePageSetup {
 		return corestep;  
 	}
 
-	//@Parameters("BrowserValue")
-	//@AfterMethod(alwaysRun=true)
+	@Parameters("BrowserValue")
+	@AfterMethod(alwaysRun=true)
 	public void TearDown(String BrowserValue)
 	{
 		if (driver != null) {
-			getLog().info("Closing Browser: " + BrowserValue);
+			
+			CommonLogger.log("Closing Browser: " + BrowserValue);
 			driver.quit();
 			driver = null; // Clear driver reference
+			
+			CommonLogger.log("-------Execution Completed---");
 		}
 	}
 
 }
-
 
 /*
  * FirefoxOptions options=new FirefoxOptions();

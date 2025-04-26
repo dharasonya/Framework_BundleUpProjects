@@ -38,9 +38,22 @@ public class WaitUtils {
 	        return wait.until(ExpectedConditions.visibilityOfAllElements(webElement));
 	    }
 	    
+
+	    public List<WebElement> waitForListOfAllElementsToBeVisible(List<WebElement> selectServiceCode, int timeout) {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	        return wait.until(ExpectedConditions.visibilityOfAllElements(selectServiceCode));
+	    }
+	    
 	    public WebElement waitForElementToBeVisible(WebElement webElement, int timeout) {
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 	        return wait.until(ExpectedConditions.visibilityOf(webElement));
+	    }
+	   
+	    //elementToBeClickable
+	    
+	    public WebElement waitforelementToBeClickable(WebElement webElement, int timeout) {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	        return wait.until(ExpectedConditions.elementToBeClickable(webElement));
 	    }
 	   
 	    // Fluent Wait for an element with polling
@@ -52,12 +65,24 @@ public class WaitUtils {
 	        return wait.until(ExpectedConditions.visibilityOf(webElement));
 	    }
 	    
-	    public Alert waitForAlertIsPresent(int timeout)
-	    {
-	    	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(timeout));
-	    	return wait.until(ExpectedConditions.alertIsPresent());
+	    public Alert waitForAlertIsPresent(int timeout) {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	        return wait.until(ExpectedConditions.alertIsPresent());
 	    }
 
-
+	    
+	    public boolean waitForInvisibility(WebElement webElement, int timeout) {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	        return wait.until(ExpectedConditions.invisibilityOf(webElement));
+	    }
+	    
+	    // ADDED NEWLY WAITs
+	    
+	    public WebElement waitForvisibilityOfElementLocatedBy(By value, int timeout) {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	        return wait.until(ExpectedConditions.visibilityOfElementLocated(value));
+	    }
+	    
+	   
 }
 

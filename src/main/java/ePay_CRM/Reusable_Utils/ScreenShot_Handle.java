@@ -11,6 +11,19 @@ import org.openqa.selenium.WebDriver;
 
 import ePay_CRM.LandingPage.BasePageSetup;
 
+
+///-- ful page screenshot
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+import org.openqa.selenium.WebDriver;
+
 public class ScreenShot_Handle extends BasePageSetup{
 
 	public String ScreenshotPath;
@@ -19,7 +32,7 @@ public class ScreenShot_Handle extends BasePageSetup{
 	Random rnd = new Random();
 	int RefID = 100000 + rnd.nextInt(900000);   
 	WebDriver driver;
-	
+
 	public ScreenShot_Handle(WebDriver driver)
 	{
 		this.driver=driver;
@@ -34,8 +47,25 @@ public class ScreenShot_Handle extends BasePageSetup{
 		File destinationFile=new File(ScreenshotPath);
 		FileUtils.copyFile(src,destinationFile);
 		//System.out.println("\n Screenshot taken on Path :"+ScreenshotPath);
-		
+
 		return ScreenshotPath;
-		
+
 	}
+	public String takeFullPageScreenshot(String fileName) throws IOException {
+        driver.manage().window().maximize();
+        Screenshot screenshot = new AShot()
+                .shootingStrategy(ShootingStrategies.viewportPasting(2000))
+                .coordsProvider(new WebDriverCoordsProvider())
+                .takeScreenshot(driver);
+
+        String screenshotPath = System.getProperty("user.dir") + "/CRM_Screenshots/" + fileName + ".jpeg";
+        File destinationFile = new File(screenshotPath);
+        ImageIO.write(screenshot.getImage(), "JPEG", destinationFile);
+        return screenshotPath;
+    }
 }
+
+       
+	
+
+

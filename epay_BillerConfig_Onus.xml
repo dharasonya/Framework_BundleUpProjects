@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test_BillerConfig_Suite">
+	<listeners>
+		<listener class-name="ePay_CRM.Reusable_Utils.CallListeners" />
+	</listeners>
+
+
+	<test name="E2E_Testing" enabled="true">
+		<parameter name="BrowserValue" value="edge" />
+		<parameter name="sheetName" value="Add_Data" />
+		<parameter name="fileName" value="CRM_BillerConfigOnus_Data" />
+		<classes>
+			<class
+				name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_BillerConfigOnus" />
+				
+		</classes>
+	</test> <!-- E2E_Testing -->
+</suite> <!-- Test_BillerConfig_Suite -->
+

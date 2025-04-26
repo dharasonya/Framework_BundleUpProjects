@@ -40,9 +40,10 @@ public class TestCollection_CRM_AirtelConfiguration extends BasePageSetup{
 			boolean flag=corestep.clickOnUpdateButton();
 			int errCount = corestep.FieldError(DataCentre,DebitAccount,SourceOrigin,UserName,ServiceUrl,MakerRemark,StatusUrl);
 			
-			System.out.println("\n Flag : "+flag+" - errcount : "+errCount);
+			//System.out.println("\n Flag : "+flag+" - errcount : "+errCount);
 			if(errCount==0 && flag==true)  
 			{
+			
 				String MakerStatusMsg=corestep.MakerCaptureMsg();
 				getLog().info("Maker Status Message :-"+MakerStatusMsg);
 				corestep.Logout();

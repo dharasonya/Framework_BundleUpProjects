@@ -35,7 +35,7 @@ public class Test_FindBrokenLinks {
 		
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void FindBrokenLinksTest() throws Exception
 	{
 		List<WebElement> linkList=driver.findElements(By.tagName("a"));

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+
+	<appender name="OUTPUT" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="logs/ApplicationStep1.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/> <!-- Ensures date-wise rolling -->
+        <param name="Append" value="true"/> <!-- Ensures logs are appended instead of overwritten -->
+        
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss} - %5p [Line:%L] - %m%n"/>
+        </layout>
+    </appender>
+
+	
+	
+	
+	<logger name="com.src.output" additivity="false">
+		<level value="ALL"/>
+		<appender-ref ref="OUTPUT"/>
+		<!--<appender-ref ref="CONSOLE"/>-->
+	</logger>
+
+	
+	<root>
+		<level value="WARN"/>
+		<!--<appender-ref ref="CONSOLE"/>-->
+	</root>
+
+</log4j:configuration>

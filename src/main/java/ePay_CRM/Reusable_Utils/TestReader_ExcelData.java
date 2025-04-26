@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Arrays;
 
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -43,12 +45,16 @@ public class TestReader_ExcelData {
 			XSSFRow row = sheet.getRow(i);
 			for(int j=0; j <columnCount; j++){ // loop through the columns
 				{
+					 XSSFCell cell = row.getCell(j);
 					String cellValue = "";
 
-					cellValue = row.getCell(j).toString();
+			        if (cell == null || cell.getCellType() == CellType.BLANK) {
+			            cellValue = ""; // Handle empty cell
+			        } else {
+			            cellValue = cell.toString();
+			        }
+			        data[i - 1][j] = cellValue; // add to the data array
 
-					data[i-1][j]  = cellValue; // add to the data array
-					// System.out.println(cellValue);
 
 				}              
 			}
