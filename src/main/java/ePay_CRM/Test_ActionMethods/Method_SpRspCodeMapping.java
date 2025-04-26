@@ -69,13 +69,25 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 			Select selectEnv=new Select(selectNetworkMode);
 			selectEnv.selectByVisibleText("ONUS");
 			Assert.assertTrue(selectNetworkMode.getAttribute("value").equalsIgnoreCase(NetWorkMode));
+			
+			
 			obj.EnterServiceproviderName.sendKeys(ServiceProviderName);
-			wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectServiceProvider));
+			
+			try
+			{
+				wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectServiceProvider));
+			}
+			catch(Exception e)
+			{
+				System.out.println("Runtime Exception occured!! Retrying .");
+				wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectServiceProvider));
+			}
 			for(WebElement spname:obj.SelectServiceProvider)
 			{
 				//	System.out.println("\n Values : --"+spname.getText());
-				if(spname.getText().contains("Airtel"))
+				if(spname.getText().contains(ServiceProviderName))
 				{
 					spname.click();
 				}
@@ -95,7 +107,7 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		obj.EnterServiceProviderResponseCode.sendKeys(ServiceproviderResponsCode);
 
 		obj.EnterEuronetResponseCode.sendKeys(EuronetResponseCode);
-		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait=new WebDriverWait(driver,Duration.ofSeconds(12));
 		wait.until(ExpectedConditions.visibilityOfAllElements(obj.SelectEuronetResponseCode));
 		//	System.out.println("--Euronet Response code----:"+obj.SelectEuronetResponseCode.size());
 		for(WebElement enrspcode:obj.SelectEuronetResponseCode)

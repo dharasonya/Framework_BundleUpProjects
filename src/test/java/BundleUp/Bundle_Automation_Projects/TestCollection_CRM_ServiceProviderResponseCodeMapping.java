@@ -34,8 +34,8 @@ public class TestCollection_CRM_ServiceProviderResponseCodeMapping extends BaseP
 			login.clickOnLoginButton();
 
 			step.SelectEnviornmentType(Environment); 
-			step.SelectMainMenu("BBPS Configuration","Biller Configuration ONUS");
-			//corestep.ClickOnAddButton();
+			step.SelectMainMenu(ParentMenu,ChildMenu);
+			corestep.ClickOnAddButton();
 			corestep.FillInAddDetails(NetworkMode,ServiceProvider,ServiceProviderResponseCode,EuronetResponseCode,ResponseAction,ServiceProviderResponseMessage,Status,MakerRemark);
 			boolean flag=corestep.clickOnSaveButton();
 			int errCount = corestep.FieldError();

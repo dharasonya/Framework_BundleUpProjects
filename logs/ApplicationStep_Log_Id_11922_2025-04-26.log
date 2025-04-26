@@ -1,0 +1,58 @@
+26:04:2025 22:24:48 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:150] - Browser Initilzation Started : chrome
+26:04:2025 22:24:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:102] - Browser Launched :- chrome
+26:04:2025 22:24:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------1
+26:04:2025 22:24:56 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:64] - Maker Username Entered
+26:04:2025 22:24:57 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserPassword [Line:82] - Maker Password Entered
+26:04:2025 22:24:58 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton [Line:110] - Successfully Login with Entered Credentials
+26:04:2025 22:25:01 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectEnviornmentType [Line:48] - Enviornment Selected :-Amazon
+26:04:2025 22:25:02 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:83] - Main Menu Selected :-Service Configuration
+26:04:2025 22:25:06 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:99] - Child Menu Opened :-Sevice Provider Response Code Mapping
+26:04:2025 22:25:23 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:206] - Closing Browser: chrome
+26:04:2025 22:25:24 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:210] - -------Execution Completed---
+26:04:2025 22:25:24 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:150] - Browser Initilzation Started : chrome
+26:04:2025 22:25:28 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:102] - Browser Launched :- chrome
+26:04:2025 22:25:28 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------2
+26:04:2025 22:25:30 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:64] - Maker Username Entered
+26:04:2025 22:25:31 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserPassword [Line:82] - Maker Password Entered
+26:04:2025 22:25:32 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton [Line:110] - Successfully Login with Entered Credentials
+26:04:2025 22:25:34 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectEnviornmentType [Line:48] - Enviornment Selected :-Amazon
+26:04:2025 22:25:35 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:116] - Menu/Sub-Menu Not availabele for Selection , Retry Attempt :1
+26:04:2025 22:25:35 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:83] - Main Menu Selected :-Service Configuration
+26:04:2025 22:25:42 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:99] - Child Menu Opened :-Sevice Provider Response Code Mapping
+26:04:2025 22:26:02 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:206] - Closing Browser: chrome
+26:04:2025 22:26:03 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:210] - -------Execution Completed---
+26:04:2025 22:26:03 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:150] - Browser Initilzation Started : chrome
+26:04:2025 22:26:06 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:102] - Browser Launched :- chrome
+26:04:2025 22:26:06 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------3
+26:04:2025 22:26:09 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:64] - Maker Username Entered
+26:04:2025 22:26:09 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserPassword [Line:82] - Maker Password Entered
+26:04:2025 22:26:10 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton [Line:110] - Successfully Login with Entered Credentials
+26:04:2025 22:26:12 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectEnviornmentType [Line:48] - Enviornment Selected :-Amazon
+26:04:2025 22:26:13 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:116] - Menu/Sub-Menu Not availabele for Selection , Retry Attempt :1
+26:04:2025 22:26:13 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:83] - Main Menu Selected :-Service Configuration
+26:04:2025 22:26:20 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:99] - Child Menu Opened :-Sevice Provider Response Code Mapping
+26:04:2025 22:26:38 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:206] - Closing Browser: chrome
+26:04:2025 22:26:38 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:210] - -------Execution Completed---
+26:04:2025 22:26:38 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:150] - Browser Initilzation Started : chrome
+26:04:2025 22:26:42 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:102] - Browser Launched :- chrome
+26:04:2025 22:26:42 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------4
+26:04:2025 22:26:44 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:64] - Maker Username Entered
+26:04:2025 22:26:45 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserPassword [Line:82] - Maker Password Entered
+26:04:2025 22:26:45 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton [Line:110] - Successfully Login with Entered Credentials
+26:04:2025 22:26:49 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectEnviornmentType [Line:48] - Enviornment Selected :-Amazon
+26:04:2025 22:26:50 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:83] - Main Menu Selected :-Service Configuration
+26:04:2025 22:26:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:99] - Child Menu Opened :-Sevice Provider Response Code Mapping
+26:04:2025 22:27:03 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:206] - Closing Browser: chrome
+26:04:2025 22:27:05 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:210] - -------Execution Completed---
+26:04:2025 22:27:05 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:150] - Browser Initilzation Started : chrome
+26:04:2025 22:27:07 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:102] - Browser Launched :- chrome
+26:04:2025 22:27:07 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------5
+26:04:2025 22:27:10 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:64] - Maker Username Entered
+26:04:2025 22:27:10 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserPassword [Line:82] - Maker Password Entered
+26:04:2025 22:27:11 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.clickOnLoginButton [Line:110] - Successfully Login with Entered Credentials
+26:04:2025 22:27:13 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectEnviornmentType [Line:48] - Enviornment Selected :-Amazon
+26:04:2025 22:27:14 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:83] - Main Menu Selected :-Service Configuration
+26:04:2025 22:27:17 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_CRMBaseSteps.SelectMainMenu [Line:99] - Child Menu Opened :-Sevice Provider Response Code Mapping
+26:04:2025 22:27:39 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:206] - Closing Browser: chrome
+26:04:2025 22:27:40 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.TearDown [Line:210] - -------Execution Completed---
+26:04:2025 22:27:41 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onFinish [Line:136] - Report got flushed
