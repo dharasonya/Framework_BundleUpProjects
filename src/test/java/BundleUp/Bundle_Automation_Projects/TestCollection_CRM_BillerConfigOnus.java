@@ -36,8 +36,7 @@ public class TestCollection_CRM_BillerConfigOnus extends BasePageSetup{
 		login.EnterMakerUserPassword();
 		login.clickOnLoginButton();
 		Map<String, String> testFields = mapTestData(testData);
-
-
+		
 		step.SelectEnviornmentType(testFields.get("Environment")); 
 		step.SelectMainMenu(testFields.get("ParentMenu"),testFields.get("ChildMenu"));
 		corestep.FillInAddDetails(testFields.get("BillerId"),testFields.get("ServiceCode"),testFields.get("ServiceProviderName"),

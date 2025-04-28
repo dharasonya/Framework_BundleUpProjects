@@ -3,6 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_BillerConfigOnus">
+        <methods>
+          <include name="TearDown"/>
+          <include name="AddNewRecord"/>
+          <include name="BrowserIntilization"/>
+        </methods>
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_BillerConfigOnus -->
+      <class name="BundleUp.Bundle_Automation_Projects.TestTask">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestTask -->
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping">
+        <methods>
+          <include name="TearDown"/>
+          <include name="AddNewRecord"/>
+          <include name="BrowserIntilization"/>
+        </methods>
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ServiceProviderResponseCodeMapping -->
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig">
         <methods>
           <include name="EditRecords"/>
@@ -14,6 +33,14 @@
           <include name="BrowserIntilization"/>
         </methods>
       </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_ePayPropertyConfig -->
+      <class name="BundleUp.Bundle_Automation_Projects.TestCollection_CRM_AirtelConfiguration">
+        <methods>
+          <include name="AddNewRecord"/>
+          <include name="TearDown"/>
+          <include name="Verify_BAL_Wallets_Switch"/>
+          <include name="BrowserIntilization"/>
+        </methods>
+      </class> <!-- BundleUp.Bundle_Automation_Projects.TestCollection_CRM_AirtelConfiguration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

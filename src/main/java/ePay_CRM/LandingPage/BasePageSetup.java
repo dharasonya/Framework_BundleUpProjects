@@ -51,7 +51,8 @@ public class BasePageSetup {
 	public WebDriver LoadConfigFile(String BrowserValue) throws Exception
 	{
 		setCount(count++);
-		input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
+		//input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
+		input=new FileInputStream("./src/main/resources/orangehrm.properties");
 		prop.load(input);  
 
 		switch(BrowserValue.toLowerCase())
@@ -155,13 +156,6 @@ public class BasePageSetup {
 			throw new IllegalStateException("Driver is not initialized.");
 		}
 
-		/*System.setProperty("atu.reporter.config", "C://Users//sdhara//OneDrive - Euronet Worldwide//Documents//New_Auto_WorkSpace//Framework_BundleUpProjects-main//atu.properties");
-		ATUReports.setWebDriver(driver);
-        ATUReports.indexPageDescription = "Test_Sample Project";
-        ATUReports.currentRunDescription = "Test_Sample Run";
-       // ATUReports.add("Navigated to Url", LogAs.PASSED, null);
-*/
-
 	}
 
 	public Method_LoginWithCredentials GetLoginCredentials() throws Exception
@@ -197,8 +191,8 @@ public class BasePageSetup {
 		return corestep;  
 	}
 
-	@Parameters("BrowserValue")
-	@AfterMethod(alwaysRun=true)
+	//@Parameters("BrowserValue")
+	//@AfterMethod(alwaysRun=true)
 	public void TearDown(String BrowserValue)
 	{
 		if (driver != null) {
