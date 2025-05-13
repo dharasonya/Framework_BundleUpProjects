@@ -1,0 +1,9 @@
+13:05:2025 21:47:29 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:151] - Browser Initilzation Started : edge
+13:05:2025 21:47:35 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:103] - Browser Launched :- edge
+13:05:2025 21:47:35 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------1
+13:05:2025 21:47:41 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:71] - RunTime Exception occured-On page load,Retrying!!!...
+13:05:2025 21:47:41 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:151] - Browser Initilzation Started : edge
+13:05:2025 21:47:48 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:103] - Browser Launched :- edge
+13:05:2025 21:47:48 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------2
+13:05:2025 21:47:54 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_LoginWithCredentials.EnterMakerUserName [Line:71] - RunTime Exception occured-On page load,Retrying!!!...
+13:05:2025 21:47:55 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onFinish [Line:136] - Report got flushed

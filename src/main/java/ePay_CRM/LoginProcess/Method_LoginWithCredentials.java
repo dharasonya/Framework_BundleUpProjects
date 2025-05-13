@@ -30,8 +30,8 @@ public class Method_LoginWithCredentials extends BasePageSetup {
 	public Method_LoginWithCredentials(WebDriver driver) throws Exception {
 		this.driver=driver;
 		obj =new ObjRepo_CRM_LoginCredentials(driver);	
-		//input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
-		input=new FileInputStream("./src/main/resources/orangehrm.properties");
+		input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
+		//input=new FileInputStream("./src/main/resources/orangehrm.properties");
 		prop.load(input);  
 	}
 

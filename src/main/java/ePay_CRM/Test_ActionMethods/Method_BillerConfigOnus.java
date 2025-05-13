@@ -20,6 +20,7 @@ import ePay_CRM.Reusable_Utils.ScrollHandler;
 import ePay_CRM.Reusable_Utils.WaitUtils;
 import ePay_CRM.Test_PageObjects.Repo_BillerConfig_Onus;
 import ePay_CRM.WrapMethods.WrapperMethods;
+import javafx.util.Pair;
 import ePay_CRM.Reusable_Utils.CommonLogger;
 
 public class Method_BillerConfigOnus extends BasePageSetup{
@@ -303,24 +304,28 @@ public class Method_BillerConfigOnus extends BasePageSetup{
 	private void validatePageFieldError_OnStep1(String onSaveMsg)
 	{
 		// Define a map for field elements and their corresponding validation messages
-		Map<WebElement, String> fieldValidationMap = new LinkedHashMap<>();
-		fieldValidationMap.put(obj.EnterBillerId, "Please enter Biller Id");
-		fieldValidationMap.put(obj.EnterServiceCode, "Please enter Service Code");
-		fieldValidationMap.put(obj.EnterServiceProviderName, "Please enter Service Provider Name");
-		fieldValidationMap.put(obj.EnterSubServiceProviderName, "Please enter SubService Provider Name");
-		fieldValidationMap.put(obj.EnterSubServiceProviderCode, "Please enter SubService Provider Code");
-
-		// Iterate through the map and validate each field
-		for (Map.Entry<WebElement, String> entry : fieldValidationMap.entrySet()) {
-		    WebElement field = entry.getKey();
-		    String validationMessage = entry.getValue();
-		    
-		    if (action.getAttributeValue(field, "value").equals("")) {
-		    	
-		        Assert.assertEquals(onSaveMsg, validationMessage, "Verification of " + validationMessage);
-		        break;
+		
+		 Map<WebElement, Pair<String, List<String>>> fieldValidationMap = new LinkedHashMap<>();
+		 fieldValidationMap.put(obj.EnterBillerId, new Pair<>("Biller_Id",Arrays.asList("Please enter Biller Id")));
+		 fieldValidationMap.put(obj.EnterServiceCode, new Pair<>("ServiceCode",Arrays.asList("Please enter Service Code")));
+		 fieldValidationMap.put(obj.EnterServiceProviderName, new Pair<>("ServiceProviderName",Arrays.asList("Please enter Service Provider Name")));
+		 fieldValidationMap.put(obj.EnterSubServiceProviderName, new Pair<>("SubServiceProviderName",Arrays.asList("Please enter SubService Provider Name")));
+		 fieldValidationMap.put(obj.EnterSubServiceProviderCode, new Pair<>("SubServiceCode",Arrays.asList("Please enter SubService Provider Code")));
+		 
+		    for (Map.Entry<WebElement, Pair<String, List<String>>> entry : fieldValidationMap.entrySet())        
+		    {
+		    	 	WebElement field = entry.getKey();
+			        String fieldName = entry.getValue().getKey();
+			        List<String> validationMessages = entry.getValue().getValue();
+			       
+		        if (action.getAttributeValue(field, "value",fieldName).equals("")) {
+		            boolean matchFound = validationMessages.contains(onSaveMsg);
+		            Assert.assertTrue(matchFound, "Verification failed for " + onSaveMsg);
+		            break;
+		        }
 		    }
-		}
+		
+		
 	}
 	/*private void validatePageFieldError_OnStep3(String onSaveMsg)
 	{
@@ -346,21 +351,27 @@ public class Method_BillerConfigOnus extends BasePageSetup{
 		    }
 		}
 	}*/
+	@SuppressWarnings("restriction")
 	private void validatePageFieldError_OnStep3(String onSaveMsg) {
 	    // Define a map for field elements and their corresponding validation messages
-	    Map<WebElement, List<String>> fieldValidationMap = new LinkedHashMap<>();
-	    fieldValidationMap.put(obj.EnterDCBilPaymentUrl, Arrays.asList("Please enter DC BilPayment Url"));
-	    fieldValidationMap.put(obj.EnterDRBilPaymentUrl, Arrays.asList("Please enter DR BilPayment Url"));
-	    fieldValidationMap.put(obj.EnterDROprServiceUrl, Arrays.asList("Please enter DR OprService Url"));
-	    fieldValidationMap.put(obj.EnterDCOprServiceUrl, Arrays.asList("Please enter DC OprService Url"));
-	    fieldValidationMap.put(obj.EnterRemark, Arrays.asList("Please enter Maker Remark", "Remarks should be greater than 5", "Please enter valid Maker Remark"));
-
+	    Map<WebElement, Pair<String, List<String>>> fieldValidationMap = new LinkedHashMap<>();
+	    fieldValidationMap.put(obj.EnterDCBilPaymentUrl, new Pair<>("DC_BillPaymentUrl",Arrays.asList("Please enter DC BilPayment Url")));
+	    fieldValidationMap.put(obj.EnterDRBilPaymentUrl, new Pair<>("DR_BillPaymentUrl",Arrays.asList("Please enter DR BilPayment Url")));
+	    fieldValidationMap.put(obj.EnterDROprServiceUrl, new Pair<>("DR_OprServiceUrl",Arrays.asList("Please enter DR OprService Url")));
+	    fieldValidationMap.put(obj.EnterDCOprServiceUrl, new Pair<>("DC_OprServiceUrl",Arrays.asList("Please enter DC OprService Url")));
+	    fieldValidationMap.put(obj.EnterRemark, new Pair<>("Please enter Maker Remark",Arrays.asList("Remarks should be greater than 5", "Please enter valid Maker Remark")));
+	  	
+	    
+	    
 	    // Iterate through the map and validate each field
-	    for (Map.Entry<WebElement, List<String>> entry : fieldValidationMap.entrySet()) {
-	        WebElement field = entry.getKey();
-	        List<String> validationMessages = entry.getValue();
 
-	        if (action.getAttributeValue(field, "value").equals("")) {
+	    for (Map.Entry<WebElement, Pair<String, List<String>>> entry : fieldValidationMap.entrySet())        
+	    {
+	    	 	WebElement field = entry.getKey();
+		        String fieldName = entry.getValue().getKey();
+		        List<String> validationMessages = entry.getValue().getValue();
+		       
+	        if (action.getAttributeValue(field, "value",fieldName).equals("")) {
 	            boolean matchFound = validationMessages.contains(onSaveMsg);
 	            Assert.assertTrue(matchFound, "Verification failed for " + onSaveMsg);
 	            break;

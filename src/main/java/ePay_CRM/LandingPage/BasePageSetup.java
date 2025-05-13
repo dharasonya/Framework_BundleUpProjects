@@ -17,11 +17,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import ePay_CRM.LoginProcess.Method_LoginWithCredentials;
+import ePay_CRM.LoginProcess.Method_OrangeHRM_LoginWithCredentials;
 import ePay_CRM.Reusable_Utils.CallListeners;
 import ePay_CRM.Reusable_Utils.CommonLogger;
 import ePay_CRM.Test_ActionMethods.Method_AirtelConfiguration;
 import ePay_CRM.Test_ActionMethods.Method_BillerConfigOnus;
 import ePay_CRM.Test_ActionMethods.Method_EpayPropertyConfig;
+import ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee;
 import ePay_CRM.Test_ActionMethods.Method_SpRspCodeMapping;
 
 
@@ -51,8 +53,8 @@ public class BasePageSetup {
 	public WebDriver LoadConfigFile(String BrowserValue) throws Exception
 	{
 		setCount(count++);
-		//input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
-		input=new FileInputStream("./src/main/resources/orangehrm.properties");
+		input=new FileInputStream("./src/main/resources/EnviornmentSetup.properties");
+		//input=new FileInputStream("./src/main/resources/orangehrm.properties");
 		prop.load(input);  
 
 		switch(BrowserValue.toLowerCase())
@@ -164,12 +166,24 @@ public class BasePageSetup {
 		return login;
 
 	}
+	
+	public Method_OrangeHRM_LoginWithCredentials GetOrangeHRMLoginCredentials() throws Exception
+	{
+		Method_OrangeHRM_LoginWithCredentials login=new Method_OrangeHRM_LoginWithCredentials(driver);
+		return login;
+
+	}
 	public Method_CRMBaseSteps CRMBaseStep() throws Exception
 	{
 		Method_CRMBaseSteps step=new Method_CRMBaseSteps(driver); 
 		return step;
 	}
 
+	public Method_OrangeHRM_BaseSteps Method_OrangeHRM_BaseSteps() throws Exception
+	{
+		Method_OrangeHRM_BaseSteps step=new Method_OrangeHRM_BaseSteps(driver); 
+		return step;
+	}
 	public Method_EpayPropertyConfig CRMCoreStep() throws Exception
 	{
 		Method_EpayPropertyConfig corestep=new Method_EpayPropertyConfig(driver);
@@ -188,6 +202,11 @@ public class BasePageSetup {
 	public Method_AirtelConfiguration CRM_AirtelConfiguration_CoreStep() throws Exception
 	{
 		Method_AirtelConfiguration corestep=new Method_AirtelConfiguration(driver);
+		return corestep;  
+	}
+	public Method_PIM_AddEmployee OrangeHRM_PIM_Admin() throws Exception
+	{
+		Method_PIM_AddEmployee corestep=new Method_PIM_AddEmployee(driver);
 		return corestep;  
 	}
 

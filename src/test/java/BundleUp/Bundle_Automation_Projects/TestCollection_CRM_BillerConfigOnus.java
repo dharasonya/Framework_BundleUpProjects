@@ -104,27 +104,27 @@ public class TestCollection_CRM_BillerConfigOnus extends BasePageSetup{
 			}	
 		}  
 	}	
+	public static Map<String, String> mapTestData(String[] testData) {
+        // Mapping column values dynamically for easier access
+        Map<String, String> testMap = new HashMap<>();
+        String[] columnNames = {"Environment",  "ParentMenu", "ChildMenu", "BillerId", "ServiceCode", "ServiceProviderName",
+    			 "ServiceProviderCode","ValidateAmountFlag", "FetchRequirment", "SubServiceProviderName", "SubServiceProviderCode",
+    			 "Spfield1", "Spfield2", "Spfield3", "Spfield4", "Spfield5", "Spfield6", "Spfield7",
+    			 "Spfield8", "Spfield9", "Spfield10", "selectQuickPayFlag", "selectValidationFlag",
+    			 "SelectAmountFlag", "isMappedResponseCode", "DC_BillValidation_URL", "DR_BillValidation_URL", "DC_Bill_Fetch_URL",
+    			 "DR_Bill_Fetch_URL", "DC_Bill_Payment_URL", "DR_Bill_Payment_URL", "DC_Operator_Validation_URL", "DR_Operator_Validation_URL",
+    			 "DC_Operator_Service_URL", "DR_Operator_Service_URL", "DC_Operator_Status_URL", "DR_Operator_Status_URL", "DC_Bill_Status_Check_URL",
+    			 "DR_Bill_Status_Check_URL", "DC_Operator_Token_URL", "DR_Operator_Token_URL", "DC_Operator_Balance_URL", "DR_Operator_Balance_URL",
+    			 "DC_Operator_Username","DR_Operator_Username", "DC_Operator_Password","DR_Operator_Password","DC_Operator_Token_Session",
+    			 "DR_Operator_Token_Session", "DC_Connection_URL", "DR_Connection_URL", "DC_ProxyIp", "DR_ProxyIp", "DC_ProxyPort", "DR_ProxyPort",
+    			 "DC_BillCancelURL", "DR_BillCancelURL", "DC_BillResendURL", "DR_BillResendURL", "DC_OprCancelURL", "DR_OprCancelURL", "DC_OprResendURL",
+    			 "DR_OprResendURL", "DC_Status", "DR_Status","DC_InActive", "DR_InActive", "DC_Is_WCF_Operator",
+    			 "DR_Is_WCF_Operator", "Remarks", "Action", "CheckerRemarks","ExpectedExecutionStatus"};
+        for (int i = 0; i < columnNames.length && i < testData.length; i++) {
+            testMap.put(columnNames[i], testData[i]);
+        }
+        return testMap;
+    }	
 	
-	 public static Map<String, String> mapTestData(String[] testData) {
-	        // Mapping column values dynamically for easier access
-	        Map<String, String> testMap = new HashMap<>();
-	        String[] columnNames = {"Environment",  "ParentMenu", "ChildMenu", "BillerId", "ServiceCode", "ServiceProviderName",
-	    			 "ServiceProviderCode","ValidateAmountFlag", "FetchRequirment", "SubServiceProviderName", "SubServiceProviderCode",
-	    			 "Spfield1", "Spfield2", "Spfield3", "Spfield4", "Spfield5", "Spfield6", "Spfield7",
-	    			 "Spfield8", "Spfield9", "Spfield10", "selectQuickPayFlag", "selectValidationFlag",
-	    			 "SelectAmountFlag", "isMappedResponseCode", "DC_BillValidation_URL", "DR_BillValidation_URL", "DC_Bill_Fetch_URL",
-	    			 "DR_Bill_Fetch_URL", "DC_Bill_Payment_URL", "DR_Bill_Payment_URL", "DC_Operator_Validation_URL", "DR_Operator_Validation_URL",
-	    			 "DC_Operator_Service_URL", "DR_Operator_Service_URL", "DC_Operator_Status_URL", "DR_Operator_Status_URL", "DC_Bill_Status_Check_URL",
-	    			 "DR_Bill_Status_Check_URL", "DC_Operator_Token_URL", "DR_Operator_Token_URL", "DC_Operator_Balance_URL", "DR_Operator_Balance_URL",
-	    			 "DC_Operator_Username","DR_Operator_Username", "DC_Operator_Password","DR_Operator_Password","DC_Operator_Token_Session",
-	    			 "DR_Operator_Token_Session", "DC_Connection_URL", "DR_Connection_URL", "DC_ProxyIp", "DR_ProxyIp", "DC_ProxyPort", "DR_ProxyPort",
-	    			 "DC_BillCancelURL", "DR_BillCancelURL", "DC_BillResendURL", "DR_BillResendURL", "DC_OprCancelURL", "DR_OprCancelURL", "DC_OprResendURL",
-	    			 "DR_OprResendURL", "DC_Status", "DR_Status","DC_InActive", "DR_InActive", "DC_Is_WCF_Operator",
-	    			 "DR_Is_WCF_Operator", "Remarks", "Action", "CheckerRemarks","ExpectedExecutionStatus"};
-	        for (int i = 0; i < columnNames.length && i < testData.length; i++) {
-	            testMap.put(columnNames[i], testData[i]);
-	        }
-	        return testMap;
-	    }	
-}
+	}
 

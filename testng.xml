@@ -6,7 +6,11 @@
 	</listeners>
 	
   <test name="Test_OrangeCrm">
+  
   <parameter name="BrowserValue" value="edge" />
+  
+		<parameter name="sheetName" value="PIM_ADD" />
+		<parameter name="fileName" value="OrangeHRM_PIM_AddEmpData" />
     <classes>
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity"/>
     </classes>

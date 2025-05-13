@@ -166,8 +166,6 @@ public class Method_SpRspCodeMapping extends BasePageSetup{
 		}
 		
 		return flag;
-
-
 	}
 
 	public int FieldError() throws Exception

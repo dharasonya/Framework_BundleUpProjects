@@ -1,0 +1,34 @@
+13:05:2025 22:10:12 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:153] - Browser Initilzation Started : edge
+13:05:2025 22:10:17 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:105] - Browser Launched :- edge
+13:05:2025 22:10:17 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------1
+13:05:2025 22:10:26 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: AdminUserId is entered & verified.
+13:05:2025 22:10:26 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: AdminPassword is entered & verified.
+13:05:2025 22:10:28 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Login Button is Clicked & Verified.
+13:05:2025 22:10:28 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_OrangeHRM_LoginWithCredentials.clickOnLoginButton [Line:78] - Successfully Login with Entered Credentials
+13:05:2025 22:10:28 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getTextAndVerify [Line:189] - For Field :On Login-Dashboard Message Verification Text Value :Dashboard is Retrieved & Verified.
+13:05:2025 22:10:30 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_OrangeHRM_BaseSteps.SelectMainMenu [Line:51] - Main Menu Selected : - PIM
+13:05:2025 22:10:30 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.UploadProfilePic [Line:72] - Initiated the process of filling in details on Page 1.
+13:05:2025 22:10:32 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Add Button is Clicked & Verified.
+13:05:2025 22:10:33 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Upload Profile Image is Clicked & Verified.
+13:05:2025 22:10:33 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.UploadProfilePic [Line:82] - Upload File Selection Dialog Opened
+13:05:2025 22:10:39 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.uploadFileUsingRobot [Line:260] - File Selection Completed
+13:05:2025 22:10:42 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.VerifyElement_EnabledDisable [Line:269] - Uploaded Image Flag Status : true
+13:05:2025 22:10:42 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.UploadProfilePic [Line:109] - File Selection Completed
+13:05:2025 22:10:45 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: FirstName is entered & verified.
+13:05:2025 22:10:45 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: MiddleName is entered & verified.
+13:05:2025 22:10:46 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: LastName is entered & verified.
+13:05:2025 22:10:46 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enableToggleSwitchAndVerify [Line:119] - Field :LoginDetailsFlag is Selected & Verified.
+13:05:2025 22:10:46 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: Username is entered & verified.
+13:05:2025 22:10:47 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.selectEnableDisabledFlagAndVerify [Line:160] - Value :Disabled is Selected & Verified.
+13:05:2025 22:10:47 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: Password is entered & verified.
+13:05:2025 22:10:47 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: ConfirmPassword is entered & verified.
+13:05:2025 22:10:47 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.AddEmployee [Line:138] - The process of adding employee details has been completed.
+13:05:2025 22:10:48 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :On Save is Clicked & Verified.
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.clickOnSaveButton [Line:193] - Unable to Save Records due to error occured
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.FieldError [Line:213] - Error Count :1 / Error Message : Employee Id already exists
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.FieldError [Line:222] - Total Count : Error Messages: 1
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getAttributeValue [Line:227] - For Attribute :First Name / attribute Value :Karana is Retrieved & Verified.
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getAttributeValue [Line:227] - For Attribute :Last Name / attribute Value :Dhar is Retrieved & Verified.
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getAttributeValue [Line:227] - For Attribute :Password / attribute Value :Sina@1234** is Retrieved & Verified.
+13:05:2025 22:10:53 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getAttributeValue [Line:227] - For Attribute :Confirm Password / attribute Value :Sina@1234** is Retrieved & Verified.
+13:05:2025 22:10:54 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onFinish [Line:136] - Report got flushed

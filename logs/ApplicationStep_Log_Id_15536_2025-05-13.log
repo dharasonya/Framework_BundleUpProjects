@@ -1,0 +1,14 @@
+13:05:2025 22:08:00 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.BrowserIntilization [Line:153] - Browser Initilzation Started : edge
+13:05:2025 22:08:09 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.BasePageSetup.LoadConfigFile [Line:105] - Browser Launched :- edge
+13:05:2025 22:08:09 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Reusable_Utils.CallListeners.onTestStart [Line:70] - -------Execution Started for Record : ------1
+13:05:2025 22:08:22 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: AdminUserId is entered & verified.
+13:05:2025 22:08:22 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.enterAndVerify [Line:42] - Field: AdminPassword is entered & verified.
+13:05:2025 22:08:23 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Login Button is Clicked & Verified.
+13:05:2025 22:08:23 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LoginProcess.Method_OrangeHRM_LoginWithCredentials.clickOnLoginButton [Line:78] - Successfully Login with Entered Credentials
+13:05:2025 22:08:26 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.getTextAndVerify [Line:189] - For Field :On Login-Dashboard Message Verification Text Value :Dashboard is Retrieved & Verified.
+13:05:2025 22:08:29 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.LandingPage.Method_OrangeHRM_BaseSteps.SelectMainMenu [Line:51] - Main Menu Selected : - PIM
+13:05:2025 22:08:30 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.UploadProfilePic [Line:72] - Initiated the process of filling in details on Page 1.
+13:05:2025 22:08:32 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Add Button is Clicked & Verified.
+13:05:2025 22:08:32 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.clickOnButtonAndVerify [Line:205] - On Click :Upload Profile Image is Clicked & Verified.
+13:05:2025 22:08:32 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.Test_ActionMethods.Method_PIM_AddEmployee.UploadProfilePic [Line:82] - Upload File Selection Dialog Opened
+13:05:2025 22:08:40 -  INFO ePay_CRM.Reusable_Utils.CommonLogger.log [Line:23] - ePay_CRM.WrapMethods.WrapperMethods.uploadFileUsingRobot [Line:260] - File Selection Completed

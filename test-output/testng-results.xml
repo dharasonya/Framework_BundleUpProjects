@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-28T22:32:21 IST" name="OrangeCRM" finished-at="2025-04-28T22:32:34 IST" duration-ms="13302">
+  <suite started-at="2025-05-13T22:15:08 IST" name="OrangeCRM" finished-at="2025-05-13T22:15:51 IST" duration-ms="43513">
     <groups>
     </groups>
-    <test started-at="2025-04-28T22:32:21 IST" name="Test_OrangeCrm" finished-at="2025-04-28T22:32:34 IST" duration-ms="13302">
+    <test started-at="2025-05-13T22:15:08 IST" name="Test_OrangeCrm" finished-at="2025-05-13T22:15:51 IST" duration-ms="43513">
       <class name="BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity">
-        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity@28975c28]" started-at="2025-04-28T22:32:22 IST" name="BrowserIntilization" finished-at="2025-04-28T22:32:29 IST" duration-ms="7140" status="PASS">
+        <test-method is-config="true" signature="BrowserIntilization(java.lang.String)[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity@dd0c991]" started-at="2025-05-13T22:15:11 IST" name="BrowserIntilization" finished-at="2025-05-13T22:15:16 IST" duration-ms="5349" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilization -->
-        <test-method signature="Sanity()[pri:0, instance:BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity@28975c28]" started-at="2025-04-28T22:32:29 IST" name="Sanity" finished-at="2025-04-28T22:32:34 IST" duration-ms="5238" status="PASS">
+        <test-method signature="Sanity([Ljava.lang.String;)[pri:1, instance:BundleUp.Bundle_Automation_Projects.TestCollection_OrangeCRM_Sanity@dd0c991]" started-at="2025-05-13T22:15:16 IST" name="Sanity" data-provider="ExcelDataProvider" finished-at="2025-05-13T22:15:51 IST" duration-ms="34886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@57ce2898]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sanity -->
